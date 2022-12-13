@@ -1,0 +1,59 @@
+
+/* some general settings */
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    background-color: rgb(245, 245, 245);
+    font-family: 'Open Sans', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+}
+
+main {
+    margin:0 auto;
+    box-sizing:content-box;
+    background-color: rgb(245, 245, 245);
+}
+
+header, footer {
+    padding: 3%;
+    font-family: "Verdana", "Helverica", "Glober", "Cambria";
+}
+
+p, h1, h2, h3, h4, ul, ol, li, figure, figcaption, div, section, article {
+    margin:0;
+    padding:0;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline;
+}
+
+a {
+    text-decoration:none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:link {
+    color: inherit;
+}
+
+header {
+    background-image: url("../images/header_bg.webp"); /*img source: https://wallpapersafari.com/w/pNHxwB*/
+    min-height: 100vh; /* full window viewpoint */
+    background-size: cover;
+}
+
+main {
+    background-size: cover;
+    min-height: 100vh;
+}
+
+footer {
+    background-image: url("../images/footer_bg_black.jpg");     /* img-source: https://jooinn.com/img/get */
+    background-size: cover;
+    padding: 0em;
+}
