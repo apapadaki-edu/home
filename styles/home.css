@@ -42,7 +42,7 @@ a:link {
 }
 
 header {
-    background-image: url("../images/header_bg.webp"); /*img source: https://wallpapersafari.com/w/pNHxwB*/
+    background-image: url("images/header_bg.webp"); /*img source: https://wallpapersafari.com/w/pNHxwB*/
     min-height: 100vh; /* full window viewpoint */
     background-size: cover;
 }
@@ -53,7 +53,7 @@ main {
 }
 
 footer {
-    background-image: url("../images/footer_bg_black.jpg");     /* img-source: https://jooinn.com/img/get */
+    background-image: url("images/footer_bg_black.jpg");     /* img-source: https://jooinn.com/img/get */
     background-size: cover;
     padding: 0em;
 }
