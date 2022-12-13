@@ -1,24 +1,95 @@
 
 /*remember to remove the ../ from the path of all resorce files*/
+@media (min-width: 1080px) {
 
-header{
+    header{
     background-color: rgb(6,14,25);
     min-height: 100vh; /* full window viewpoint */
-}
-#header-container {
-    background: url("images/header_bg.webp"); /*img source: https://wallpapersafari.com/w/pNHxwB*/
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-}
+    }
 
-main {
-    background-size: cover;
-    min-height: 100vh;
-}
+    #header-container {
+        background: url("images/header_bg.webp"); /*img source: https://wallpapersafari.com/w/pNHxwB*/
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+    }
 
-footer {
-    background-color:black;     /* img-source: https://jooinn.com/img/get */
-    height: min(max-content, max(min-content, 30vh));
-    padding: 0em;
+
+
+
+    main > section{
+        display: flex;
+        gap: 2em;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 4em;
+        background-size: cover;
+    }
+
+    
+    .app-category {
+        padding: 3em;
+        border: 0.3em solid black;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+        text-align: center;
+        width: calc(100% / 6);
+    }
+
+    .app-category h3 {
+        font-size: 1.7em;
+        font-weight: bolder;
+        margin-top: 1em;
+    }
+
+
+
+/*#############################################*/
+
+    footer {
+        display: grid;
+        grid-template-areas: 
+            "about social" 
+            "copyright copyright" ;
+        grid-template-rows: 3fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: end;
+        padding:2.5em 2em 1em 2em;
+        height: max(max-content, 30%);
+        width:auto;
+        font-size: 1.1em;
+        background-color:black;     /* img-source: https://jooinn.com/img/get */
+        color: white;
+    }
+
+    footer h3 {
+        font-size: 1.7em;
+        font-weight: 200;
+        padding-bottom: 0.5em;
+    }
+
+    .about {
+        grid-area: about;
+    }
+
+    .social {
+        grid-area: social;
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    .icon-container {
+        width: 2.5em;
+        height: 2.5em;
+        margin-left:1em;
+        border: 2px solid white;
+        border-radius: 50px;
+        background-color: white;
+    }
+
+    .copyright {
+        grid-area: copyright;
+        font-size: 0.9em;
+        text-align:center;
+    }
 }

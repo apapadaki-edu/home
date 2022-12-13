@@ -30,7 +30,6 @@ p, h1, h2, h3, h4, ul, ol, li, figure, figcaption, div, section, article {
 
 ul li{
     list-style-type: none;
-    display: inline;
 }
 
 a {

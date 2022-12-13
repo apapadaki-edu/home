@@ -38,31 +38,40 @@
     <main>
         <section><!--style with flexbox-->
             <!-- may change the oreder of a and div elements-->
-            <a href="#" class="category"><div>
-                <div class="cat-icon"></div>
-                <h3>Machine Learning Applications</h3>
-            </div></a>
+            <a href="#" class="app-category">
+                <div>
+                    <img src="icons/ml.svg" alt="machine learning apps" height="100em">
+                    <h3>Machine Learning</h3>
+                </div>
+            </a>
             
-            <a href="#" class="category"><div>
-                <div class="cat-icon"></div>
-                <h3>Android Applications</h3>
-            </div></a>
+            <a href="#" class="app-category">
+                <div>
+                    <img src="icons/android.svg" alt="android apps" height="100em">
+                    <h3>Android</h3>
+                    <button><img src="icons/down-arrow-icon.svg" alt="android apps" height="30em"></button>
+                </div>
+            </a>
             
-            <a href="#" class="category"><div>
-                <div class="cat-icon"></div>
-                <h3>Web Applications</h3>
-            </div></a>
+            <a href="#" class="app-category">
+                <div>
+                    <img src="icons/web.svg" alt="web apps"  height="100em">
+                    <h3>Web</h3>
+                </div>
+            </a>
 
-            <a href="#" class="category"><div>
-                <div class="cat-icon"></div>
-                <h3>IoT Application</h3>
-            </div></a>
+            <a href="#" class="app-category">
+                <div>
+                    <img src="icons/iot.svg" alt="iot" height="100em">
+                    <h3 class="app-title">IoT</h3>
+                </div>
+            </a>
         </section>
     </main>
 
     <footer> <!-- style as flexbox -->
-        <div id="about"> <!-- style with grid and split in half with one containg the contents and the other being empty-->
-            <h2>About</h2>
+        <div class="about"> <!-- style with grid and split in half with one containg the contents and the other being empty-->
+            <h3>About</h3>
             <p>
                 This page is a portfolio for some projects I have
                 developed during my free time and while studying for my masters in  
@@ -75,9 +84,9 @@
             </p>
         </div>
         
-        <div> <!--style with flexbox -->
+        <section class="social"> <!--style with flexbox -->
             <a href="#linkedInLink">
-                <div class="icon-container" style="height:20px; width:20px">
+                <div class="icon-container">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="100%" height="100%"
                     viewBox="0 0 64 64">
@@ -86,7 +95,7 @@
                 </div>
             </a>
             <a href="#githubLink">
-                <div class="icon-container" style="height:20px; width:20px">
+                <div class="icon-container">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="100%" height="100%"
                     viewBox="0 0 50 50">
@@ -95,7 +104,7 @@
                 </div>
             </a>
             <a href="dockerHubLink">
-                <div class="icon-container" style="height:20px;  width:20px">
+                <div class="icon-container">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="100%" height="100%"
                     viewBox="0 0 50 50">
@@ -105,15 +114,15 @@
             </a>
 
             <a href="instagramLink">
-                <div class="icon-container" style="height:20px; width:20px">
+                <div class="icon-container">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="100%" height="100%"
-                    viewBox="0 0 50 50">
-                        <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+                    viewBox="0 0 64 64">
+                    <path d="M 31.820312 12 C 13.438312 12 12 13.439312 12 31.820312 L 12 32.179688 C 12 50.560688 13.438313 52 31.820312 52 L 32.179688 52 C 50.561688 52 52 50.560688 52 32.179688 L 52 32 C 52 13.452 50.548 12 32 12 L 31.820312 12 z M 43.994141 18 C 45.099141 17.997 45.997 18.889141 46 19.994141 C 46.003 21.099141 45.110859 21.997 44.005859 22 C 42.900859 22.003 42.003 21.110859 42 20.005859 C 41.997 18.900859 42.889141 18.003 43.994141 18 z M 31.976562 22 C 37.498562 21.987 41.987 26.454563 42 31.976562 C 42.013 37.498562 37.545437 41.987 32.023438 42 C 26.501437 42.013 22.013 37.545437 22 32.023438 C 21.987 26.501437 26.454563 22.013 31.976562 22 z M 31.986328 26 C 28.672328 26.008 25.992 28.701625 26 32.015625 C 26.008 35.328625 28.700672 38.008 32.013672 38 C 35.327672 37.992 38.008 35.299328 38 31.986328 C 37.992 28.672328 35.299328 25.992 31.986328 26 z"></path>
                     </svg>
                 </div>
             </a>
-        </div>
+        </section>
         <!-- put conditional in js for when the link to the icon is active
              in the html code from icon 8 and only then activate the code otherwise add  the png icon
             html for all icons:
@@ -123,6 +132,7 @@
                 viewBox="0 0 50 50">
                 <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
                 </svg>-->
+        <p class="copyright"> Copyright 2022</p>
     </footer>
 </body>
 </html>
