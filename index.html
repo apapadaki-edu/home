@@ -5,6 +5,7 @@
     <meta charset="utf-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="styles/all.css" rel="stylesheet">
     <link href="styles/home.css" rel="stylesheet">
 </head>
@@ -38,34 +39,37 @@
     <main>
         <section><!--style with flexbox-->
             <!-- may change the oreder of a and div elements-->
-            <a href="#" class="app-category">
-                <div>
-                    <img src="icons/ml.svg" alt="machine learning apps" height="100em">
-                    <h3>Machine Learning</h3>
-                </div>
+            <div  class="app-category">
+            <a href="#">
+                <img src="icons/ml.svg" alt="machine learning apps">
+                <h3>Machine Learning</h3>
             </a>
-            
-            <a href="#" class="app-category">
-                <div>
-                    <img src="icons/android.svg" alt="android apps" height="100em">
-                    <h3>Android</h3>
-                    <button><img src="icons/down-arrow-icon.svg" alt="android apps" height="30em"></button>
-                </div>
-            </a>
-            
-            <a href="#" class="app-category">
-                <div>
-                    <img src="icons/web.svg" alt="web apps"  height="100em">
-                    <h3>Web</h3>
-                </div>
-            </a>
+            <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+            </div>
 
-            <a href="#" class="app-category">
-                <div>
-                    <img src="icons/iot.svg" alt="iot" height="100em">
+            <div class="app-category">
+                <a href="#">
+                    <img src="icons/android.svg" alt="android apps">
+                    <h3>Android</h3>
+                </a>
+                <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+            </div>
+
+            <div class="app-category">
+                <a href="#">
+                    <img src="icons/web.svg" alt="web apps">
+                    <h3>Web</h3>
+                </a>
+                <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+            </div>
+
+            <div class="app-category">
+                <a href="#">
+                    <img src="icons/iot.svg" alt="iot">
                     <h3 class="app-title">IoT</h3>
-                </div>
-            </a>
+                </a>
+                <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+            </div>
         </section>
     </main>
 
