@@ -53,20 +53,18 @@
         margin-top: 1em;
     }
 
-    .app-category > a img, i {
-        height: 8em;
+    .app-category > a img {
+        height: 7em;
+        font-size:1.2em;
     }
 
-    .app-category > a i {
-        font-size: 7em;
-    }
     .more-btn {
         border: none;
         max-width: max-content;
         align-self: center;
         padding:1em;
         cursor: pointer;
-        font-size: 1em;
+        font-size: 2em;
         color:black;
     }
 
