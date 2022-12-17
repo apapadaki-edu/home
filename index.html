@@ -22,17 +22,45 @@
                     and change the icon otherwise do the oposite
             -->
             <nav>
-
-                <a>Insert an icon instead</a>
                 <ul>
-                    <li><a href="#" id="nav-home">Home</a></li>
-                    <li><a href="#" id="nav-ml">Machine Learning</a></li>
-                    <li><a href="#" id="nav-android">Android</a></li>
-                    <li><a href="#" id="nav-web">Web</a></li>
-                    <li><a href="#" id="nav-iot">IoT</a></li>
+                    <li class="sub-nav-container"><button>Home</button></li>
+                    <li class="sub-nav-container">
+                        <button>Machine Learning</button>
+                        <ul class="sub-nav">
+                            <li><a href="#">Project 1 has a very big title</a></li>
+                            <li><a href="#">Project 2</a></li>
+                            <li><a href="#">all..</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-nav-container">
+                        <button>Android</button>
+                        <ul class="sub-nav">
+                            <li><a href="#">Project 1</a></li>
+                            <li><a href="#">Project 2</a></li>
+                            <li><a href="#">Project 3</a></li>
+                            <li><a href="#">Project 4</a></li>
+                            <li><a href="#">all..</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-nav-container">
+                        <button>Web</button>
+                        <ul class="sub-nav">
+                            <li><a href="#">Project 1</a></li>
+                            <li><a href="#">Project 2</a></li>
+                            <li><a href="#">Project 3</a></li>
+                            <li><a href="#">Project 4</a></li>
+                            <li><a href="#">all..</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-nav-container">
+                        <button>IoT</button>
+                        <ul class="sub-nav">
+                            <li><a href="#">Project 1</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
-            <h1>Home Page</h1>
+            <h1>A Dive Into Applied Informatics</h1>
         </div>
     </header>
 
@@ -44,7 +72,7 @@
                 <img src="icons/ml.svg" alt="machine learning apps">
                 <h3>Machine Learning</h3>
             </a>
-            <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+            <button class="more-btn">more...</button>
             </div>
 
             <div class="app-category">
@@ -52,7 +80,7 @@
                     <img src="icons/android.svg" alt="android apps">
                     <h3>Android</h3>
                 </a>
-                <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+                <button class="more-btn">more...</button>
             </div>
 
             <div class="app-category">
@@ -60,7 +88,7 @@
                     <img src="icons/web.svg" alt="web apps">
                     <h3>Web</h3>
                 </a>
-                <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+                <button class="more-btn">more...</button>
             </div>
 
             <div class="app-category">
@@ -68,7 +96,7 @@
                     <img src="icons/iot.svg" alt="iot">
                     <h3 class="app-title">IoT</h3>
                 </a>
-                <button class="more-btn"><i class="fa fa-regular fa-circle-arrow-down"></i></button>
+                <button class="more-btn">more...</button>
             </div>
         </section>
     </main>
