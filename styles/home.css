@@ -349,6 +349,7 @@ svg#docker-icon {
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(0.47turn, #ffffff, rgb(194, 194, 196));
         border-image-slice: 1;
+        font-size: 1.2rem;
         pointer-events: none;
     }
 
