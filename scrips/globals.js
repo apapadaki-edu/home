@@ -404,7 +404,12 @@ function createArticle(prId) {
     articleBody.innerHTML = PROJECT_CONTENTS[prId].body;
     articleBody.style.textIndent = "3%";
     articleContainer.appendChild(articleBody);
-
+    /*
+    $(document).on("scroll", function() {
+        let pageTop = $(document).scollTop();
+        let pageBottom = pageTop + $(window).height();
+        let 
+    });*/
     articleRepo = document.createElement("p");
     articleRepo.classList.add("github");
     articleRepo.innerHTML = `The application code is available on Github. <a href="${PROJECT_CONTENTS[prId].github}">Link to repo.</a>`;
