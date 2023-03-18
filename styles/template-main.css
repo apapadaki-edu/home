@@ -3,8 +3,7 @@ main {
     display:flex;
     flex-direction: column;
     row-gap: 3rem;
-    font-size: calc(16px + 0.390625vw);
-
+    font-size: 1.1rem;
 }
 
 body {
@@ -32,7 +31,7 @@ body {
 .pr-nav-container li.selected {
     border-bottom: 3px solid #0870d8;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 .pr-container {
     display: flex;   
@@ -162,6 +161,7 @@ th.cat-heading {
         "project-nav"
         "projects";
         padding: 8% 10%;   
+        font-size: 1rem;
     }
 
     .pr-nav-container {
