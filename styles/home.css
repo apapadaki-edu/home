@@ -23,7 +23,7 @@
 
 /* some general settings */
 html, body {
-    font-size: calc(15px + 0.390625vw);
+    font-size: calc(16px + 0.390625vw); /* normal 15px */
     height:100%;
     background-color: var(--white);
     font-family: 'Open Sans', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';

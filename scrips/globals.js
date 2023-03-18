@@ -404,11 +404,12 @@ function createArticle(prId) {
     articleBody.innerHTML = PROJECT_CONTENTS[prId].body;
     articleBody.style.textIndent = "3%";
     articleContainer.appendChild(articleBody);
-    /*
-    $(document).on("scroll", function() {
-        let pageTop = $(document).scollTop();
-        let pageBottom = pageTop + $(window).height();
-        let 
+    
+    /*document.addEventListener("scroll", function() {
+        let pageTop = document.scollTop();
+        let pageBottom = pageTop + window.height();
+        let tab = document.querySelector(".pr-container");
+        if(tab.position
     });*/
     articleRepo = document.createElement("p");
     articleRepo.classList.add("github");
