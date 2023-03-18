@@ -717,27 +717,4 @@ svg#docker-icon {
         column-gap:4vw;
     }
 }
-/*
-palette green
-CSS HEX 
---white: #ffffffff;
---rich-black-fogra-29: #060e19ff;
---middle-blue-green: #84dcc6ff;
 
-CSS HSL 
---white: hsla(0, 0%, 100%, 1);
---rich-black-fogra-29: hsla(215, 61%, 6%, 1);
---middle-blue-green: hsla(165, 56%, 69%, 1);
-*/
-
-/* 
-pallete blue
---steel-blue: #427aa1ff;
---alice-blue: #ebf2faff;
---rich-black-fogra-29: #060e19ff;
-
-
---steel-blue: hsla(205, 42%, 45%, 1);
---alice-blue: hsla(212, 60%, 95%, 1);
---rich-black-fogra-29: hsla(215, 61%, 6%, 1);
-*/
