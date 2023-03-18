@@ -36,8 +36,16 @@ body {
     display: flex;   
     row-gap: 3rem;
     flex-direction: column;
+    
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
 }
 
+.pr-container.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
 .pr-article-container {
     display: none;
 
