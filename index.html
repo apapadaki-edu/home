@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+    <title>Home</title>
+    <link href="styles/home.css" rel="stylesheet">
+    <script src="scrips/nav-drop-down.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="header-container">
+            <div class="hamb-menu-banner"><button class="hamb-menu" hamb-menu><svg class="hamb-menu-icon"x="0px" y="0px" width="122.879px" height="103.609px" viewBox="0 0 122.879 103.609" enable-background="new 0 0 122.879 103.609" xml:space="preserve"><g><path fill="currentColor" clip-rule="evenodd" d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"/></g></svg></button></div>
+            <nav class="main-nav-container">
+                <ul class="main-nav">
+                    <li class="sub-nav-container" data-dropdown><a class="link" data-dropdown-button href="index.html">Home</a></li>
+                    <li class="sub-nav-container" data-dropdown>
+                        <a class="link" data-dropdown-button role="link" aria-disabled="true">Machine Learning (soon)</a> <!-- href="pages/template.html?sr=h&d=ml&pr=no" -->
+                        <ul class="sub-nav">
+                            <li><a role="link" aria-disabled="true">Crop Cultivation Prediction</a></li> <!-- href="pages/template.html?sr=h&d=ml&pr=ccp -->
+                            <li><a role="link" aria-disabled="true">Tomato Disease Classification</a></li> <!-- href="pages/template.html?sr=h&d=ml&pr=tdc" -->
+                            <li><a role="link" aria-disabled="true">Neural Style Transfer Art</a></li> <!-- href="pages/template.html?sr=h&d=ml&pr=nst" -->
+                            <li><a role="link" aria-disabled="true">Switch On/Off</a></li> <!-- href="pages/template.html?sr=h&d=ml&pr=soo" -->
+                            <li><a role="link" aria-disabled="true">all..</a></li> <!-- href="pages/template.html?sr=h&d=ml&pr=no" -->
+                        </ul>
+                    </li>
+                    <li class="sub-nav-container" data-dropdown>
+                        <a class="link" data-dropdown-button href="pages/template.html?sr=h&d=a&pr=no">Android</a>
+                        <ul class="sub-nav">
+                            <li><a href="pages/template.html?sr=h&d=a&pr=c">Contact Methods</a></li>
+                            <li><a href="pages/template.html?sr=h&d=a&pr=sc">Scientific Calculator</a></li>
+                            <li><a href="pages/template.html?sr=h&d=a&pr=ca">Calendar App</a></li>
+                            <li><a href="pages/template.html?sr=h&d=a&pr=ma">Maps App</a></li>
+                            <li><a href="pages/template.html?sr=h&d=a&pr=pg">Photo Gallery App</a></li>
+                            <li><a href="pages/template.html?sr=h&d=a&pr=no">all..</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-nav-container" data-dropdown>
+                        <a class="link" data-dropdown-button href="pages/template.html?sr=h&d=w&pr=no">Web</a>
+                        <ul class="sub-nav">
+                            <li><a href="pages/template.html?sr=h&d=w&pr=as">Online Art Store</a></li>
+                            <li><a href="pages/template.html?sr=h&d=w&pr=nb">Simple Notebook App</a></li>
+                            <li><a href="pages/template.html?sr=h&d=w&pr=sp">Sensors Playground</a></li>
+                            <li><a href="pages/template.html?sr=h&d=w&pr=no">all..</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-nav-container" data-dropdown>
+                        <a class="link" data-dropdown-button href="pages/template.html?sr=h&d=otr&pr=no">Other</a>
+                        <ul class="sub-nav">
+                            <li><a href="pages/template.html?sr=h&d=otr&pr=sda">MSDS Manager</a></li>
+                            <li><a href="pages/template.html?sr=h&d=otr&pr=iot">Smart Light Switch</a></li>
+                            <li><a href="pages/template.html?sr=h&d=otr&pr=no">all..</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <p class="one-line-intro">Small space for Applied Informatics<br>A portfolio</p>
+        </div>
+        <p class="site-description"> <span>Welcome!</span> <span>A small space for Applied Info&shyrmatics.</span></p>
+    </header>
+
+    <main>
+        <p class="page-introduction"> This is a port&shyfolio page. One can find
+            small projects, mainly develop&shyed during my studies. I welcome you
+            to navigate through the four main catego&shyries offered here. A short
+            descri&shyption of the concepts covered, can be found under each cate&shygory.
+            I hope some&shything catches your eye. Please enjoy!</p>
+
+        <h2 class="main-heading"><span>Categories</span></h2>
+
+        <section class="categories-container"><!--style with flexbox-->
+            <!-- may change the oreder of a and div elements-->
+            <div class="app-category" category-data>
+                <a role="link" area-disabled="true"> <!-- href="pages/template.html?sr=h&d=ml&pr=no" -->
+                    <svg viewBox="0 0 114.75 122.88" id="ml" y="372"><path d="M64.94 8.92c2.03 3.52 3.42 12.25 4.15 23.81h12.97V20.46c-.28-.13-.55-.28-.81-.45-.49-.31-.94-.67-1.33-1.06l-.05-.05a7.49 7.49 0 01-1.62-2.44 7.689 7.689 0 010-5.91c.39-.95.97-1.8 1.67-2.51a7.66 7.66 0 012.51-1.67c.91-.38 1.91-.59 2.95-.59 1.04 0 2.03.21 2.95.59.95.39 1.8.97 2.51 1.67.71.71 1.28 1.56 1.67 2.5l.02.06a7.689 7.689 0 01-.03 5.84c-.39.95-.97 1.8-1.67 2.51l-.06.06a7.93 7.93 0 01-1.84 1.34v15.84c0 .95-.39 1.81-1.01 2.43-.62.62-1.48 1.01-2.43 1.01H69.43c.12 3.29.2 6.75.23 10.32h30.44c.13-.26.27-.51.42-.75l.04-.05a7.66 7.66 0 013.5-2.89l.06-.02c.9-.36 1.88-.57 2.89-.57 1.04 0 2.03.21 2.95.59.95.39 1.8.97 2.51 1.67a7.66 7.66 0 011.67 2.51c.38.92.59 1.91.59 2.95 0 1.04-.21 2.03-.59 2.95-.39.95-.97 1.8-1.67 2.51a7.66 7.66 0 01-2.51 1.67l-.06.02c-.9.36-1.88.56-2.89.56-1.04 0-2.04-.21-2.95-.59-.94-.39-1.79-.96-2.51-1.67-.38-.38-.72-.8-1.02-1.27-.16-.24-.3-.49-.43-.75H69.67c-.03 3.9-.11 7.89-.24 11.95h37.21c.95 0 1.81.39 2.43 1.01.62.62 1.01 1.48 1.01 2.43v25.53c.33.14.64.3.94.48a7.66 7.66 0 013.14 3.66l.02.06c.36.9.57 1.88.57 2.89 0 1.04-.21 2.03-.59 2.95-.39.95-.97 1.8-1.67 2.51a7.66 7.66 0 01-2.51 1.67c-.91.38-1.91.59-2.95.59-1.04 0-2.03-.21-2.95-.59a7.82 7.82 0 01-2.51-1.67 7.66 7.66 0 01-1.67-2.51c-.38-.91-.59-1.91-.59-2.95 0-1.04.21-2.04.59-2.95.39-.95.97-1.8 1.67-2.51.32-.32.68-.62 1.06-.89.18-.13.37-.25.57-.36V75.66H69.16c-.15 3.24-.33 6.49-.55 9.73h11.04c.95 0 1.81.39 2.43 1.01.62.62 1.01 1.48 1.01 2.43v13.66a7.693 7.693 0 011.96 1.43l.06.06c.68.7 1.24 1.53 1.62 2.45.38.91.59 1.91.59 2.95 0 1.04-.21 2.04-.59 2.95l-.03.06c-.39.93-.96 1.76-1.65 2.45l-.05.05c-.7.69-1.53 1.25-2.44 1.63a7.701 7.701 0 01-5.91 0 7.82 7.82 0 01-2.51-1.67l-.06-.06c-.68-.7-1.24-1.53-1.62-2.45-.38-.92-.59-1.91-.59-2.95s.21-2.03.59-2.95c.39-.95.96-1.8 1.67-2.51.39-.39.83-.74 1.29-1.04.25-.16.51-.31.78-.44V92.28h-8.1c-.11 1.37-.23 2.74-.35 4.1-.16 1.76-.67 5.01-.34 6.62.88 4.27-2.97 17.15-14.29 19.52-5.58 1.16-11.35-.55-15.7-3.95-3.48-2.71-6.09-6.52-7.03-10.83-1.82-.07-3.67-.44-5.47-1.04-3.98-1.34-7.81-3.95-10.8-7.41-3.01-3.47-5.19-7.83-5.88-12.68-.35-2.53-.3-5.17.26-7.89-1.95-1.77-3.63-3.76-4.96-5.93C1.22 69.08-.05 64.9 0 60.6c.05-4.33 1.43-8.72 4.42-12.8 1.74-2.37 4.03-4.63 6.93-6.7-.03-.79-.03-1.58-.01-2.36.23-6.32 2.56-11.88 5.96-16.03 3.52-4.3 8.23-7.11 13.07-7.8h.02c.17-.71.37-1.41.63-2.09 1.56-4.23 4.77-7.83 8.7-10.12C43.68.4 48.43-.62 53.06.34c4.45.94 8.69 3.6 11.88 8.58zM30.77 99.21c1.64-5.16 5.97-10.31 14.14-14.48a4.154 4.154 0 015.57 1.8c1.03 2.04.23 4.52-1.8 5.57-7.57 3.87-10.42 8.31-10.42 12.18 0 3.02 1.72 5.84 4.22 7.8 2.54 1.97 5.82 3 8.92 2.36 3.86-.8 7.58-4.37 9.51-12.15v-81.8c-1.93-7.72-5.65-11.27-9.5-12.07-2.54-.53-5.24.07-7.54 1.42-2.33 1.35-4.2 3.43-5.09 5.83-1.18 3.2-.48 7.13 3.52 10.83 1.66 1.55 1.77 4.14.22 5.8-1.55 1.66-4.14 1.77-5.8.22-3.11-2.88-5.03-5.94-5.99-8.99-2.45.59-4.87 2.21-6.83 4.59-2.29 2.79-3.86 6.57-4.02 10.91-.04 1.15.02 2.37.19 3.62h-.01c.22 1.62-.5 3.3-1.98 4.21-3 1.84-5.21 3.87-6.76 5.98-1.88 2.56-2.74 5.25-2.77 7.84-.03 2.63.78 5.25 2.23 7.6 1.23 1.99 2.91 3.81 4.96 5.33a4.269 4.269 0 011.63 4.89c-.81 2.4-.99 4.73-.68 6.9.44 3.12 1.89 5.97 3.87 8.26 1.99 2.3 4.51 4.02 7.09 4.9a10 10 0 003.12.65zm.94-58.11a4.12 4.12 0 015.82.05 4.12 4.12 0 01-.05 5.82c-3.53 3.48-5.37 7.96-5.57 12.54-.19 4.72 1.34 9.58 4.56 13.57 1.43 1.77 1.14 4.36-.63 5.79-1.77 1.43-4.36 1.14-5.79-.63-4.51-5.59-6.65-12.39-6.38-19.06.29-6.62 2.95-13.08 8.04-18.08z"/></svg>
+                    <h3>Machine Learning</h3>
+                </a>
+                <button class="more-btn" data-category-description-button>
+                    <svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>                    
+                    <svg class="less-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 263.55c4.3 4.28 11.3 4.3 15.62.05 4.33-4.26 4.35-11.19.05-15.47L263.83 3.22c-4.3-4.27-11.3-4.3-15.63-.04L3.21 248.13c-4.3 4.28-4.28 11.21.05 15.47 4.32 4.25 11.32 4.23 15.62-.05L255.99 26.48l237.13 237.07z"/></svg>                
+                </button>
+                <p class="app-category-description" category-description-data>
+                    Projects mainly deve&shyloped on my free time. There are 
+                    two pro&shyjects in total for now. One is a tomato disease 
+                    classi&shyfier, a deep learning project using CNNs. The other
+                    one is a pro&shyject analy&shyzing cross sectional meteo&shyrological 
+                    data for countries around the world along the past 40
+                    or for some, the past 20 years. There is a third pro&shyject,
+                    based on neural style trans&shyfer, mainly deve&shyloped as a hobby.
+                    Some of the results produced by the pre&shyviously mention&shyed
+                    pro&shyject can be found on my Insta&shygram (link in footer).
+                </p>
+            </div>
+            <div class="app-category" category-data> 
+                <a href="pages/template.html?sr=h&d=a&pr=no">
+                    <svg viewbox="0 0 50 50" id="android" y="32"><path d="M0 0h48v48H0z" fill="none"/><path d="M12 36c0 1.1.9 2 2 2h2v7c0 1.66 1.34 3 3 3s3-1.34 3-3v-7h4v7c0 1.66 1.34 3 3 3s3-1.34 3-3v-7h2c1.1 0 2-.9 2-2V16H12v20zM7 16c-1.66 0-3 1.34-3 3v14c0 1.66 1.34 3 3 3s3-1.34 3-3V19c0-1.66-1.34-3-3-3zm34 0c-1.66 0-3 1.34-3 3v14c0 1.66 1.34 3 3 3s3-1.34 3-3V19c0-1.66-1.34-3-3-3zM31.06 4.32l2.61-2.61A.996.996 0 1032.26.3L29.3 3.25A11.92 11.92 0 0024 2c-1.92 0-3.72.46-5.33 1.26L15.7.29a.996.996 0 10-1.41 1.41l2.62 2.62C13.94 6.51 12 10.03 12 14h24c0-3.98-1.95-7.5-4.94-9.68zM20 10h-2V8h2v2zm10 0h-2V8h2v2z" fill="#231F20"/></svg>
+                    <h3>Android</h3>
+                </a>
+                <button class="more-btn" data-category-description-button>
+                    <svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>                    
+                    <svg class="less-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 263.55c4.3 4.28 11.3 4.3 15.62.05 4.33-4.26 4.35-11.19.05-15.47L263.83 3.22c-4.3-4.27-11.3-4.3-15.63-.04L3.21 248.13c-4.3 4.28-4.28 11.21.05 15.47 4.32 4.25 11.32 4.23 15.62-.05L255.99 26.48l237.13 237.07z"/></svg>                
+                </button>                
+                <p class="app-category-description" category-description-data>
+                    Various small projects of native android appli&shycations, 
+                    developed during my studies. The fea&shytures cover 
+                    layouts, acti&shyvities, forms, content pro&shyviders, photo galleries
+                    and inter&shyacting with the google maps API.  
+                </p>
+            </div>
+
+            <div class="app-category" category-data>
+                <a href="pages/template.html?sr=h&d=w&pr=no">
+                    <svg viewBox="0 0 100 100"><path d="M 45 0 C 20.187 0 0 20.187 0 45 c 0 24.813 20.187 45 45 45 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 z M 48 31.559 c 4.885 -0.239 9.636 -1.059 14.088 -2.403 C 62.971 33.151 63.535 37.48 63.71 42 H 48 V 31.559 z M 48 25.551 V 6.53 c 5.139 1.8 9.651 8.111 12.517 16.84 C 56.579 24.572 52.358 25.316 48 25.551 z M 42 6.53 v 19.021 c -4.358 -0.235 -8.579 -0.978 -12.517 -2.18 C 32.349 14.641 36.861 8.33 42 6.53 z M 42 31.559 V 42 H 26.29 c 0.175 -4.52 0.739 -8.849 1.622 -12.843 C 32.364 30.5 37.115 31.32 42 31.559 z M 20.284 42 H 6.127 c 0.565 -7.39 3.195 -14.208 7.318 -19.879 c 2.652 1.924 5.591 3.59 8.758 4.959 C 21.131 31.684 20.468 36.704 20.284 42 z M 20.284 48 c 0.184 5.296 0.847 10.317 1.919 14.921 c -3.167 1.369 -6.106 3.035 -8.758 4.959 C 9.322 62.208 6.692 55.39 6.127 48 H 20.284 z M 26.29 48 H 42 v 10.441 c -4.885 0.239 -9.636 1.059 -14.087 2.403 C 27.029 56.85 26.465 52.52 26.29 48 z M 42 64.45 v 19.02 c -5.139 -1.8 -9.65 -8.111 -12.517 -16.84 C 33.421 65.428 37.642 64.685 42 64.45 z M 48 83.47 V 64.45 c 4.358 0.235 8.579 0.978 12.517 2.18 C 57.651 75.359 53.139 81.67 48 83.47 z M 48 58.441 V 48 h 15.71 c -0.175 4.52 -0.739 8.85 -1.623 12.844 C 57.636 59.5 52.886 58.68 48 58.441 z M 69.716 48 h 14.157 c -0.565 7.39 -3.195 14.208 -7.318 19.879 c -2.652 -1.924 -5.591 -3.589 -8.758 -4.959 C 68.87 58.317 69.533 53.296 69.716 48 z M 69.716 42 c -0.184 -5.296 -0.847 -10.316 -1.919 -14.921 c 3.167 -1.369 6.106 -3.035 8.758 -4.959 C 80.679 27.792 83.308 34.61 83.873 42 H 69.716 z M 72.66 17.536 c -1.993 1.409 -4.176 2.65 -6.51 3.712 c -1.596 -4.749 -3.665 -8.889 -6.098 -12.223 C 64.804 11.02 69.08 13.931 72.66 17.536 z M 29.949 9.024 c -2.433 3.334 -4.502 7.475 -6.098 12.224 c -2.335 -1.062 -4.518 -2.302 -6.511 -3.712 C 20.92 13.931 25.196 11.02 29.949 9.024 z M 17.34 72.464 c 1.993 -1.409 4.176 -2.65 6.511 -3.712 c 1.596 4.749 3.666 8.889 6.098 12.224 C 25.196 78.98 20.92 76.069 17.34 72.464 z M 60.051 80.976 c 2.433 -3.334 4.502 -7.474 6.098 -12.223 c 2.334 1.062 4.517 2.302 6.51 3.712 C 69.08 76.069 64.804 78.98 60.051 80.976 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" /></svg>
+                    <h3>Web</h3>
+                </a>
+                <button class="more-btn" data-category-description-button>
+                    <svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>                    
+                    <svg class="less-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 263.55c4.3 4.28 11.3 4.3 15.62.05 4.33-4.26 4.35-11.19.05-15.47L263.83 3.22c-4.3-4.27-11.3-4.3-15.63-.04L3.21 248.13c-4.3 4.28-4.28 11.21.05 15.47 4.32 4.25 11.32 4.23 15.62-.05L255.99 26.48l237.13 237.07z"/></svg>                
+                </button>
+                <p class="app-category-description" category-description-data>
+                    Small scale projects mainly comprised of form-based appli&shycations. 
+                    I only develop the front end of these simple appli&shycations, 
+                    with Java&shyScript intera&shycting with the local storage of the browser
+                    to store information added by the user. One of them is 
+                    somewhat more complex, as it simu&shylates a small&shyscale e-shop. 
+                    It is the only appli&shycation that involves back-end develop&shyment.
+                </p>
+            </div>
+            <!-- maybe replace it with more category-->
+            <div class="app-category" category-data>
+                <a href="pages/template.html?sr=h&d=otr&pr=no">
+                    <svg viewBox="0 0 122.75 125.28" id="iot" y="276"><path d="M111.09 6.23c3.85 3.85 6.23 9.16 6.23 15.04s-2.38 11.19-6.23 15.04a21.184 21.184 0 01-15.03 6.23c-3.02 0-5.89-.63-8.49-1.76L85.6 44.5c6.61 4.42 10.97 11.95 10.97 20.49 0 7.21-3.1 13.7-8.04 18.21l2.03 2.6c3.2-1.92 6.94-3.03 10.94-3.03 5.87 0 11.19 2.38 15.03 6.23 3.85 3.85 6.23 9.16 6.23 15.04s-2.38 11.19-6.23 15.04c-3.85 3.85-9.16 6.23-15.03 6.23s-11.19-2.38-15.04-6.23-6.23-9.16-6.23-15.04S82.61 92.85 86.46 89c.12-.12.24-.23.36-.35l-1.98-2.67a24.517 24.517 0 01-12.9 3.64c-8.76 0-16.46-4.58-20.82-11.47L39.27 84.3c2.06 3.28 3.25 7.15 3.25 11.31 0 5.87-2.38 11.19-6.23 15.03a21.19 21.19 0 01-15.04 6.23c-5.87 0-11.19-2.38-15.03-6.23C2.38 106.78 0 101.46 0 95.59S2.38 84.4 6.23 80.55s9.16-6.23 15.03-6.23 11.19 2.38 15.04 6.23l.03.04L49.02 74c-1.1-2.79-1.7-5.84-1.7-9.02 0-4.61 1.27-8.93 3.48-12.62l-8.07-6.27a21.184 21.184 0 01-15.65 6.88c-5.87 0-11.19-2.38-15.03-6.23-3.85-3.85-6.23-9.16-6.23-15.04s2.38-11.19 6.23-15.03c3.85-3.85 9.16-6.23 15.03-6.23s11.19 2.38 15.03 6.23c3.85 3.85 6.23 9.16 6.23 15.03 0 3.89-1.04 7.53-2.86 10.67l8.06 6.26c4.51-5.07 11.08-8.27 18.41-8.27 3.4 0 6.63.69 9.58 1.93l2.03-3.82c-.9-.65-1.74-1.38-2.52-2.16-3.85-3.85-6.23-9.16-6.23-15.04s2.38-11.19 6.23-15.04C84.87 2.38 90.19 0 96.06 0s11.19 2.38 15.03 6.23zM74.95 71.04a3.577 3.577 0 010 5.06 3.559 3.559 0 01-5.05 0 3.577 3.577 0 010-5.06 3.559 3.559 0 015.05 0zm4.38-15.56c2.18 1.01 4.34 2.49 6.45 4.48.34.32.51.74.53 1.17.01.43-.14.86-.45 1.2l-.04.04c-.31.31-.72.47-1.13.48-.43.01-.86-.14-1.19-.45l-.03-.03c-1.8-1.69-3.63-2.96-5.45-3.81-1.85-.86-3.7-1.3-5.53-1.33-1.86-.03-3.72.36-5.58 1.15-1.87.8-3.73 2.01-5.55 3.62-.03.03-.06.06-.1.08-.34.27-.75.39-1.14.36-.41-.02-.82-.2-1.12-.53-.03-.03-.06-.06-.08-.1-.27-.33-.39-.75-.36-1.15.03-.43.22-.84.56-1.15 2.13-1.89 4.33-3.31 6.58-4.26 2.25-.95 4.54-1.41 6.85-1.37 2.26.04 4.53.56 6.78 1.6zm-2.72 6.98c1.33.51 2.64 1.28 3.9 2.31l.04.03c.34.29.54.69.58 1.11.04.41-.07.85-.35 1.2l-.04.05c-.29.34-.69.54-1.11.59-.42.04-.87-.08-1.23-.37-.98-.8-1.97-1.39-2.97-1.78-1-.39-2.01-.59-3.01-.58-1 0-2.02.21-3.02.61-1.02.4-2.03 1.01-3.01 1.8-.36.29-.8.41-1.23.37-.42-.04-.83-.25-1.13-.61-.29-.36-.41-.8-.37-1.23v-.03c.05-.42.25-.81.6-1.1 1.27-1.03 2.59-1.81 3.95-2.34 1.37-.53 2.77-.81 4.19-.81 1.44-.01 2.84.25 4.21.78zm-1.66 13.63zM19.03 29.04h1.55V26.9c0-1.77.72-3.37 1.89-4.53a6.418 6.418 0 014.54-1.89c1.77 0 3.37.72 4.53 1.89a6.413 6.413 0 011.89 4.53v2.14h1.23c.27 0 .5.23.5.5v10.57c0 .27-.23.5-.5.5H19.02c-.27 0-.5-.23-.5-.5V29.54c0-.28.23-.5.51-.5zm4.04 0h7.85v-2.18A3.926 3.926 0 0027 22.94a3.926 3.926 0 00-3.92 3.92v2.18h-.01zm-1.81 55.59L9.73 95.93l2.81 1.48 8.65-9.07 8.79 9.07 2.81-1.48-11.53-11.3zm-8.1 13.95l8.12-8.12 8.09 8.12v7.96H13.16v-7.96zm7.29 2.61l-1.07 2.8h3.75l-.99-2.84c.63-.32 1.06-.97 1.06-1.74 0-1.08-.88-1.95-1.95-1.95-1.08 0-1.95.88-1.95 1.95.02.79.49 1.47 1.15 1.78zm87.68.2c-.19.09-.38.2-.57.31-.57.33-1.13.74-1.71 1.21l-1.23-1.4c.42-.39.88-.75 1.37-1.07.39-.25.79-.48 1.21-.67.17-.08.33-.16.5-.23a7.453 7.453 0 00-3.29-3.09c-1.31-.63-2.79-.87-4.22-.74-1.42.14-2.81.66-3.96 1.55-1.32 1.03-2.33 2.56-2.72 4.59l-.12.64-.63.11c-.62.11-1.17.26-1.66.45-.47.18-.89.41-1.26.67-.29.21-.55.45-.76.71-.67.8-.98 1.8-.97 2.81.01 1.03.34 2.07.96 2.92.23.32.5.61.8.86.31.26.66.47 1.05.63.39.16.81.27 1.29.34h18.37c.9-.22 1.68-.51 2.35-.88.67-.37 1.21-.83 1.62-1.37.63-.84.95-2.04.96-3.26.02-1.28-.3-2.57-.91-3.51-.17-.27-.37-.51-.57-.73-.92-.99-2.08-1.41-3.28-1.42-.86-.02-1.76.19-2.62.57zM88.75 20.45c-.57-1.22-.89-2.49-.88-3.8.01-1.31.34-2.66 1.07-4.06 0-.01.01-.02.01-.03.95-1.61 2.28-2.69 3.76-3.29 1.24-.51 2.59-.68 3.91-.56 1.32.12 2.61.54 3.74 1.2 1.43.85 2.61 2.11 3.26 3.7.35.86.59 1.82.62 2.87.03 1.05-.15 2.18-.63 3.37l-3.6 5.6-7.51 1.08c-.37-1.1-.96-2.32-1.72-3.2-.82-.91-1.5-1.75-2.03-2.88zm4.5 10.75c-.35-.96-.32-1.56-.62-2.87l7.89-1.17c-.3 1.4-.03 2.12-.24 3.22-.65 3.47-5.83 4.03-7.03.82zm20.9 60.16c-3.24-3.24-7.71-5.24-12.66-5.24s-9.42 2-12.66 5.24-5.24 7.72-5.24 12.66 2 9.42 5.24 12.66 7.72 5.24 12.66 5.24 9.42-2 12.66-5.24 5.24-7.72 5.24-12.66-2-9.42-5.24-12.66zM108.72 8.6a17.834 17.834 0 00-12.66-5.24c-4.94 0-9.42 2-12.66 5.24s-5.24 7.71-5.24 12.66 2 9.42 5.24 12.66 7.71 5.24 12.66 5.24c4.94 0 9.42-2 12.66-5.24s5.24-7.72 5.24-12.66-2-9.42-5.24-12.66zM39.73 19.03c-3.24-3.24-7.71-5.24-12.66-5.24s-9.42 2-12.66 5.24a17.852 17.852 0 00-5.24 12.66c0 4.94 2 9.42 5.24 12.66s7.71 5.24 12.66 5.24c4.94 0 9.42-2 12.66-5.24s5.24-7.71 5.24-12.66c.01-4.94-2-9.42-5.24-12.66zm-5.81 63.9a17.852 17.852 0 00-12.66-5.24c-4.94 0-9.42 2-12.66 5.24s-5.24 7.71-5.24 12.66c0 4.94 2 9.42 5.24 12.66s7.71 5.24 12.66 5.24c4.94 0 9.42-2 12.66-5.24s5.24-7.71 5.24-12.66c.01-4.95-2-9.42-5.24-12.66z" fill-rule="evenodd" clip-rule="evenodd"/></svg>
+                    <h3 class="app-title">Other</h3>
+                </a>
+                <button class="more-btn" data-category-description-button>
+                    <svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>                    
+                    <svg class="less-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" d="M493.12 263.55c4.3 4.28 11.3 4.3 15.62.05 4.33-4.26 4.35-11.19.05-15.47L263.83 3.22c-4.3-4.27-11.3-4.3-15.63-.04L3.21 248.13c-4.3 4.28-4.28 11.21.05 15.47 4.32 4.25 11.32 4.23 15.62-.05L255.99 26.48l237.13 237.07z"/></svg>                
+                </button>                
+                <p class="app-category-description" category-description-data>
+                    This is an IoT end-to-end system, developed for 
+                    under&shystanding web-based tech&shynologies on IoT Systems.
+                    The system contains both hard&shyware and soft&shyware
+                    compo&shynents. It is a smart switch which can be 
+                    switched on or off both auto&shymatically and over Wi-Fi (from 
+                    the user's phone).<br><br>&nbsp&nbspThere is also a stand&shyalone appli&shycation, developed in python, for the needs
+                    of my free&shylance job as a mixture classi&shyfier and msds author. The 
+                    appl&shycation inter&shyacts with a data&shybase that contains the pro&shyducts 
+                    and contains logic for classi&shyfying them.
+                </p>
+            </div>
+        </section>
+
+        <p class="note-of-importance"><strong>Note:</strong> Currently, most projects are getting updated, 
+            with both impro&shyving code (from the semester initially developed) 
+            and adding more featu&shyres. I would be extre&shymely grateful for any feedback
+            or tips on how to improve or change these projects.
+            It would help immen&shysely my develop&shyment as a programmer.</p>
+
+    </main>
+
+    <footer> <!-- style as flexbox -->
+        <div class="about"> <!-- style with grid and split in half with one containg the contents and the other being empty-->
+            <h3>About</h3>
+            <p>
+                This page is a portfolio for some projects I have
+                developed during my free time and while studying for my masters in  
+                <a href="https://www.e-ce.uth.gr/studies/postgraduate/applied-informatics/?lang=en">Applied Informatics</a>,
+                offered by the <a href="https://www.e-ce.uth.gr/?lang=en">
+                Department of Electrical and Computer Engineering</a> (University of Thessaly). 
+                Upon coming across this website, I hope you would be able to get to know more about me and my work. 
+            </p>
+        </div>
+        
+        <section class="social"> <!--style with flexbox -->
+            <a href="https://www.linkedin.com/in/aspa-papadaki-jmle"><svg viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="#f5f5f5" clip-rule="evenodd" width="32" height="32" id="linkedin-round-icon" y="308"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm-215 1336h342v175h5c48-86 164-175 338-175 361 0 428 225 428 517v596h-357v-528c0-126-3-288-186-288-186 0-214 137-214 279v537h-357V1336zm-247-309c0 102-83 186-186 186-102 0-186-83-186-186 0-102 83-186 186-186 102 0 186 83 186 186zm-371 309h371v1113H834V1336z"/></svg></a>
+            <a href="https://github.com/apapadaki-edu"><svg width="64" height="64" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="#f5f5f5" clip-rule="evenodd" viewBox="0 0 640 640" id="github-icon" y="212"><path d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z"/></svg></a>
+            <a role="link" aria-disabled="true"><svg viewBox="0 0 50 50" width="100" height="100" id="docker-icon" y="112"><path fill="black" d="M20 9v5H10v5H5v5H1.125a.974.974 0 00-.969.813A11.73 11.73 0 000 26.75c0 .7.066 1.46.188 2.219 1.144-.274 3.242-.684 2.874-2.032 1.973 2.286 6.708 1.594 7.907.47 1.34 1.94 9.144 1.198 9.687-.313 1.68 1.968 6.887 1.968 8.563 0 .543 1.511 8.316 2.254 9.656.312.426.399 1.313.73 2.344.907.347-.66.668-1.325.968-2.032 6.352-.078 7.723-4.644 7.782-4.843.11-.383-.04-.778-.344-1.032-.105-.09-2.45-1.992-6.25-1.343-1.066-3.473-3.813-5.055-3.938-5.125a.991.991 0 00-1.124.093c-.102.082-2.465 2.086-2.094 6.188a7.371 7.371 0 00.781 2.75c-.82.457-2.23 1.031-4.5 1.031H32v-5h-5V9zm21.219 19.313c-.121.234-.278.46-.407.687h9.032c-1.086-.273-3.418-.64-3.032-2.063-1.277 1.477-3.703 1.696-5.593 1.375zm-.407.687H.188a15.645 15.645 0 001.5 4.5c5.43 1.277 11.128-.668 11.187-.688.523-.183 1.07.106 1.25.626.184.519-.074 1.101-.594 1.28-.191.067-3.625 1.22-7.844 1.22a21.13 21.13 0 01-2.593-.157C5.719 39.261 10.168 42 17 42c10.805 0 19.113-4.59 23.813-13zM.188 29c-.004-.016.003-.016 0-.031-.067.015-.13.015-.188.031zM22 11h3v3h-3zm-10 5h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zM7 21h3v3H7zm5 0h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zM16 31c.129 0 .262.02.375.063-.121.07-.219.19-.219.343 0 .227.18.438.407.438a.449.449 0 00.375-.219c.05.117.062.238.062.375 0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1z"/></svg></a>
+            <a href="https://www.instagram.com/guess.the_mood"><svg data-name="Layer 1" viewBox="0 0 122.88 122.88" width="32" height="32" id="black-instagram-icon" y="80"><path fill="#f5f5f5" d="M61.45 0C44.76 0 42.66.07 36.11.37A45.08 45.08 0 0021.2 3.23a29.86 29.86 0 00-10.88 7.08 30.26 30.26 0 00-7.1 10.88A44.92 44.92 0 00.37 36.11C.08 42.66 0 44.75 0 61.44s.07 18.77.37 25.33a45.08 45.08 0 002.86 14.91 30.12 30.12 0 007.08 10.88 30.13 30.13 0 0010.88 7.1 45.17 45.17 0 0014.92 2.85c6.55.3 8.64.37 25.33.37s18.77-.07 25.33-.37a45.17 45.17 0 0014.92-2.85 31.54 31.54 0 0018-18 45.6 45.6 0 002.86-14.91c.29-6.55.37-8.64.37-25.33s-.08-18.78-.37-25.33a45.66 45.66 0 00-2.86-14.92 30.1 30.1 0 00-7.09-10.88 29.77 29.77 0 00-10.88-7.08A45.14 45.14 0 0086.76.37C80.2.07 78.12 0 61.43 0zm-5.52 11.07h5.52c16.4 0 18.34.06 24.82.36a34 34 0 0111.41 2.11 19 19 0 017.06 4.6 19.16 19.16 0 014.6 7.06 34 34 0 012.11 11.41c.3 6.47.36 8.42.36 24.82s-.06 18.34-.36 24.82a33.89 33.89 0 01-2.11 11.4 20.35 20.35 0 01-11.66 11.65 33.64 33.64 0 01-11.41 2.12c-6.47.3-8.42.36-24.82.36s-18.35-.06-24.83-.36a34 34 0 01-11.41-2.12 19 19 0 01-7.07-4.59 19 19 0 01-4.59-7.06 34 34 0 01-2.12-11.41c-.29-6.48-.35-8.42-.35-24.83s.06-18.34.35-24.82a33.7 33.7 0 012.12-11.41 19 19 0 014.59-7.06 19.12 19.12 0 017.07-4.6 34.22 34.22 0 0111.41-2.12c5.67-.25 7.86-.33 19.31-.34zm38.31 10.2a7.38 7.38 0 107.38 7.37 7.37 7.37 0 00-7.38-7.37zm-32.79 8.62A31.55 31.55 0 1093 61.44a31.56 31.56 0 00-31.55-31.55zm0 11.07A20.48 20.48 0 1141 61.44 20.48 20.48 0 0161.45 41z"/></svg></a>
+        </section>
+        <p class="copyright"> Last updated Mar 2023</p>
+    </footer>
+</body>
+</html>
