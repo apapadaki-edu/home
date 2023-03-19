@@ -193,13 +193,53 @@ const PROJECT_CONTENTS = {
     },
     "nb": {
         title: "Simple Notebook",
-        body: "The project's description is on the way.",
+        body: "The project's description is on the way.",        
+        images: [
+            {
+                path: "../images/nb_ini.png",
+                caption: "Start screen"
+            },
+            {
+                path: "../images/nb_new_note.png",
+                caption: "Add Note"
+            },
+            {
+                path: "../images/nb_update_note.png",
+                caption: "Update Note"
+            }
+        ],
+    
+        video: "../videos/nb_notepad.mp4",
+        specs: {
+            Languages: [["Html","5"],[" CSS","3"], ["Javascript", "Vanilla"]],
+            Databases: [["IndexedDB", "1 (in browser db)"]],
+            Servers: [["not needed", ""]],
+            'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""]],
+            'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
+        },
         github: "https://github.com/apapadaki-edu/web_based/tree/note-pad",
     },
     "sp": {
         title: "Sensor Playground",
         body: "The project's description is on the way.",
+        images: [
+            {
+                path:"../images/sp_ini.png",
+                caption: "Main screen"
+            },            
+            {
+                path:"../images/sp_with_results.png",
+                caption: "With results"
+            },
+        ],
+        video: "../videos/sp_sensors.mp4",
         github: "https://github.com/apapadaki-edu/web_based/tree/sensors",
+        specs: {
+            Languages: [["Html","5"],[" CSS","3"], ["Javascript", "Vanilla"]],
+            Servers: [["Apache", "2.4.46"]],
+            'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""]],
+            'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
+        },
     },
     "sda": {
         title: "MSDS Manager",
@@ -310,7 +350,7 @@ document.addEventListener("click", (ev)=>{
     document.querySelectorAll(".pr-article-container").forEach((article) => {
         
         if(curProject.id === article.id) {
-            article.classList.add("open")
+            article.classList.add("open");
             //prTitleContainer.innerHTML = PROJECT_CONTENTS[article.id].title;
             ev.target.classList.add("selected");
             document.querySelector(".project-specs tbody").innerHTML = createTable(article.id);

@@ -42,14 +42,12 @@ body {
 
 .pr-article-container {
     display: none;
-
 }
 .pr-article-container.open {
     display:flex;
     flex-direction: column;
-    row-gap: 2rem;
+    row-gap: 2rem;;
 }
-
 
 .fullpage {
     display: none;
@@ -147,6 +145,7 @@ th.cat-heading {
         left: 50%;
         transform: translateX(-50%);
     }
+    
 }
 
 @media (min-width: 551px) {
@@ -188,16 +187,18 @@ th.cat-heading {
         "project-tab aside";
         grid-template-columns: 5fr 2fr;
         row-gap: 0;
-        column-gap: 5%;   
+        column-gap: 5%;  
     }
 
 
     .pr-navigation  {
         grid-area: project-nav;
+
     }
     
     .pr-heading {
         grid-area: pr-heading;
+
     }
     
     .project-tabs {
