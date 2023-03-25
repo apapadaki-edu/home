@@ -1,6 +1,6 @@
 function c() {
 const URL_PARAMS_PAGES = {
-    h: "Home",
+    h:  "Home", 
     ml: "Machine Learning Subspace",
     a: "Android Subspace",
     w: "Web Subspace",
@@ -37,8 +37,6 @@ const URL_PARAMS_PROJECTS = {
         SMART_LIGHT_SWITCH: "iot"
     }
 }
-
-
 const PROJECT_CONTENTS = {
     "ccp": {
         title: "Crop Cultivation Prediction",
@@ -55,10 +53,10 @@ const PROJECT_CONTENTS = {
     "c": {
         title: "Contact Methods",
         body: "<p>This is a messaging application that makes it easier to manage the types of \
-            messages you want to send, from one UI. For instance, if we want to send an email\
-            we must open the mail app and for messaging, one of the other available messaging apps on our phone directly\
+            messages someone want to send, from one UI. For instance, if we want to send an email\
+            we must open the mail app and for messaging, one of the other available messaging apps on their phone directly\
             Here the user can provide their message, as well as, the email address or phone number of the receiver and by \
-            the press of a button, the appropriate application opens with its fields already filled in. \
+            the press of a button, the appropriate application opens with its fields already filled out. \
             This application makes it easier for sending messages from one UI. The application detects the systems language and \
             the corresponding keyboard layout is presented.</p>\
             <p>As for its structure, the user is presented with a simple UI that probes them for an email address or a phone number. \
@@ -79,10 +77,10 @@ const PROJECT_CONTENTS = {
             ],
         github: "https://github.com/apapadaki-edu/android-based/tree/contact-methods",
         specs: {
-            Software:[["Android Studio", "Dolphin 2021.3.1"]],
-            Languages: [["Java","8"],[" XML","1.0"]],
-            Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
-            Dependencies: [["flexbox", "3.0.0"], ["play-services-location", "20.0.0"]],
+            Software:[["Android Studio", "Dolphin v2021.3.1"]],
+            Languages: [["Java","v8"],[" XML","v1.0"]],
+            Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
+            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
     },
@@ -109,10 +107,10 @@ const PROJECT_CONTENTS = {
         github: "https://github.com/apapadaki-edu/android-based/tree/calculator",
         video: "../videos/sc_calculator.mp4",
         specs: {
-            Software:[["Android Studio", "Dolphin 2021.3.1"]],
-            Languages: [["Java","8"],[" XML","1.0"]],
-            Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
-            Dependencies: [["flexbox", "3.0.0"], ["play-services-location", "20.0.0"]],
+            Software:[["Android Studio", "Dolphin v2021.3.1"]],
+            Languages: [["Java","v8"],[" XML","v1.0"]],
+            Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
+            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
         
@@ -126,7 +124,7 @@ const PROJECT_CONTENTS = {
             from the closest to the latest one. For each event on the list, its title, the date of creation and the due date will be included as well as \
             a check box for bulk deleting events. Events that are past due are still stored in the database, however, they are not displayed on the main \
             screen. A button with the '+' sign can be used to add a new event. Once pressed a new activity is started with a new screen that contains \
-            the form with the event's information, which the user needs to fill out. The information includes its title, a description and the date of the event.  \
+            the form with the event's information, which the user needs to fill in. The information includes its title, a description and the date of the event.  \
             On this new screen, there are three buttons available. One to save the event, another to delete it and a final one to cancel the changes, after each \
             operation the user is directed back to the main screen. The event list must be updated after returning from the form screen. The user can also click on \
             an event from the event list and be brought to the activity with the form to modify the event's information. All events will be stored in \
@@ -146,10 +144,10 @@ const PROJECT_CONTENTS = {
         video: "../videos/ca_calendar.mp4",
         github:"https://github.com/apapadaki-edu/android-based/tree/calendar",
         specs: {
-            Software:[["Android Studio", "Dolphin 2021.3.1"]],
-            Languages: [["Java","8"],[" XML","1.0"]],
-            Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
-            Dependencies: [["flexbox", "3.0.0"], ["play-services-location", "20.0.0"]],
+            Software:[["Android Studio", "Dolphin v2021.3.1"]],
+            Languages: [["Java","v8"],[" XML","v1.0"]],
+            Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
+            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
 
@@ -163,9 +161,9 @@ const PROJECT_CONTENTS = {
         github: "https://github.com/apapadaki-edu/android-based/tree/maps-app",
         specs: {
             Software:[["Android Studio", "Dolphin 2021.3.1"]],
-            Languages: [["Java","8"],[" XML","1.0"]],
-            Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
-            Dependencies: [["flexbox", "3.0.0"], ["play-services-location", "20.0.0"]],
+            Languages: [["Java","v8"],[" XML","v1.0"]],
+            Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
+            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
     },
@@ -179,21 +177,91 @@ const PROJECT_CONTENTS = {
             the image's details follow after. The description can be modified and stored anew. Finally, the user can delete a selected image.</p>",
         github: "https://github.com/apapadaki-edu/android-based/tree/photo-gallery",
         specs: {
-            Software:[["Android Studio", "Dolphin 2021.3.1"]],
-            Languages: [["Java","8"],[" XML","1.0"]],
+            Software:[["Android Studio", "Dolphin v2021.3.1"]],
+            Languages: [["Java","v8"],[" XML","v1.0"]],
             Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
-            Dependencies: [["flexbox", "3.0.0"], ["play-services-location", "20.0.0"]],
+            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
     },
     "as": {
         title: "Art Store",
-        body: "The project's description is on the way.",
+        body: "<p>Model page of an Art Store for a product and a new customer form. Focusing on mainly on the layout. \
+            The user can create a new customer account from the designed form and manage customers. \
+            They can update, delete and view customer information. </p>\
+            <h4>Interworkings</h4><p>Once the user navigates to the model product page, they can be directed to the form page \
+            by clicking on the “Create new account” link at the top left side of the page. \
+            Once there, they can complete the form, check that they agree with the terms of use and press submit. \
+            Before submitting the data, the required fields are checked for having values, \
+            if there are empty such fields an error message is presented to the user \
+            with the option to navigate back to the form to fill in all required fields. \
+            If everything is okay, the information are displayed to the user and they \
+            can navigate to managing customers with the  press of a button. Once on \
+            navigation page all customers with some information are listed, with the options \
+            to delete, update or view each customers information. Once any of the three \
+            previously mentioned operations are complete the user is redirected to the customer management page.</p>\
+            <h4>Technical</h4><p>Apart for the server-side part of handling customer, \
+            the main purpose was to design the front-end of the page. The database \
+            functionality was for learning how to handle form data and interact with databases, \
+            even though it is not relevant so much for the art store but from an administrator's perspective. \
+            We were not yet guided on how to use cookies so for navigating from one page to another, \
+            while managing customers no-cookie logic was developed. More about this and a more detailed description \
+            of how this was accomplished can be found on the projects GitHub page, following the link below.</p>",
         github: "https://github.com/apapadaki-edu/web_based/tree/art-store",
+        images: [
+            {
+                path:"../images/sda_form_ini.png",
+                caption: "Form main"
+            },
+            {
+                path:"../images/sda_empty_field.png",
+                caption: "Verification error"
+            },
+            {
+                path:"../images/sda_verification_ok.png",
+                caption: "Verification ok"
+            },
+            {
+                path:"../images/sda_list_customers.png",
+                caption: "List customers"
+            },
+            {
+                path:"../images/sda_view_customer.png",
+                caption: "View customer"
+            },
+            {
+                path:"../images/sda_update_successful.png",
+                caption: "Update customer"
+            }
+        ],
+        specs: {
+            Languages: [["HTML5",""],[" CSS3", ""], ["Javascript", ""], ["PHP", "7.4.3"], ["PL/pgSQL","v12.12"]],
+            Databases: [["PostgreSQL", "v12"]], // ######### find server and php info from ubuntu #########
+            Servers: [["Apache", "v2.4.41"]],
+            'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""], ["Firefox", ""]],
+            'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
+        },
     },
     "nb": {
         title: "Simple Notebook",
-        body: "The project's description is on the way.",        
+        body: "<p>Application that records notes. The user can see all notes created, \
+            add a new note, update the information of an already existing one and finally, \
+            delete  a note. Additionally, there is the choice of clearing all notes. \
+            Information available  for the user  to include in a note are its title, \
+            the description and a theme. The themes from which they can choose include, \
+            important, reminder, shopping, planning, and lastly, there is the choice of no-theme.</p>\
+            <p>On launching the application the user is presented with the main screen, \
+            which lists all available notes they have previously been created, their count, \
+            a button to create a new note and one to clear all notes. Note count was included \
+            for anyone that wants to clean unneeded notes they may have forgotten to delete, \
+            after they reach a number they consider appropriate for this task. The user can \
+            click on a note to edit its contents or delete it. If they decide to create a new \
+            note, they are presented with a form to fill in the notes information.</p>\
+            <p>Technical aspects, a server is not needed, apart from hosting the web application, \
+            since there was the use of indexedDB for database operations. This is a low-level \
+            client storage API available on the browsers. This approach was a personal preference, \
+            in order to get accustomed to applications other than server-side storage ones. \
+            This application was designed, having in mind, mainly mobile users.</p>",        
         images: [
             {
                 path: "../images/nb_ini.png",
@@ -211,8 +279,8 @@ const PROJECT_CONTENTS = {
     
         video: "../videos/nb_notepad.mp4",
         specs: {
-            Languages: [["Html","5"],[" CSS","3"], ["Javascript", "Vanilla"]],
-            Databases: [["IndexedDB", "1 (in browser db)"]],
+            Languages: [["HTML5",""],[" CSS3",""], ["Javascript", ""]],
+            Databases: [["IndexedDB", "v1 (in browser db)"]],
             Servers: [["not needed", ""]],
             'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""]],
             'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
@@ -221,7 +289,23 @@ const PROJECT_CONTENTS = {
     },
     "sp": {
         title: "Sensor Playground",
-        body: "The project's description is on the way.",
+        body: "<p>Web application that finds the sensors that it can reach from the browser, \
+            activate, or deactivate them and record the results at provided time intervals. \
+            Active buttons of the available sensors can be pressed once to activate them. \
+            Once active the user can provide a period on the field next to each sensor and press enter \
+            for the measurements to be displayed at the given interval. The period can be \
+            changed while the sensor is active, by typing a new one and pressing enter once more.</p>\
+            <p>For safety reasons the browser does not allow applications direct access \
+            to core sensors on our devices, so buttons that control the sensors are active \
+            only for those that are allowed access and inactive for all the others. The reason \
+            the button for not available sensors are displayed, are for the user to know the wide range \
+            of sensors that we carry on us, at any given time.</p>\
+            <p>Technical aspects, a server is required, apart from hosting the application, since workers were used for controlling \
+            the display of sensor results with accordance to the given period and workers are defined in external files. \
+            Purposes of this application was to access sensors and work with threads. \
+            In the works, is the development of a flask application that connects to a remote \
+            Redis database for storing sensor date in the form of time series. Once developed \
+            I will post new media files in this section.</p>",
         images: [
             {
                 path:"../images/sp_ini.png",
@@ -235,7 +319,7 @@ const PROJECT_CONTENTS = {
         video: "../videos/sp_sensors.mp4",
         github: "https://github.com/apapadaki-edu/web_based/tree/sensors",
         specs: {
-            Languages: [["Html","5"],[" CSS","3"], ["Javascript", "Vanilla"]],
+            Languages: [["HTML5",""],[" CSS3",""], ["Javascript", ""]],
             Servers: [["Apache", "2.4.46"]],
             'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""]],
             'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
@@ -243,22 +327,89 @@ const PROJECT_CONTENTS = {
     },
     "sda": {
         title: "MSDS Manager",
-        body: "The project's description is on the way.",
+        body: '<p>An application with two main features. The first one is the management of products, additives and \
+            material safety datasheets. The second one is the classification of products based on their hazardous properties. \
+            This app could assist those who work for multiple companies with the management of their datasheets. It \
+            can be a cumbersome task, since changes in regulations or a substance\'s hazzardous properties, occur frequently. \
+            Even more essential, since MSDS autors are obliged to review the datasheets every two years maximum. </p> \
+            <p>The users can store new or update already existing products and their datasheets. They can store \
+            and manage all additives of those products. Finally, they can find the classification of products \
+            based on the hazzardous properties of their additives. The classification can be also generated automatically, \
+            with the press of a button. The only thing remaining is to check for any specific conditions \
+            applicable to any products, however not included in the regulation.</p>\
+            <p>Technical aspects of this application. The database that supports the application was designed from scratch. \
+            The logic behind the classification was according to (EC) No 1907/2006 (REACH) Regulation, as was until July 2021. \
+            There has not been revised, for the purposes of this project, since then.</p>\
+            <p>New substances cannot be added. \
+            The generated classification is based on  those hazards that are commonly applied for mechanical oils, \
+            since the application  was designed for users that work with datasheets from that industry. \
+            There are also some limited filtering features for products, additives and substances. \
+            Additional capabilities could be functions that generate a resulting product from the provided consecrations \
+            of their components.</p>',
+        images: [
+            {
+                path:"../images/sda_start_page.png",
+                caption: "Main screen"
+            },            
+            {
+                path:"../images/sda_products.png",
+                caption: "Product Management"
+            },            
+            {
+                path:"../images/sda_additives.png",
+                caption: "Additive Management"
+            },
+            {
+                path:"../images/sda_classification.png",
+                caption: "Classification"
+            },
+            {
+                path:"../images/sda_result_classification.png",
+                caption: "Result Classification"
+            },
+        ],
+        video: "../videos/sda_msdsmngr.mp4",
         github: "https://github.com/apapadaki-edu/standalone_msds_manager",
+        specs: {
+            Languages: [["Python", "v3.9"], ["PL/pgSQL","v15.1"]],
+            Databases: [["PostgreSQL", "v15"]],
+            Libraries: [["numpy", "v1.20.1"],["psycopg2", "v2.9"], ["Pillow", "v8.1.0"], ["python-dateutil", "v2.8.1"]],
+            Frameworks: [["Tkinter", "v8.3"]],
+            Tools: [["ER2SQL", "v0.5.15.729"]]
+        },
     },
     "iot": {
         title: "Smart Light Switch",
-        body: "The project's description is on the way.",
+        body: '<p>In a nutshell, smart light switch developed from the hardware level to the software level. \
+            A device was developed that can keep track of the time and date \
+            and sense the changes in luminosity of the environment to switch the lights on or off accordingly. \
+            The device operates both automatically and manually.</p>\
+            <p>Depending on whether the user has control of the device from their phone, \
+            they can either turn on the switch from their phones or leave control \
+            to the device itself. For instance, if the user has opened the app \
+            that controls the switch on their phone, the smart device can detect this \
+            and let the user make the decisions (παραχωρήσει). However, if the\
+            the app is closed, the device can switch on or off the lights \
+            depending on the time of day and the levels of luminosity in the room.</p>\
+            <p>Some technical aspects of the system developed. \
+            The device was constructed using a microcontroller and chips so that \
+            the individual parts of the device can operate. The device was \
+            installed on the wall next to a light switch. The design of the application \
+            controlling the device was provided by the blynk cloud platform. \
+            Node-RED was used for flow control, helping with managing the different \
+            parts of the system and the way they communicate. Also, luminosity measurements \
+            along with the time of measurement were send through HiveMQ broker \
+            to Node-RED and with the help of some nodes they were stored in a Redis database. \
+            Those measurements will be used in a different project later.</p>',
         github: "https://github.com/apapadaki-edu/smart-light-switch",
         specs: {
             Hardware:[["NodeMCU Lua ESP8266", "RISC microcontroller, 4MB flash, integrated Wi-Fi chip"], ["SG90 Micro Servo", "Small servo motor with up to 180 degree rotation."],
                 ["Photoresistor", "dark resistance: in excess of 200 kΩ and bright-light: 1 or 2 kΩ"],["DS1302 RTC", "Real time clock"], ["Resistor", "1kΩ"]],
-            Software: [["Ubuntu Linux", "v20.04.3 (dev OS)"], ["redis-server", "v4.0.7 (installed locally)"],
+            Software: [["redis-server", "v4.0.7 (installed locally)"],
                 ["node-red", "v2.1.5 (insalled locally)"], ["Arduino IDE", "v1.8.15"], ["Blynk Cloud", "Free plan"], ["HiveMQ and Dashboard", "<a href=\"mqtt-dashboard.com/index.com\" style=\"color:#0028e5;\">HiveMQ dashboard</a>"]],
-            Languages: [["C++","11"]],
-            Libraries: [["ESP8266WiFi", ""], ["BlynkSimpleEsp8266", ""], ["Servo", ""], ["ThreeWire", ""],
-                ["RTcDS1302", ""],
-                ["PubSubClient]", ""]]
+            Languages: [["C++","v11"]],
+            Libraries: [["ESP8266WiFi", "1.0.6"], ["BlynkSimpleEsp8266", "1.2.1"], ["Servo", "1.1.8"], ["RTC by Makuna", "2.3.5"],
+                ["PubSubClient", "1.13.3"]]
         },
     }
 }
@@ -293,15 +444,6 @@ class Project {
 
     }
 }
-
-
-/* implement a method to populate the .pr-navigation menu 
-//with a href property values the project codes
-// the number of elemnts will depend on the 
-//values of urlParamsProjects[project_code] values
-*/
-function populatePrNavigationMenu() {}
-
 
 const CUR_URL= document.URL.match(/(?<=\w\/).[^\/]+$/)[0];
 const CUR_PR_CATEGORY = CUR_URL.match(/(?<=d=)\w+/)[0];
@@ -382,10 +524,6 @@ mutationObserver.observe(
     {attributes: true}
 )
 */
-
-
-
-
 //##############################################################################
 
 
@@ -396,6 +534,7 @@ window.addEventListener("load", (ev)=>{
     Object.values(URL_PARAMS_PROJECTS[CUR_PR_CATEGORY]).forEach((pr)=>{
         createArticle(pr);
     });
+
 
     //set project visibility based on url d value
     prContainer.querySelectorAll(".pr-article-container").forEach((article) => {
@@ -419,7 +558,7 @@ window.addEventListener("load", (ev)=>{
 
     //change the header title based on the projects's category
     const textElms = document.querySelectorAll(".site-description span");
-    textElms[0].innerText = "Inside";
+    //textElms[0].innerText = "Inside";
     textElms[1].innerText = URL_PARAMS_PAGES[CUR_PR_CATEGORY];
     document.title = URL_PARAMS_PAGES[CUR_PR_CATEGORY];
 
@@ -442,7 +581,6 @@ function createArticle(prId) {
     articleBody = document.createElement("div");
     articleBody.classList.add("pr-desc");
     articleBody.innerHTML = PROJECT_CONTENTS[prId].body;
-    articleBody.style.textIndent = "3%";
     articleContainer.appendChild(articleBody);
 
     articleRepo = document.createElement("p");
@@ -455,7 +593,7 @@ function createArticle(prId) {
 
 
     const articlePics = document.createElement("div");
-    articlePics.classList.add("app-layout-imgs", "slider");
+    articlePics.classList.add("app-layout-imgs");
 
     articleContainer.appendChild(articlePics);
     
@@ -471,7 +609,6 @@ function createArticle(prId) {
         document.querySelector('.pr-container').appendChild(fullPage);
 
         // populate with images
-
         PROJECT_CONTENTS[prId].images.forEach((img)=>{
             const figureNode = document.createElement("figure");
             const imgNode = document.createElement("img");
@@ -483,15 +620,13 @@ function createArticle(prId) {
               });
             figureNode.appendChild(imgNode);
             const figCap = document.createElement("figcaption");
+            figCap.classList.add("caption");
             figCap.innerText = img.caption;
-            figCap.style.textAlign = "center";
             figureNode.appendChild(figCap)
 
             articlePics.appendChild(figureNode);
         });
-
     }
-
 
     if(PROJECT_CONTENTS[prId].video){
         const articleVid = document.createElement("div");
@@ -505,8 +640,8 @@ function createArticle(prId) {
         articleVid.appendChild(vid);
 
         const vidCaption = document.createElement("p");
+        vidCaption.classList.add("caption");
         vidCaption.innerText = "App demo";
-        vidCaption.style.textAlign = "center";
         articleVid.append(vidCaption);
 
         articlePics.appendChild(articleVid);

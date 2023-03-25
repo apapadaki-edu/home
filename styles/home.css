@@ -191,12 +191,13 @@ header{
 
 
 .app-category-description {
-    min-height: 0;
+    max-height: 0;
     overflow-y: hidden;
     font-size: 1rem;
     position: relative;
-    line-height: 0;
     margin-bottom: 5%;
+    transition: max-height .5s ease-out;
+
 }
 
 .note-of-importance {
@@ -206,8 +207,8 @@ header{
 }
 
 .app-category-description.open {
-    line-height: 1.1;
-    transition: all .3s ease-in;
+    max-height: 100vh;
+    transition: max-height .5s ease-in;
 }
 
 
@@ -541,6 +542,7 @@ svg#docker-icon {
         vertical-align: middle;
         text-align: center;
         padding: 0em 1rem;
+        background-color: #c0c0c200;
     }
 
     .sub-nav-container:nth-child(2) .sub-nav a {
@@ -566,7 +568,11 @@ svg#docker-icon {
         font-size: 0.95rem;
         transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
         border-top: 2px solid #000000;
-        background-color: #dbdbdb7e;
+        background-color: #e3e2e2f5;
+    }
+
+    .sub-nav-container.active > a {
+        background-color: #e3e2e2f5;
     }
     
     .sub-nav-container.active > a.link + .sub-nav {

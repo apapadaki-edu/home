@@ -84,8 +84,6 @@ header{
     color: #171717e1;
 }
 
-
-
 .hamb-menu-banner{
     display:none;
 }
@@ -150,8 +148,6 @@ svg#docker-icon {
     font-size: 0.8rem;
     text-align:center;
 }
-
-
 
 
 @media (max-width: 900px) {
@@ -279,7 +275,7 @@ svg#docker-icon {
     }
 
     .site-description {
-        height:55vh;
+        height:45vh;
         box-sizing: border-box;
         margin-top: calc(20px + 2rem);
         padding: 16vh 6vw 6vh 0;
@@ -357,6 +353,7 @@ svg#docker-icon {
         vertical-align: middle;
         text-align: center;
         padding: 0em 1em;
+        background-color: #c0c0c200;
     }
 
     .sub-nav-container:first-of-type > a:hover {
@@ -378,7 +375,7 @@ svg#docker-icon {
         box-sizing: border-box;
         padding: 1em;
         font-size: 0.95rem;
-        background-color: #fcfcfcf5;
+        background-color: #f6f6f6f5;
         inline-size: max-content;
         pointer-events: none; /*not be clickable when not visible*/
         opacity: 0;
@@ -386,7 +383,9 @@ svg#docker-icon {
         transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     }
     
-
+    .sub-nav-container.active > a {
+        background-color: #f6f6f6f5;
+    }
     .sub-nav-container.active > a + .sub-nav {
         opacity:1;
         pointer-events:auto; /*be clickable when visible*/

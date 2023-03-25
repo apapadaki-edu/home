@@ -7,14 +7,14 @@
         <title>Standalone App</title>
         <link href="../styles/template.css" rel="stylesheet">
         <link href="../styles/template-main.css" rel="stylesheet">
+        <link href="../styles/darkmode.css" rel="stylesheet">
         <script src="../scrips/nav-drop-down.js" defer></script>
         <script src="../scrips/globals.js" defer></script> <!--toggle between async and defer-->
     </head>
     <body>
-        <header>
-            <!-- here the navigation but with js-->
+        <header>  
             <div id="header-container">
-                <div class="hamb-menu-banner"><button class="hamb-menu" hamb-menu><svg class="hamb-menu-icon"x="0px" y="0px" width="122.879px" height="103.609px" viewBox="0 0 122.879 103.609" enable-background="new 0 0 122.879 103.609" xml:space="preserve"><g><path fill="currentColor" clip-rule="evenodd" d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"/></g></svg></button></div>
+                <div class="hamb-menu-banner"><button class="hamb-menu" hamb-menu><svg class="hamb-menu-icon" x="0px" y="0px" width="122.879px" height="103.609px" viewBox="0 0 122.879 103.609" enable-background="new 0 0 122.879 103.609" xml:space="preserve"><g><path fill="currentColor" clip-rule="evenodd" d="M10.368,0h102.144c5.703,0,10.367,4.665,10.367,10.367v0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,20.735,0,16.07,0,10.368v0C0,4.665,4.666,0,10.368,0L10.368,0z M10.368,82.875 h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0c0,5.702-4.664,10.367-10.367,10.367H10.368C4.666,103.609,0,98.944,0,93.242l0,0 C0,87.54,4.666,82.875,10.368,82.875L10.368,82.875z M10.368,41.438h102.144c5.703,0,10.367,4.665,10.367,10.367l0,0 c0,5.702-4.664,10.368-10.367,10.368H10.368C4.666,62.173,0,57.507,0,51.805l0,0C0,46.103,4.666,41.438,10.368,41.438 L10.368,41.438z"/></g></svg></button></div>
                 <nav class="main-nav-container">
                     <ul class="main-nav">
                         <li class="sub-nav-container" data-dropdown><a class="link" data-dropdown-button href="../index.html">Home</a></li>
@@ -65,6 +65,7 @@
         <main>
             <nav class="pr-navigation">
                 <ul class="pr-nav-container">
+                    <!--<li class="pr-select"></li>-->
                 </ul>
             </nav>
 
@@ -73,34 +74,25 @@
 
                 <section class="project-tabs">
                     <!--
-                    <article id="sample" class="pr-article-container">
-                        <div class="pr-desc">
-                            <p>
-                                Duis at augue sit amet quam euismod faucibus. 
-                                Donec faucibus tempor odio at tempus. Nam nec feugiat tellus. 
-                                Donec ac est semper, scelerisque ex ut, dictum odio. Vestibulum non justo 
-                                quam. Suspendisse mattis elementum lorem eu fringilla. Aenean efficitur, 
-                                est sit amet condimentum varius, risus mi efficitur urna, sed egestas 
-                                elit purus ac tellus. Quisque egestas vulputate malesuada.
-                            </p>
-                        </div>
+                    <article class="pr-artcle-container">
+                        <div class="'pr-desc"></div>
+                        <p class="github"></p>
                         <div class="app-layout-imgs">
-
+                            <figure>
+                                <img>
+                                <figcaption class="caption"></figcaption>
+                            </figure>
+                            <div class="pr-demo">
+                                <video></video>
+                                <p class="caption"></p>
+                            </div>
                         </div>
-                        
-                        <p class="github">The application code is available on Github. <a href="#">Link to repo.</a></p>
-                        
-                        <div class="pr-demo">
-                            <video class=""></video>
-                        </div>
-                    </article>
-                    --->
+                    </article>-->
                 </section>
 
                 
                 <aside class="project-specs">
                     <table>
-                        <!--<caption>Product Details</caption>-->
                         <tbody> 
                         </tbody>
                     </table>
@@ -108,9 +100,8 @@
             </section>
         </main>
 
-        <!-- maybe later added with javascript-->
         <footer>
-            <div class="about"> <!-- style with grid and split in half with one containg the contents and the other being empty-->
+            <div class="about">
                 <h3>About</h3>
                 <p>
                     This page is a portfolio for some projects I have
@@ -123,7 +114,7 @@
                 </p>
             </div>
             
-            <section class="social"> <!--style with flexbox -->
+            <section class="social">
                 <a href="https://www.linkedin.com/in/aspa-papadaki-jmle"><svg viewBox="0 0 3333 3333" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="#f5f5f5" clip-rule="evenodd" width="32" height="32" id="linkedin-round-icon" y="308"><path d="M1667 0c920 0 1667 746 1667 1667 0 920-746 1667-1667 1667C747 3334 0 2588 0 1667 0 747 746 0 1667 0zm-215 1336h342v175h5c48-86 164-175 338-175 361 0 428 225 428 517v596h-357v-528c0-126-3-288-186-288-186 0-214 137-214 279v537h-357V1336zm-247-309c0 102-83 186-186 186-102 0-186-83-186-186 0-102 83-186 186-186 102 0 186 83 186 186zm-371 309h371v1113H834V1336z"/></svg></a>
                 <a href="https://github.com/apapadaki-edu"><svg width="64" height="64" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="#f5f5f5" clip-rule="evenodd" viewBox="0 0 640 640" id="github-icon" y="212"><path d="M319.988 7.973C143.293 7.973 0 151.242 0 327.96c0 141.392 91.678 261.298 218.826 303.63 16.004 2.964 21.886-6.957 21.886-15.414 0-7.63-.319-32.835-.449-59.552-89.032 19.359-107.8-37.772-107.8-37.772-14.552-36.993-35.529-46.831-35.529-46.831-29.032-19.879 2.209-19.442 2.209-19.442 32.126 2.245 49.04 32.954 49.04 32.954 28.56 48.922 74.883 34.76 93.131 26.598 2.882-20.681 11.15-34.807 20.315-42.803-71.08-8.067-145.797-35.516-145.797-158.14 0-34.926 12.52-63.485 32.965-85.88-3.33-8.078-14.291-40.606 3.083-84.674 0 0 26.87-8.61 88.029 32.8 25.512-7.075 52.878-10.642 80.056-10.76 27.2.118 54.614 3.673 80.162 10.76 61.076-41.386 87.922-32.8 87.922-32.8 17.398 44.08 6.485 76.631 3.154 84.675 20.516 22.394 32.93 50.953 32.93 85.879 0 122.907-74.883 149.93-146.117 157.856 11.481 9.921 21.733 29.398 21.733 59.233 0 42.792-.366 77.28-.366 87.804 0 8.516 5.764 18.473 21.992 15.354 127.076-42.354 218.637-162.274 218.637-303.582 0-176.695-143.269-319.988-320-319.988l-.023.107z"/></svg></a>
                 <a role="link" aria-disabled="true"><svg viewBox="0 0 50 50" width="100" height="100" id="docker-icon" y="112"><path fill="black" d="M20 9v5H10v5H5v5H1.125a.974.974 0 00-.969.813A11.73 11.73 0 000 26.75c0 .7.066 1.46.188 2.219 1.144-.274 3.242-.684 2.874-2.032 1.973 2.286 6.708 1.594 7.907.47 1.34 1.94 9.144 1.198 9.687-.313 1.68 1.968 6.887 1.968 8.563 0 .543 1.511 8.316 2.254 9.656.312.426.399 1.313.73 2.344.907.347-.66.668-1.325.968-2.032 6.352-.078 7.723-4.644 7.782-4.843.11-.383-.04-.778-.344-1.032-.105-.09-2.45-1.992-6.25-1.343-1.066-3.473-3.813-5.055-3.938-5.125a.991.991 0 00-1.124.093c-.102.082-2.465 2.086-2.094 6.188a7.371 7.371 0 00.781 2.75c-.82.457-2.23 1.031-4.5 1.031H32v-5h-5V9zm21.219 19.313c-.121.234-.278.46-.407.687h9.032c-1.086-.273-3.418-.64-3.032-2.063-1.277 1.477-3.703 1.696-5.593 1.375zm-.407.687H.188a15.645 15.645 0 001.5 4.5c5.43 1.277 11.128-.668 11.187-.688.523-.183 1.07.106 1.25.626.184.519-.074 1.101-.594 1.28-.191.067-3.625 1.22-7.844 1.22a21.13 21.13 0 01-2.593-.157C5.719 39.261 10.168 42 17 42c10.805 0 19.113-4.59 23.813-13zM.188 29c-.004-.016.003-.016 0-.031-.067.015-.13.015-.188.031zM22 11h3v3h-3zm-10 5h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zM7 21h3v3H7zm5 0h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zm5 0h3v3h-3zM16 31c.129 0 .262.02.375.063-.121.07-.219.19-.219.343 0 .227.18.438.407.438a.449.449 0 00.375-.219c.05.117.062.238.062.375 0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1z"/></svg></a>
