@@ -44,7 +44,7 @@ window.addEventListener("resize", (ev) =>{
     const hambButtons = document.querySelectorAll("[data-dropdown-button]");
     const main = document.getElementsByTagName("MAIN")[0];
 
-    if (window.matchMedia("(min-width: 901px)").matches) {
+    if (window.matchMedia("(min-width: 901px)").matches || screen.width > 901) {
         // if the last dropdown button does not have
         // a span sibling element there is no need to remove it (we come from a big screen)
         if (hambButtons[hambButtons.length -1].nextElementSibling.tagName !== "SPAN") return;

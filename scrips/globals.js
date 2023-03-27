@@ -556,14 +556,12 @@ window.addEventListener("load", (ev)=>{
         document.querySelector(".project-specs tbody").innerHTML = createTable(CUR_PR_CODE);
     })
 
-    //change the header title based on the projects's category
+    //change the header title based on projects's category
     const textElms = document.querySelectorAll(".site-description span");
     let titles = URL_PARAMS_PAGES[CUR_PR_CATEGORY].split(" ");
     textElms[0].innerText = titles[0];
     textElms[1].innerText = titles.length < 3 ? titles[1] : 'of Space';
     document.title = URL_PARAMS_PAGES[CUR_PR_CATEGORY];
-
-
 
 });
 
@@ -664,7 +662,6 @@ function createTable(prId){
     });
 
     return tableContents;
-
 }
 }
 c();
