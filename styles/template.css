@@ -237,7 +237,7 @@ svg#docker-icon {
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(0.47turn, #ffffff, #c0c0c2);
         border-image-slice: 1;
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         pointer-events: none;
     }
 
@@ -261,16 +261,19 @@ svg#docker-icon {
 
 
     .sub-nav.open {
-        line-height: 2.5;
+        max-height: 100vh;
         color: black;
+        transition: max-height .3s ease-in-out;
+
     }
 
     .sub-nav {
         overflow: hidden;
-        transition: all .3s ease-in-out;
-        line-height: 0rem;
+        max-height: 0;
+        line-height: 2;
         padding: 0 3em;
         color: transparent;
+        transition: max-height .2s ease-in-out;
     }
 
     .sub-nav-container:nth-child(2) .sub-nav a {

@@ -78,15 +78,15 @@ window.addEventListener("load", (ev) => {
         })
     })
 
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (ev) => {
+        if (ev.matches) {
+            document.body.classList.add("dark-mode");
+        } else {
+            document.body.classList.remove("dark-mode");
+        }
+    });
 })
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener("change", (ev) => {
-    if (ev.matches) {
-        document.body.classList.add("dark-mode");
-    } else {
-        document.body.classList.remove("dark-mode");
-    }
-});
 
 function addDropdownButtons(elmButton){
     //gets all buttons in the navigation menu  that have sub-menus 
