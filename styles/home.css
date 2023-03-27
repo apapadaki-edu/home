@@ -193,7 +193,7 @@ header{
 .app-category-description {
     max-height: 0;
     overflow-y: hidden;
-    font-size: 1rem;
+    font-size: 1.1rem;
     position: relative;
     margin-bottom: 5%;
     transition: max-height .5s ease-out;
@@ -444,10 +444,6 @@ svg#docker-icon {
         row-gap: 2rem;
         
         width: calc(100vw - 20vw);
-    }
-
-    .app-category-description.open {
-        font-size: 1.1rem;
     }
 
     footer {
