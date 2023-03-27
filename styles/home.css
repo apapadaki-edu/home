@@ -38,9 +38,11 @@ body {
     position: relative;
 }
 
-
 main {
-    grid-area:main;
+    grid-area: main;
+}
+.main-container {
+    width:100%;
     margin:0 auto;
     box-sizing:content-box;
     background-color: var(--white);
@@ -94,6 +96,9 @@ header{
     display:none;
 }
 
+.main-container {
+    width: 100%;
+}
 .one-line-intro {
     grid-area:heading;
     padding-left: 9rem;
@@ -252,6 +257,68 @@ svg#docker-icon {
 }
 
 
+.toggle-button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    column-gap: 0.5rem;
+
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 2px solid #1f1f1f;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.toggle-icon {
+    color: #1f1f1f;
+
+}
+.circle {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    pointer-events: none;
+    background-color: #1f1f1f;
+    transition: .3s;
+}
+.toggle.active {
+    border-color: #1fc8c3;
+}
+
+.toggle.active + .toggle-icon {
+    color: #1fc8c3;
+}
+
+.toggle.active .circle {
+    left: 100%;
+    transform: translateX(-100%);
+    transition: .3s;
+    background-color: #1fc8c3;
+}
+
+.toggle.active .toggle-icon {
+    color: #1fc8c3;
+}
+
+.toggle-icon svg {
+    width: 25px;
+    height: 35px;
+}
+
 @media (max-width: 900px) {
     body {
         display: grid;
@@ -264,6 +331,16 @@ svg#docker-icon {
     
     header {
         background-color: #e5e5e5;
+    }
+
+    main {
+        grid-area: main;
+        padding: 8vh 10vw;
+
+    }
+    .toggle-button-container {
+        padding:0.5rem 1.3rem;
+        right: 0;
     }
 
     #header-container {
@@ -290,7 +367,7 @@ svg#docker-icon {
 
     .hamb-menu {
         position: absolute;
-        right: 0;
+        left: 0;
     }
 
     .hamb-menu-icon {
@@ -389,8 +466,7 @@ svg#docker-icon {
         color: black;
         transition: max-height .3s ease-in-out;
     }
-
-        
+    
     .one-line-intro {
         display:none
     } 
@@ -418,9 +494,9 @@ svg#docker-icon {
         font-size: 2.5rem;
     }
 
-    main {
-        margin: 8vh 10vw;
+    .main-container {
         padding:0;
+        width: 100%;
     }
 
     .page-introduction {
@@ -434,7 +510,7 @@ svg#docker-icon {
         display: none;
     }
 
-    main > section {
+    .main-container > section {
         display: grid;
         grid-template-areas: 
             "c1"
@@ -491,20 +567,24 @@ svg#docker-icon {
 @media (min-width: 901px) {
     
     body {
-        display: grid;
-        grid-template-areas: 
-            "header header header" 
-            "side-left main side-right"
-            "footer footer footer" ;
-        grid-template-columns: 1fr 8fr 1fr;
         background-color: var(--white);
     }
-    
+
+    body.dark-mode header{
+        background: url("../images/bg_dark.webp");
+        background-size: cover;
+    }
+
     header{
-        grid-area: header;
         background: url("../images/bg.jpg"); /*img source: https://wallpapersafari.com/w/pNHxwB*/
         background-size: cover;
         /*min-height: 100vh; /* full window viewpoint */
+    }
+    
+    .toggle-button-container {
+        top:0;
+        right: 1.3rem;
+        height: 3.5rem;
     }
 
     #header-container {
@@ -529,7 +609,7 @@ svg#docker-icon {
         display: inline-block;
         box-sizing: border-box;
         position: relative;
-        min-width: 8rem;
+        min-width: 6rem;
     }
 
     .sub-nav-container > a.link {
@@ -539,7 +619,6 @@ svg#docker-icon {
         line-height: 3rem; /* to vertically align text to the middle */
         vertical-align: middle;
         text-align: center;
-        padding: 0em 1rem;
         background-color: #c0c0c200;
     }
 
@@ -547,7 +626,9 @@ svg#docker-icon {
         font-size:0.9rem;
         color:#4a4a4a
     }
-
+    .sub-nav-container:nth-child(2) a.link {
+        padding: 0 1em;
+    }
     .sub-nav-container:first-of-type > .link:hover {
         border-bottom: 2px solid #000000;
     }
@@ -587,16 +668,21 @@ svg#docker-icon {
     }
         
     main {
+        display: grid;
+        grid-template-areas: "side-left main side-right";
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+    .main-container {
         margin-top: 4em;
         grid-area: main;
         width: 100%;
         padding: 6rem 0 3rem 0;
     }
 
-    main::before {
+    .main-container::before {
         grid-area: side-left;
     }
-    main::after {
+    .main-container::after {
         grid-area: side-right;
     }
 
@@ -619,7 +705,7 @@ svg#docker-icon {
         z-index: 5;
     }
 
-    main > section {
+    .main-container > section {
         display: grid;
         grid-template-areas: 
             "c1 c2" 
@@ -631,7 +717,6 @@ svg#docker-icon {
 
     footer {
         min-height: 35vh;
-        grid-area: footer;
         display: grid;
         grid-template-areas: 
             "about social" 
@@ -681,14 +766,16 @@ svg#docker-icon {
 /*remember to remove the ../ from the path of all resorce files*/
 @media (min-width: 1400px) {
 
-    main > section {
+    .main-container > section {
         display: grid;
         grid-template-areas: 
             "c1 c2 c3 c4";
         grid-template-columns: repeat(4, 1fr);
         column-gap: 2rem;
     }
-
+    .app-category-description {
+        font-size: 0.9rem;
+    }
 }
 
 
@@ -720,7 +807,7 @@ svg#docker-icon {
 }
 
 @media (min-width: 3000px) {
-    main > section {
+    .main-container > section {
         column-gap:4vw;
     }
 }

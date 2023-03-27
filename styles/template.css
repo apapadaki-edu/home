@@ -85,7 +85,6 @@ header{
 }
 
 
-
 .hamb-menu-banner{
     display:none;
 }
@@ -151,11 +150,75 @@ svg#docker-icon {
     text-align:center;
 }
 
+.toggle-button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    column-gap: 0.5rem;
 
+}
 
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 2px solid #1f1f1f;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.toggle-icon {
+    color: #1f1f1f;
+
+}
+.circle {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    pointer-events: none;
+    background-color: #1f1f1f;
+    transition: .3s;
+}
+.toggle.active {
+    border-color: #1fc8c3;
+}
+
+.toggle.active + .toggle-icon {
+    color: #1fc8c3;
+}
+
+.toggle.active .circle {
+    left: 100%;
+    transform: translateX(-100%);
+    transition: .3s;
+    background-color: #1fc8c3;
+}
+
+.toggle.active .toggle-icon {
+    color: #1fc8c3;
+}
+
+.toggle-icon svg {
+    width: 25px;
+    height: 35px;
+}
 @media (max-width: 900px) {
     header {
         background-color: #e5e5e5;
+    }
+    
+    .toggle-button-container {
+        padding:0.5rem 1.3rem;
+        right: 0;
     }
 
     #header-container {
@@ -180,7 +243,7 @@ svg#docker-icon {
 
     .hamb-menu {
         position: absolute;
-        right: 0;
+        left: 0;
     }
 
     .hamb-menu-icon {
@@ -327,12 +390,23 @@ svg#docker-icon {
             "header" 
             "main"
             "footer" ;
-        background-color: rgb(255, 255, 255);
+        background-color: #ffffff;
     }
     
     main {
         grid-area: main;
     }
+
+    .main-nav-container {
+        position: relative;
+    }
+    
+    .toggle-button-container {
+        top:0;
+        right: 1.3rem;
+        height: 3.5rem;
+    }
+
     .main-nav {
         display: flex;
         grid-area: nav;
@@ -340,7 +414,7 @@ svg#docker-icon {
         align-items: baseline;
         color: #171717;
         background-color: #e5e5e5;
-        height: 3rem;
+        height: 3.5rem;
         font-size: 1rem;
     }
 
@@ -348,17 +422,16 @@ svg#docker-icon {
         display: inline-block;
         box-sizing: border-box;
         position: relative;
-        min-width: 8rem;
+        min-width: 6rem;
     }
 
     .sub-nav-container > a {
         display: inline-block;
         box-sizing: border-box;
         width: 100%;
-        line-height: 3rem; /* to vertically align text to the middle */
+        line-height: 3.5rem; /* to vertically align text to the middle */
         vertical-align: middle;
         text-align: center;
-        padding: 0em 1em;
         background-color: #c0c0c200;
     }
 
@@ -366,9 +439,10 @@ svg#docker-icon {
         border-bottom: 2px solid #171717;
     }
 
-    .sub-nav-container:nth-child(2) .sub-nav a {
-        color: #17171777;
+    .sub-nav-container:nth-child(2) a.link {
+        padding: 0 1em;
     }
+
     .sub-nav-container:nth-child(2) .sub-nav a:hover {
         border-bottom: 0px;
     }

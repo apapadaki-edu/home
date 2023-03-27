@@ -1,3 +1,4 @@
+
 function c() {
 const URL_PARAMS_PAGES = {
     h:  "Home", 
@@ -447,8 +448,7 @@ class Project {
 
 const CUR_URL= document.URL.match(/(?<=\w\/).[^\/]+$/)[0];
 const CUR_PR_CATEGORY = CUR_URL.match(/(?<=d=)\w+/)[0];
-const CUR_PR_CODE = CUR_URL.match(/(?<=pr=)\w+$/)[0];
-
+const CUR_PR_CODE = CUR_URL.match(/(?<=pr=)\w+/)[0];
 // suppose url is the following:
 //fefge:///C:/fefe/gde/hrt/tes/template.html?sr=h&d=ml&pr=ccp
 //it means that the user redirected from the home(sr=h) page
@@ -662,6 +662,7 @@ function createTable(prId){
     });
 
     return tableContents;
+
 }
 }
 c();
