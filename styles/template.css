@@ -269,7 +269,7 @@ svg#docker-icon {
     .sub-nav {
         overflow: hidden;
         transition: all .3s ease-in-out;
-        line-height: 0.1rem;
+        line-height: -0.1rem;
         padding: 0 3em;
         color: transparent;
     }
@@ -280,7 +280,7 @@ svg#docker-icon {
 
     .sub-nav a {
         font-size: 0.9rem;
-        color:blue;
+        color:pink;
     }
 
     .site-description {
