@@ -313,7 +313,7 @@ svg#docker-icon {
         z-index: 100;
         padding: 20px 0px;
         background-image: linear-gradient(to bottom, #e5e5e5, #ebebeb, #f2f2f2, #f8f8f8, #ffffff);
-        overflow: hidden;
+        overflow:hidden;
         transition: top .5s ease-in-out;
     }
     
