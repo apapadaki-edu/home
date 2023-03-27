@@ -558,8 +558,9 @@ window.addEventListener("load", (ev)=>{
 
     //change the header title based on the projects's category
     const textElms = document.querySelectorAll(".site-description span");
-    //textElms[0].innerText = "Inside";
-    textElms[1].innerText = URL_PARAMS_PAGES[CUR_PR_CATEGORY];
+    let titles = URL_PARAMS_PAGES[CUR_PR_CATEGORY].split(" ");
+    textElms[0].innerText = titles[0];
+    textElms[1].innerText = titles.length < 3 ? titles[1] : 'of Space';
     document.title = URL_PARAMS_PAGES[CUR_PR_CATEGORY];
 
 
