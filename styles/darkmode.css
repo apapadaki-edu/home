@@ -216,12 +216,15 @@ body.dark-mode .app-category:first-of-type h3 {
         border-bottom: 1px solid #ffffff7e;
     }
     
-    body.dark-mode a.link {
+    body.dark-mode a.link,
+    body.dark-mode .one-line-intro {
         color:#e7d8c9;
     }
     body.dark-mode .sub-nav a:hover {
         border-bottom: 2px solid #BFA181;
     } 
+
+
 }
 
 @media (min-width:901px) and (max-width: 1339px) {
