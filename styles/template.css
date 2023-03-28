@@ -429,7 +429,7 @@ svg#docker-icon {
         display: inline-block;
         box-sizing: border-box;
         width: 100%;
-        line-height: 3.5rem; /* to vertically align text to the middle */
+        line-height: 3rem; /* to vertically align text to the middle */
         vertical-align: middle;
         text-align: center;
         background-color: #c0c0c200;

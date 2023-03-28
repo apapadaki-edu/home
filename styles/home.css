@@ -199,16 +199,8 @@ header{
     max-height: 0;
     overflow-y: hidden;
     font-size: 1.1rem;
-    position: relative;
     margin-bottom: 5%;
     transition: max-height .5s ease-out;
-
-}
-
-.note-of-importance {
-    margin-top: 6rem;
-    padding: 2rem 1rem;
-    border-top: 2px solid var(--bg-gray);
 }
 
 .app-category-description.open {
@@ -216,6 +208,11 @@ header{
     transition: max-height .5s ease-in;
 }
 
+.note-of-importance {
+    margin-top: 6rem;
+    padding: 2rem 1rem;
+    border-top: 2px solid var(--bg-gray);
+}
 
 .site-description span:first-child {
     font-size: 2.5rem;
@@ -408,6 +405,7 @@ svg#docker-icon {
 
     .sub-nav-container {
         position: relative;
+        margin: 0.5rem;
     }
 
     .sub-nav-container:nth-child(2) .sub-nav a {
@@ -472,7 +470,7 @@ svg#docker-icon {
     } 
 
     .site-description {
-        height:55vh;
+        height:60vh;
         box-sizing: border-box;
         margin-top: calc(20px + 2rem);
         padding: 16vh 6vw 6vh 0;
@@ -483,6 +481,7 @@ svg#docker-icon {
         letter-spacing: 5px;
 
     }
+
     .site-description span {
         display: block;
         box-sizing: border-box;
@@ -753,6 +752,7 @@ svg#docker-icon {
 
     .site-description {
         padding-top:20%;
+        font-size: 0.98rem;
     }
     .one-line-intro {
         padding-left: 5vw;
@@ -774,7 +774,7 @@ svg#docker-icon {
         column-gap: 2rem;
     }
     .app-category-description {
-        font-size: 0.9rem;
+        font-size: 0.98rem;
     }
 }
 

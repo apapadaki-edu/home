@@ -70,7 +70,7 @@ window.addEventListener("load", (ev) => {
     if (window.innerWidth < 901) {
         addDropdownButtons(document.querySelectorAll("[data-dropdown-button]"));
     }
-    
+
     const DARK_MODE =  (document.URL.includes("darkMode")) ? document.URL.match(/(?<=Mode=)\w+$/)[0] : "f";
     createFontToggleButton(DARK_MODE);
 
@@ -88,7 +88,7 @@ window.addEventListener("load", (ev) => {
 
         if (!document.querySelector(".toggle").classList.contains("active")) document.querySelector(".toggle").classList.add("active");
 
-        document.querySelectorAll(".main-nav a").forEach((url) => {
+        document.querySelectorAll("a.to-content").forEach((url) => {
                 let urlDest = url.getAttribute("href");
 
                 if(!urlDest) return;
@@ -142,7 +142,7 @@ function createFontToggleButton(darkMode) {
             document.body.classList.add("dark-mode");
            
             if (darkMode === "t") return;
-            document.querySelectorAll(".main-nav a").forEach((url) => {
+            document.querySelectorAll("a.to-content").forEach((url) => {
                 let urlDest = url.getAttribute("href");
 
                 if(!urlDest) return;
@@ -158,7 +158,7 @@ function createFontToggleButton(darkMode) {
 
         if(darkMode === "f") return;
 
-        document.querySelectorAll(".main-nav a").forEach((url) => {
+        document.querySelectorAll("a.to-content").forEach((url) => {
             let urlDest = url.getAttribute("href");
             
             if(!urlDest) return;

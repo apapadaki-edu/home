@@ -237,7 +237,7 @@ const PROJECT_CONTENTS = {
         ],
         specs: {
             Languages: [["HTML5",""],[" CSS3", ""], ["Javascript", ""], ["PHP", "7.4.3"], ["PL/pgSQL","v12.12"]],
-            Databases: [["PostgreSQL", "v12"]], // ######### find server and php info from ubuntu #########
+            Databases: [["PostgreSQL", "v12"]],
             Servers: [["Apache", "v2.4.41"]],
             'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""], ["Firefox", ""]],
             'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
