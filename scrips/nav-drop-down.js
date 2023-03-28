@@ -61,18 +61,26 @@ window.addEventListener("resize", (ev) =>{
         return;
     }
     //im case of a mobile screen we need to create the drop-down open button
-
     addDropdownButtons(hambButtons);  
 
 });
 
 window.addEventListener("load", (ev) => {
-    const DARK_MODE =  (document.URL.includes("darkMode")) ? document.URL.match(/(?<=Mode=)\w+$/)[0] : "f";
-    createFontToggleButton(DARK_MODE);
 
     if (window.innerWidth < 901) {
         addDropdownButtons(document.querySelectorAll("[data-dropdown-button]"));
     }
+    
+    const DARK_MODE =  (document.URL.includes("darkMode")) ? document.URL.match(/(?<=Mode=)\w+$/)[0] : "f";
+    createFontToggleButton(DARK_MODE);
+
+    // mobile-screen expanding drop-down sub-menus
+    document.querySelectorAll(".expand-down-arrow").forEach( dropdown=>{
+        dropdown.addEventListener("click", ev=>{
+            let submenu = ev.target.nextElementSibling;
+            submenu.classList.toggle("open");
+        })
+    })
 
     if (DARK_MODE === "t" && !document.body.classList.contains("dark-mode")) 
     {
@@ -88,15 +96,6 @@ window.addEventListener("load", (ev) => {
                 url.setAttribute("href", urlDest.replace(/.$/g, "t"));
             });
     }
-
-    
-    // mobile-screen expanding drop-down sub-menus
-    document.querySelectorAll(".expand-down-arrow").forEach( dropdown=>{
-        dropdown.addEventListener("click", ev=>{
-            let submenu = ev.target.nextElementSibling;
-            submenu.classList.toggle("open");
-        })
-    })
 
 })
 
