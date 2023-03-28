@@ -93,6 +93,9 @@ body.dark-mode svg#black-instagram-icon path {
 }
 
 /* index main */
+.dark-mode main {
+    padding: 1.3rem;
+}
 body.dark-mode section.categories-container {
     align-items: start;
 }
@@ -173,7 +176,14 @@ body.dark-mode .app-category:first-of-type h3 {
     color: #178e8a;
 } 
 /* up to here will be removed once ml projects are added */
-
+@media (max-width:550px) {
+    body.dark-mode .app-category {
+        max-width: 100%;
+    }
+    body.dark-mode .categories-container {
+        width: 100%;
+    }
+}
 
 @media (max-width: 900px) {
     body.dark-mode .app-category {
@@ -190,6 +200,10 @@ body.dark-mode .app-category:first-of-type h3 {
         border-image-slice: 1;
 
     }
+    body.dark-mode .categories-container {
+        width: 100%;
+        justify-items: center;
+    }
 }
 
 @media (min-width:551px) and (max-width: 900px) {
@@ -197,6 +211,9 @@ body.dark-mode .app-category:first-of-type h3 {
         max-width: 90%;
     }
 
+    body.dark-mode main {
+        padding: 2rem;
+    }
 }
 
 @media (min-width: 901px) {

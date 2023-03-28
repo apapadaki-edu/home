@@ -551,7 +551,7 @@ svg#docker-icon {
 }
 
 
-@media (min-width:500px) and (max-width:899px) {
+@media (min-width:700px) and (max-width:899px) {
     .site-description span {
         margin: auto 10vw;
     }
@@ -559,7 +559,7 @@ svg#docker-icon {
         justify-items: center;
     }
     .app-category {
-        max-width: 70%;
+        max-width: 80%;
     }
 }
 
