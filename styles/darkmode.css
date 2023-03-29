@@ -157,6 +157,9 @@ body.dark-mode  .app-category:first-of-type > a {
 body.dark-mode .app-category > a h3 {      
     margin-top:0;
 }
+@-moz-document url-prefix() {
+    body.dark-mode .app-category > a h3 {font-size: 1.1rem;}
+}
 
 body.dark-mode .app-category svg {
     width: 2rem;
@@ -175,6 +178,8 @@ body.dark-mode .app-category:first-of-type svg,
 body.dark-mode .app-category:first-of-type h3 {
     color: #178e8a;
 } 
+
+
 /* up to here will be removed once ml projects are added */
 @media (max-width:550px) {
     body.dark-mode .app-category {
@@ -203,6 +208,10 @@ body.dark-mode .app-category:first-of-type h3 {
     body.dark-mode .categories-container {
         width: 100%;
         justify-items: center;
+    }
+
+    body.dark-mode header, body.dark-mode #header-container {
+        background-color:#02062198;
     }
 }
 

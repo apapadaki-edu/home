@@ -15,7 +15,13 @@
     font-weight: 300;
     font-style: normal;
 }
-
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("../fonts/OpenSansReg/OpenSans-Regular.woff"),
+         url("../fonts/OpenSansReg/OpenSans-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
 * {
     padding:0;
     margin:0;
@@ -24,9 +30,13 @@
 /* some general settings */
 html, body {
     font-size: calc(16px + 0.390625vw); /* normal 15px */
+    letter-spacing: 1px;
     height:100%;
     background-color: var(--white);
-    font-family: 'Open Sans', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+    font-family: 'Open Sans', 'Open Sans Reqular', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+}
+@-moz-document url-prefix() {
+    html, body {font-size: calc(14px + 0.390625vw);}
 }
 
 body {
