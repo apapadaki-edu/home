@@ -188,6 +188,10 @@ body.dark-mode .app-category:first-of-type h3 {
     body.dark-mode .categories-container {
         width: 100%;
     }
+
+    body.dark-mode div.main-projects {
+        padding: 4%; 
+    }
 }
 
 @media (max-width: 900px) {
@@ -223,6 +227,10 @@ body.dark-mode .app-category:first-of-type h3 {
     body.dark-mode main {
         padding: 2rem;
     }
+
+    body.dark-mode div.main-projects {
+        padding: 7%; 
+    }
 }
 
 @media (min-width: 901px) {
@@ -249,21 +257,26 @@ body.dark-mode .app-category:first-of-type h3 {
     body.dark-mode .sub-nav a:hover {
         border-bottom: 2px solid #BFA181;
     } 
-
+    body.dark-mode div.main-projects {
+        padding: 8% 10%; 
+    }
 
 }
 
 @media (min-width:901px) and (max-width: 1339px) {
 
-    body.dark-mode .main-container {
+    body.dark-mode div.main-container {
         width: 90vw;
         column-gap: 3rem;
+        
     }
+
     body.dark-mode .more-btn {
         right: 2rem;
     }
 }
 @media (min-width: 1400px){
+
     body.dark-mode section.categories-container {
         grid-template-areas: "c1 c2" "c3 c4";
         grid-template-columns: 1fr 1fr;

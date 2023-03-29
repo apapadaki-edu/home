@@ -3,7 +3,7 @@
 #Cardin Green (#0C1A1A), downy teal (#6ACFC7)
 Dark classic blue (#0A1828), turquoise (#178582), gold (#BFA181)
 */
-main {
+div.main-projects {
     display:flex;
     flex-direction: column;
     row-gap: 3rem;
@@ -129,7 +129,7 @@ th.cat-heading {
 }
 
 @media (max-width: 550px) {
-    main{
+    div.main-projects{
         padding: 10% 8vw;
     }
     table {
@@ -157,7 +157,7 @@ th.cat-heading {
 }
 
 @media (min-width: 551px) and (max-width: 1399px) {
-    main{
+    div.main-projects{
         padding: 10% 12vw;
     }
 
@@ -183,7 +183,7 @@ th.cat-heading {
 
 }
 @media (min-width: 1400px) {
-    main {
+    main div.main-projects{
         display:grid;
         grid-template-areas: 
         "project-nav"

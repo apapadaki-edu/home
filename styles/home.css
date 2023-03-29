@@ -33,7 +33,7 @@ html, body {
     letter-spacing: 1px;
     height:100%;
     background-color: var(--white);
-    font-family: 'Open Sans', 'Open Sans Reqular', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+    font-family: 'Open Sans', 'Open Sans Regular', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
 }
 @-moz-document url-prefix() {
     html, body {font-size: calc(14px + 0.390625vw);}
@@ -346,7 +346,7 @@ svg#docker-icon {
 
     }
     .toggle-button-container {
-        padding:0.5rem 1.3rem;
+        padding:0.8rem 1.3rem;
         right: 0;
     }
 
@@ -365,7 +365,7 @@ svg#docker-icon {
     .hamb-menu-banner {
         display:block;
         box-sizing: border-box;
-        height: calc(30px + 1.6rem);
+        height: calc(30px + 2rem);
         background-color: var(--black);
         position: relative;
         background-color: #e5e5e5;
@@ -379,9 +379,9 @@ svg#docker-icon {
 
     .hamb-menu-icon {
         pointer-events: none;
-        height:25px;
-        width: 25px;
-        margin:0.8rem 1.3rem;
+        height:30px;
+        width: 30px;
+        margin:0.9rem 1.3rem;
         color: #171717;
     }
 
