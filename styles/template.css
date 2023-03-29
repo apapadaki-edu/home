@@ -36,8 +36,29 @@ html, body {
     letter-spacing: 1px;
     height:100%;
     background-color: var(--white);
-    font-family: 'Open Sans', 'Open Sans Light', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+    font-family: 'Open Sans', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
 }
+
+/* Safari 7.1+ */
+
+_::-webkit-full-page-media, _:future, :root .safari_only {
+    font-family: 'Open Sans', 'Open Sans Light', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif'; 
+  
+}
+
+/* Safari 10.1+ */
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+
+    .safari_only { 
+
+        font-family: 'Open Sans', 'Open Sans Light', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif'; 
+ 
+
+    }
+}}
+
 @-moz-document url-prefix() {
     html, body {font-size: calc(14px + 0.390625vw);}
 }
@@ -312,6 +333,7 @@ svg#docker-icon {
         border-image-slice: 1;
         font-size: 1.1rem;
         pointer-events: none;
+        font-weight: bold;
     }
 
     .main-nav li:first-child a {
@@ -443,6 +465,7 @@ svg#docker-icon {
         vertical-align: middle;
         text-align: center;
         background-color: #c0c0c200;
+        font-weight: bold;
     }
 
     .sub-nav-container:first-of-type > a:hover {

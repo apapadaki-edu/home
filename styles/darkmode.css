@@ -5,6 +5,19 @@
 html {
     scroll-behavior: smooth;
 }
+
+@font-face {
+    font-family: "Open Sans Light";
+    src: url("../fonts/OpenSansL/OpenSans-Light.woff"),
+         url("../fonts/OpenSansL/OpenSans-Light.woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+body.dark-mode * {
+    font-family: 'Open Sans Light';
+    letter-spacing: 1px;
+}
 body.dark-mode .main-container, body.dark-mode main, body.dark-mode footer, 
 body.dark-mode .hamb-menu-banner,
  body.dark-mode .main-nav, body.dark-mode .main-heading span,
@@ -259,7 +272,7 @@ body.dark-mode .app-category:first-of-type h3 {
         border-bottom: 2px solid #BFA181;
     } 
     body.dark-mode div.main-projects {
-        padding: 8% 10%; 
+        padding: 6% 8%; 
     }
 
 }
