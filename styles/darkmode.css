@@ -196,7 +196,7 @@ body.dark-mode .app-category:first-of-type h3 {
     }
 
     body.dark-mode div.main-projects {
-        padding: 4%; 
+        padding: 4% 0; 
     }
 }
 
