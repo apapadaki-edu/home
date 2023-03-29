@@ -130,13 +130,13 @@ th.cat-heading {
 
 @media (max-width: 550px) {
     div.main-projects{
-        padding: 10% 4vw;
+        padding: 10% 6vw;
     }
     table {
         width:100%;
     }
     .app-layout-imgs {
-        width: calc(100vw - 2.6rem);
+        width: calc(100vw - 20vw);
         max-height: 600px;
         overflow-x: scroll;
     }

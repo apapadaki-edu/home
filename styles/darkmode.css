@@ -100,7 +100,7 @@ body.dark-mode svg#black-instagram-icon path {
 
 /* index main */
 .dark-mode main {
-    padding: 1.3rem;
+    padding: 6vw;
 }
 body.dark-mode section.categories-container {
     align-items: start;

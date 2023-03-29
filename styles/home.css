@@ -340,7 +340,7 @@ svg#docker-icon {
 
     main {
         grid-area: main;
-        padding: 8vh 10vw;
+        padding: 8vh 6vw;
 
     }
     .toggle-button-container {
@@ -527,7 +527,7 @@ svg#docker-icon {
             "c4";
         row-gap: 2rem;
         
-        width: calc(100vw - 20vw);
+        width: calc(100vw - 12vw);
     }
 
     footer {
