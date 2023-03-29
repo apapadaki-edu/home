@@ -20,7 +20,7 @@
     font-family: "Open Sans Light";
     src: url("../fonts/OpenSansL/OpenSans-Light.woff"),
          url("../fonts/OpenSansL/OpenSans-Light.woff2");
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
 }
 * {
@@ -59,9 +59,6 @@ main {
     background-color: var(--white);
 }
 
-header, footer {
-    font-family: "Verdana", "Helverica", "Glober", "Cambria";
-}
 
 ul li{
     list-style-type: none;

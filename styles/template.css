@@ -22,17 +22,27 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Open Sans Light";
+    src: url("../fonts/OpenSansL/OpenSans-Light.woff"),
+         url("../fonts/OpenSansL/OpenSans-Light.woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
 /* some general settings */
 html, body {
     font-size: calc(16px + 0.390625vw);
     letter-spacing: 1px;
     height:100%;
     background-color: var(--white);
-    font-family: 'Open Sans', 'Open Sans Regular', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+    font-family: 'Open Sans', 'Open Sans Light', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
 }
 @-moz-document url-prefix() {
     html, body {font-size: calc(14px + 0.390625vw);}
 }
+
+
 body {
     display: grid;
     grid-template-areas: 

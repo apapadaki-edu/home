@@ -1,6 +1,7 @@
 :root  {
     --back-blue: #020621
 }
+
 html {
     scroll-behavior: smooth;
 }
