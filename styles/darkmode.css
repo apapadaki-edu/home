@@ -6,18 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: "Open Sans Light";
-    src: url("../fonts/OpenSansL/OpenSans-Light.woff"),
-         url("../fonts/OpenSansL/OpenSans-Light.woff2");
-    font-weight: 300;
-    font-style: normal;
-}
-
-body.dark-mode * {
-    font-family: 'Open Sans Light';
+body.dark-mode  {
     letter-spacing: 1px;
 }
+
 body.dark-mode .main-container, body.dark-mode main, body.dark-mode footer, 
 body.dark-mode .hamb-menu-banner,
  body.dark-mode .main-nav, body.dark-mode .main-heading span,

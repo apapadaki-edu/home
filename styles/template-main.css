@@ -140,6 +140,9 @@ th.cat-heading {
         max-height: 600px;
         overflow-x: scroll;
     }
+    .pr-desc {
+        font-size: 1.1rem;
+    }
 
     .app-layout-imgs figure, .pr-demo {
         max-width: 80%;

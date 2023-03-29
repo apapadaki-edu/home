@@ -33,20 +33,19 @@
 /* some general settings */
 html, body {
     font-size: calc(16px + 0.390625vw);
-    letter-spacing: 1px;
     height:100%;
     background-color: var(--white);
-    font-family: 'Open Sans', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+    font-family: 'Open Sans', "Open Sans Light", 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
 }
 
-/* Safari 7.1+ */
+/* Safari 7.1+ 
 
 _::-webkit-full-page-media, _:future, :root .safari_only {
     font-family: 'Open Sans', 'Open Sans Light', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif'; 
   
 }
 
-/* Safari 10.1+ */
+ Safari 10.1+ 
 
 @media not all and (min-resolution:.001dpcm)
 { @supports (-webkit-appearance:none) {
@@ -57,7 +56,7 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
  
 
     }
-}}
+}}*/
 
 @-moz-document url-prefix() {
     html, body {font-size: calc(14px + 0.390625vw);}
