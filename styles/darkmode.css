@@ -204,6 +204,7 @@ body.dark-mode .expand {
     font-weight: bold;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
+    justify-content: flex-start; /* remove if display hr */
 }
 
 body.dark-mode .expand:focus {
@@ -214,9 +215,10 @@ body.dark-mode .expand:focus {
 body.dark-mode .expand:focus svg {
     background-color: #BFA181;
 }
+/*
 body.dark-mode .expand:focus hr {
     border: 1px solid #BFA181;
-}
+}*/
 body.dark-mode .expand span {
     width: 0.8em;
 }
@@ -230,6 +232,7 @@ body.dark-mode .expand svg {
 }
 body.dark-mode .expand hr {
     border: 1px solid #178582;
+    display: none;
 }
 
 /* up to here will be removed once ml projects are added */
@@ -309,9 +312,7 @@ body.dark-mode .expand hr {
     body.dark-mode .sub-nav a:hover {
         border-bottom: 2px solid #BFA181;
     } 
-    body.dark-mode div.main-projects {
-        padding: 6% 8%; 
-    }
+
 
 }
 
@@ -326,11 +327,19 @@ body.dark-mode .expand hr {
     body.dark-mode .more-btn {
         right: 2rem;
     }
+
+    body.dark-mode div.main-projects {
+        padding: 6% 8%; 
+    }
 }
 @media (min-width: 1400px){
     body.dark-mode section.categories-container {
         grid-template-areas: "c1 c2" "c3 c4";
         grid-template-columns: 1fr 1fr;
         column-gap: 3rem;
+    }
+
+    body.dark-mode div.main-projects {
+        padding:3%; 
     }
 }
