@@ -305,7 +305,7 @@ body.dark-mode .app-category:first-of-type h3 {
 
 
 body.dark-mode .expand {
-    color: #178e8a;
+    color: #178582;
     font-weight: bold;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
@@ -327,12 +327,12 @@ body.dark-mode .expand span {
 }
 
 body.dark-mode .expand svg {
-    background-color:#178e8a;
+    background-color: #178582;
     width: 0.5em;
     height: 0.5em;
     top: 0.1em;
 
 }
 body.dark-mode .expand hr {
-    border: 1px solid #178e8a;
+    border: 1px solid #178582;
 }
