@@ -2,17 +2,26 @@
     --back-blue: #020621
 }
 
+@font-face {
+    font-family: "Open Sans Light";
+    src: url("../fonts/OpenSansL/OpenSans-Light.woff"),
+         url("../fonts/OpenSansL/OpenSans-Light.woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body.dark-mode  {
     letter-spacing: 1px;
+    font-family: 'Open Sans', "Open Sans Light", 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
 }
 
 body.dark-mode .main-container, body.dark-mode main, body.dark-mode footer, 
 body.dark-mode .hamb-menu-banner,
- body.dark-mode .main-nav, body.dark-mode .main-heading span,
+body.dark-mode .main-nav, body.dark-mode .main-heading span,
 body.dark-mode .main-nav.open  {
     background-color: var(--back-blue);
     color: #e9e9e9;
@@ -78,8 +87,8 @@ body.dark-mode th.cat-heading {
 
 
 body.dark-mode li.pr-select.selected {
-    border-bottom: 3px solid #BFA181;
-    letter-spacing: 2px;
+    border-bottom: 3px solid #a58766;
+    letter-spacing: 3px;
     padding-right: 1em;
     padding-left: 1em;
 }
@@ -130,10 +139,14 @@ body.dark-mode .app-category > a {
     left:1rem;
     color:#1fc8c3;
     box-shadow: none; /*0 2px 4px 0 #BFA18136, 0 2px 8px 0 #BFA18136; */
+
+    /* remove heighlighting when tapping on a link from mobile phones */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
 
-body.dark-mode .app-category > a:hover, body.dark-mode .app-category > a:focus, 
-body.dark-mode .app-category > a:hover svg, body.dark-mode .app-category > a:focus svg {
+body.dark-mode .app-category > a:focus,  body.dark-mode .app-category > a:hover,
+body.dark-mode .app-category > a:focus svg, body.dark-mode .app-category > a:hover svg {
     color: #e7d8c9;
     box-shadow: none /*0 1px 2px 0 #dfc7adc9, 0 1px 5px 0 #dfc7adc9;*/ 
 }
@@ -175,7 +188,7 @@ body.dark-mode .app-category svg {
 body.dark-mode .app-category:first-of-type > a:hover,
 body.dark-mode .app-category:first-of-type > a:focus,
 body.dark-mode .app-category:first-of-type > a:hover svg,
- body.dark-mode .app-category:first-of-type > a:focus svg{
+body.dark-mode .app-category:first-of-type > a:focus svg{
     color: #178e8a;
     box-shadow: none; 
 }
@@ -220,8 +233,8 @@ body.dark-mode .app-category:first-of-type h3 {
         justify-items: center;
     }
 
-    body.dark-mode header, body.dark-mode #header-container {
-        background-color:#02062198;
+    body.dark-mode, body.dark-mode header, body.dark-mode #header-container {
+        background-color: var(--back-blue);
     }
 }
 
@@ -282,10 +295,44 @@ body.dark-mode .app-category:first-of-type h3 {
     }
 }
 @media (min-width: 1400px){
-
     body.dark-mode section.categories-container {
         grid-template-areas: "c1 c2" "c3 c4";
         grid-template-columns: 1fr 1fr;
         column-gap: 3rem;
     }
+}
+
+
+
+body.dark-mode .expand {
+    color: #178e8a;
+    font-weight: bold;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+body.dark-mode .expand:focus {
+    color:#BFA181;
+    outline:0;
+}
+
+body.dark-mode .expand:focus svg {
+    background-color: #BFA181;
+}
+body.dark-mode .expand:focus hr {
+    border: 1px solid #BFA181;
+}
+body.dark-mode .expand span {
+    width: 0.8em;
+}
+
+body.dark-mode .expand svg {
+    background-color:#178e8a;
+    width: 0.5em;
+    height: 0.5em;
+    top: 0.1em;
+
+}
+body.dark-mode .expand hr {
+    border: 1px solid #178e8a;
 }

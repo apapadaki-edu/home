@@ -53,6 +53,74 @@ body {
     row-gap: 2rem;;
 }
 
+
+
+.expand {
+    box-sizing: border-box;
+    width:100%;
+    height: 1.1em;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    column-gap: 1rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.expand span {
+    width: 0.8em;
+}
+
+.expand svg {
+    position: absolute;
+    color:black;
+    border-radius: 50%;
+    top:0;
+    left:0;
+    z-index: 1;
+    padding:6px;
+    width: 0.7em;
+    height: 0.7em;
+    pointer-events: none;
+}
+
+hr {
+    display: inline-block;
+    align-self: center;
+    background: black;
+    min-width: 0.1rem;
+    flex-grow: 1;
+    pointer-events: none;
+}
+
+.section-contents {
+    max-height: 0px;
+    transition: max-height .3s ease-out;
+    overflow-y: hidden;
+}
+.expand.open {
+    justify-content: flex-start;
+}
+/*
+h4 {
+    text-indent: 0;
+}
+
+.expand p {
+    min-height: 0;
+    min-width: 0;
+    pointer-events: none;
+}
+*/
+.expand.open hr {
+   display:none;
+}
+
+.section-contents.open {
+    max-height:100vh;
+    transition: max-height .3s ease-in;
+}
+
 .fullpage {
     display: none;
     position: fixed;
@@ -78,7 +146,7 @@ body {
 .pr-desc {
     display: flex;
     flex-direction: column;
-    row-gap: 0.7rem;
+    row-gap: 1.7rem;
 }
 
 .app-layout-imgs {
@@ -136,7 +204,7 @@ th.cat-heading {
         width:100%;
     }
     .app-layout-imgs {
-        width: calc(100vw - 20vw);
+        width: calc(100vw - 12vw);
         max-height: 600px;
         overflow-x: scroll;
     }

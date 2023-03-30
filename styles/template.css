@@ -23,10 +23,10 @@
 }
 
 @font-face {
-    font-family: "Open Sans Light";
-    src: url("../fonts/OpenSansL/OpenSans-Light.woff"),
-         url("../fonts/OpenSansL/OpenSans-Light.woff2");
-    font-weight: 300;
+    font-family: "Open Sans Regular";
+    src: url("../fonts/OpenSansReg/OpenSans-Regular.woff"),
+         url("../fonts/OpenSansReg/OpenSans-Regular.woff2");
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -35,7 +35,7 @@ html, body {
     font-size: calc(16px + 0.390625vw);
     height:100%;
     background-color: var(--white);
-    font-family: 'Open Sans', "Open Sans Light", 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+    font-family: 'Open Sans', 'Open Sans Regular', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
 }
 
 /* Safari 7.1+ 
@@ -148,6 +148,8 @@ header{
     margin-top: 0.8rem;
     line-height: 1.1;
 }
+
+
 footer {
     grid-area:footer;
     padding:2.5em 2em 1em 2em;
@@ -162,7 +164,6 @@ footer {
     justify-content: flex-end;
     column-gap: 1em;
 }
-
 
 footer svg {
     width: 2.5em;
@@ -218,6 +219,7 @@ svg#docker-icon {
     background-color: #1f1f1f;
     transition: .3s;
 }
+
 .toggle.active {
     border-color: #1fc8c3;
 }
@@ -260,6 +262,7 @@ svg#docker-icon {
         width: 100%;
         position:fixed;
         z-index: 98;
+        background-color: #e5e5e5;
     }
 
     .hamb-menu-banner {
@@ -313,7 +316,7 @@ svg#docker-icon {
     
     .sub-nav-container {
         position: relative;
-
+        margin: 0.5rem;
     }
 
     .sub-nav-container:last-child {
@@ -330,7 +333,7 @@ svg#docker-icon {
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(0.47turn, #ffffff, #c0c0c2);
         border-image-slice: 1;
-        font-size: 1.1rem;
+        font-size: 1.17rem;
         pointer-events: none;
         font-weight: bold;
     }
@@ -364,8 +367,9 @@ svg#docker-icon {
     .sub-nav {
         overflow: hidden;
         max-height: 0;
-        line-height: 2;
+        line-height: 3;
         padding: 0 3em;
+        font-size: 1.1rem;
         color: transparent;
         transition: max-height .2s ease-in-out;
     }
