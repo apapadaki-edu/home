@@ -221,22 +221,22 @@ svg#docker-icon {
 }
 
 .toggle.active {
-    border-color: #1fc8c3;
+    border-color: #178582;
 }
 
 .toggle.active + .toggle-icon {
-    color: #1fc8c3;
+    color: #178582;
 }
 
 .toggle.active .circle {
     left: 100%;
     transform: translateX(-100%);
     transition: .3s;
-    background-color: #1fc8c3;
+    background-color: #178582;
 }
 
 .toggle.active .toggle-icon {
-    color: #1fc8c3;
+    color: #178582;
 }
 
 .toggle-icon svg {

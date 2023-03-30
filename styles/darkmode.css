@@ -98,13 +98,13 @@ body.dark-mode .app-layout-imgs {
 }
 
 body.dark-mode svg#docker-icon {
-    background-color: #1fc8c3;
+    background-color: #276d6b;
 }
 
 body.dark-mode svg#linkedin-round-icon path,
 body.dark-mode svg#github-icon path,
 body.dark-mode svg#black-instagram-icon path {
-    fill: #1fc8c3;
+    fill: #178582;
 }
 
 /* index main */
