@@ -608,6 +608,7 @@ svg#docker-icon {
     .main-nav {
         display: flex;
         grid-area: nav;
+        box-sizing: border-box;
         align-items: baseline;
         color: #171717;
         height: 3rem;
@@ -632,36 +633,37 @@ svg#docker-icon {
         font-weight: bold;
     }
 
+    .sub-nav-container:first-of-type > a.link:hover {
+        border-bottom: 2px solid #171717;
+    }
+
+    .sub-nav-container:nth-child(2) a.link {
+        padding: 0 1em;
+    }
+
     .sub-nav-container:nth-child(2) .sub-nav a {
         font-size:0.9rem;
         color:#4a4a4a
     }
-    .sub-nav-container:nth-child(2) a.link {
-        padding: 0 1em;
-    }
-    .sub-nav-container:first-of-type > .link:hover {
-        border-bottom: 2px solid #000000;
-    }
 
     .sub-nav {
         position:absolute;
-        /*display: none;*/ 
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
         box-sizing: border-box;
-        padding: 1rem 1rem 1rem 1rem;
+        padding: 1rem;                
+        font-size: 0.95rem;        
+        background-color: #e3e2e2f5;
         inline-size: max-content;
         pointer-events: none; /*not be clickable when not visible*/
-        opacity: 0;
-        font-size: 0.95rem;
-        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+        opacity: 0;        
         border-top: 2px solid #000000;
-        background-color: #e3e2e2f5;
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     }
 
     .sub-nav-container.active > a {
-        background-color: #e3e2e2f5;
+        background-color: #f6f6f6f5;
     }
     
     .sub-nav-container.active > a.link + .sub-nav {
@@ -670,10 +672,10 @@ svg#docker-icon {
     }
 
     .sub-nav a:hover {
-        border-bottom: 2px solid #000000;
+        border-bottom: 2px solid #171717;
     }
 
-    .site-description {
+    .main-container .site-description {
         display: none;
     }
         
@@ -700,7 +702,7 @@ svg#docker-icon {
         display:none;
     }
 
-    .main-heading {
+    .main-container .main-heading {
         margin: 2vh 0 15vh 0;
         background: linear-gradient(var(--white) 0%, var(--white) 50%, var(--black) 48%, var(--black) 52%, var(--white) 54%, var(--white) 100%);
         font-size: 1.5rem;
@@ -708,7 +710,7 @@ svg#docker-icon {
         text-align: center;
     }
 
-    .main-heading span {
+    .main-container .main-heading span {
         background: var(--white);
         padding: 0 20px;
         position: relative;
@@ -726,22 +728,23 @@ svg#docker-icon {
     }
 
     footer {
-        min-height: 35vh;
+        grid-area: footer;
         display: grid;
         grid-template-areas: 
             "about social" 
             "copyright copyright" ;
         grid-template-rows: 3fr 1fr;
         grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5rem;
         align-items: end;
-        padding:1rem 3rem;
+        padding:2rem 4rem 1rem 4rem;
         width:auto;
         font-size: 0.8rem;
         background-color: #e5e5e5;
     }
 
     footer h3 {
-        font-size: 1.3rem;
+        font-size: 1.5em;
         font-weight: 200;
         padding-bottom: 0.5em;
     }
@@ -754,7 +757,7 @@ svg#docker-icon {
         text-decoration: underline;
     }
     .about a:visited {
-        color: #0a40bc;
+        color: #0870d8;
     }
 
 }

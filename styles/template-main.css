@@ -7,7 +7,6 @@ div.main-projects {
     display:flex;
     flex-direction: column;
     row-gap: 3rem;
-    font-size: 1.1rem;
 }
 
 body {
@@ -36,6 +35,7 @@ body {
     border-bottom: 3px solid #0870d8;
     font-weight: bold;
     font-size: 1.2rem;
+    letter-spacing: 2px;
 }
 .pr-container {
     display: flex;   

@@ -1,12 +1,5 @@
 
 function c() {
-const URL_PARAMS_PAGES = {
-    h:  "Home", 
-    ml: "Machine Learning Subspace",
-    a: "Android Subspace",
-    w: "Web Subspace",
-    otr: "Rest of Space"
-}
 
 const URL_PARAMS_PROJECTS = {
     h: {
@@ -499,21 +492,6 @@ const PROJECT_CONTENTS = {
         },
     }
 }
-class Page {
-    constructor(pgSource, projectCode) {
-        this.pgSource = pgSource;
-        this.projectCode = projectCode;
-    }
-
-    fetchProjectContents(){
-
-    }
-
-    createProjectNavigation() {
-        
-    }
-}
-
 class Project {
     constructor(projectCode, article, video, specs) {
         this.projectCode = projectCode;
@@ -555,7 +533,8 @@ const prContainer = document.querySelector(".project-tabs");
 // Later put in Page Class Method
 Object.values(URL_PARAMS_PROJECTS[CUR_PR_CATEGORY]).forEach((pr)=>{
     let butt = document.createElement("li");
-    butt.classList.add(...[pr, "pr-select"])
+    butt.classList.add("pr-select");
+    butt.dataset.projectButtonName = pr;
     butt.innerHTML = PROJECT_CONTENTS[pr].title;
     prTabsContainer.append(butt);
 })
@@ -570,21 +549,22 @@ document.addEventListener("click", (ev)=>{
 
     let curProject;
     if(isProjectButton) {
-        curProject = document.getElementById(ev.target.classList[0]);
+        
+        curProject = document.querySelector('[data-project-name="' + ev.target.dataset.projectButtonName + '"]');
         curProject.classList.toggle("open");
     }
 
     document.querySelectorAll(".pr-article-container").forEach((article) => {
         
-        if(curProject.id === article.id) {
+        if(curProject.dataset.projectName === article.dataset.projectName) {
             article.classList.add("open");
-            //prTitleContainer.innerHTML = PROJECT_CONTENTS[article.id].title;
+            //prTitleContainer.innerHTML = PROJECT_CONTENTS[article.dataset.projectName].title;
             ev.target.classList.add("selected");
-            document.querySelector(".project-specs tbody").innerHTML = createTable(article.id);
+            document.querySelector(".project-specs tbody").innerHTML = createTable(article.dataset.projectName);
             return;
         }
         article.classList.remove("open");
-        document.querySelector("."+article.id).classList.remove("selected");
+        document.querySelector('[data-project-button-name="'+article.dataset.projectName+'"]').classList.remove("selected");
     })
 
 })
@@ -633,18 +613,18 @@ window.addEventListener("load", (ev)=>{
 
     //set project visibility based on url d value
     prContainer.querySelectorAll(".pr-article-container").forEach((article) => {
-        if (CUR_PR_CODE === article.id) {
+        if (CUR_PR_CODE === article.dataset.projectName) {
             article.classList.add("open");
             document.querySelector("."+CUR_PR_CODE).classList.add("selected");
             document.querySelector(".project-specs tbody").innerHTML = createTable(CUR_PR_CODE);
             return;
         }
 
-        if (CUR_PR_CODE !== article.id && CUR_PR_CODE === "no") {
+        if (CUR_PR_CODE !== article.dataset.projectName && CUR_PR_CODE === "no") {
             prContainer.firstElementChild.classList.add("open");
-            //prTitleContainer.innerHTML = PROJECT_CONTENTS[prContainer.firstElementChild.id].title;
-            document.querySelector("."+ prContainer.firstElementChild.id).classList.add("selected");
-            document.querySelector(".project-specs tbody").innerHTML = createTable(prContainer.firstElementChild.id);
+            //prTitleContainer.innerHTML = PROJECT_CONTENTS[prContainer.firstElementChild.dataset.projectName].title;
+            document.querySelector('[data-project-button-name="'+ prContainer.firstElementChild.dataset.projectName + '"]').classList.add("selected");
+            document.querySelector(".project-specs tbody").innerHTML = createTable(prContainer.firstElementChild.dataset.projectName);
             return;
         }
         //prTitleContainer.innerHTML = PROJECT_CONTENTS[CUR_PR_CODE].title;
@@ -663,7 +643,7 @@ window.addEventListener("load", (ev)=>{
 
 function createArticle(prId) {
     let articleContainer = document.createElement("article");
-    articleContainer.id = prId;
+    articleContainer.dataset.projectName = prId;
     articleContainer.classList.add("pr-article-container");
     document.querySelector(".project-tabs").appendChild(articleContainer);
 
@@ -759,5 +739,6 @@ function createTable(prId){
     return tableContents;
 
 }
+
 }
 c();

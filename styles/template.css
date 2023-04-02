@@ -460,7 +460,7 @@ svg#docker-icon {
         min-width: 6rem;
     }
 
-    .sub-nav-container > a {
+    .sub-nav-container > a.link {
         display: inline-block;
         box-sizing: border-box;
         width: 100%;
@@ -471,7 +471,7 @@ svg#docker-icon {
         font-weight: bold;
     }
 
-    .sub-nav-container:first-of-type > a:hover {
+    .sub-nav-container:first-of-type > a.link:hover {
         border-bottom: 2px solid #171717;
     }
 
@@ -487,9 +487,9 @@ svg#docker-icon {
         position:absolute;
         display: flex;
         flex-direction: column;
-        row-gap: 1em;
+        row-gap: 1rem;
         box-sizing: border-box;
-        padding: 1em;
+        padding: 1rem;
         font-size: 0.95rem;
         background-color: #f6f6f6f5;
         inline-size: max-content;
@@ -502,13 +502,14 @@ svg#docker-icon {
     .sub-nav-container.active > a {
         background-color: #f6f6f6f5;
     }
+
     .sub-nav-container.active > a + .sub-nav {
         opacity:1;
         pointer-events:auto; /*be clickable when visible*/
     }
 
     .sub-nav a:hover {
-        border-bottom: 1px solid #171717;
+        border-bottom: 2px solid #171717;
 
     }
 
@@ -532,7 +533,7 @@ svg#docker-icon {
         align-items: end;
         padding:2rem 4rem 1rem 4rem;
         width:auto;
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     footer h3 {
