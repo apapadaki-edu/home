@@ -15,7 +15,6 @@ html {
 }
 
 body.dark-mode  {
-    letter-spacing: 1px;
     font-family: 'Open Sans', 'Open Sans Light', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
 }
 
@@ -53,7 +52,6 @@ body.dark-mode p.site-description {
         background-image: none;
         background-color: var(--back-blue);
         color: #BFA181;
-        font-weight: bold;
 }
 
 body.dark-mode .main-nav.open {
@@ -204,7 +202,6 @@ body.dark-mode .app-category:first-of-type h3 {
 body.dark-mode .expand {
     color: #178582;
     font-weight: bold;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent;
     justify-content: flex-start; /* remove if display hr */
 }
@@ -216,6 +213,7 @@ body.dark-mode .expand:focus {
 
 body.dark-mode .expand:focus svg {
     background-color: #BFA181;
+    color:black;
 }
 
 body.dark-mode .expand span {

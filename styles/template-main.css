@@ -22,7 +22,8 @@ body {
     flex-wrap: wrap;
 }
 
-.pr-nav-container li{
+.pr-nav-container .pr-select{
+    display: block;
     min-width: 15%;
     display: inline-block;
     box-sizing: border-box;
@@ -31,7 +32,7 @@ body {
 
 }
 
-.pr-nav-container li.selected {
+.pr-nav-container .pr-select.selected {
     border-bottom: 3px solid #0870d8;
     font-weight: bold;
     font-size: 1.2rem;
@@ -47,6 +48,11 @@ body {
 .pr-article-container {
     display: none;
 }
+
+.pr-nav-container:last-child {
+    scroll-behavior: smooth;
+}
+
 .pr-article-container.open {
     display:flex;
     flex-direction: column;
@@ -65,6 +71,12 @@ body {
     column-gap: 1rem;
     font-weight: bold;
     margin-top: 0.5rem;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+}
+
+.expand:focus {
+    color:orange;
 }
 
 .expand span {
@@ -83,14 +95,20 @@ body {
     height: 0.7em;
     pointer-events: none;
 }
-
-hr {
+.expand:focus svg {
+    background-color: orange;
+    color:white;
+}
+.expand hr {
     display: inline-block;
     align-self: center;
     background: black;
     min-width: 0.1rem;
     flex-grow: 1;
     pointer-events: none;
+}
+.expand:focus hr {
+    border:  1px solid orange;
 }
 
 .section-contents {
@@ -105,13 +123,12 @@ hr {
 h4 {
     text-indent: 0;
 }
+*/
 
 .expand p {
-    min-height: 0;
-    min-width: 0;
     pointer-events: none;
 }
-*/
+
 .expand.open hr {
    display:none;
 }
@@ -207,6 +224,7 @@ th.cat-heading {
         width: calc(100vw - 12vw);
         max-height: 600px;
         overflow-x: scroll;
+        
     }
     .pr-desc {
         font-size: 1.1rem;
@@ -271,11 +289,11 @@ th.cat-heading {
         border-bottom: 3px solid var(--off-white);
     }
     
-    .pr-nav-container li{
+    .pr-nav-container .pr-select{
         padding: 15px;
     }
     
-    .pr-nav-container li.selected {
+    .pr-nav-container .pr-select.selected {
         font-size: 1.1rem;
         padding: 10px 5px;
     }
@@ -288,6 +306,7 @@ th.cat-heading {
         grid-template-columns: 5fr 2fr;
         row-gap: 0;
         column-gap: 5%; 
+        scroll-behavior: auto;
     }
 
 

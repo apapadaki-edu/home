@@ -250,7 +250,7 @@ svg#docker-icon {
     
     .toggle-button-container {
         padding:0.8rem 1.3rem;
-        right: 0;
+        left: 0;
     }
 
     #header-container {
@@ -276,7 +276,7 @@ svg#docker-icon {
 
     .hamb-menu {
         position: absolute;
-        left: 0;
+        right: 0;
     }
 
     .hamb-menu-icon {

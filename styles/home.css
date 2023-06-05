@@ -345,7 +345,7 @@ svg#docker-icon {
     }
     .toggle-button-container {
         padding:0.8rem 1.3rem;
-        right: 0;
+        left: 0;
     }
 
     #header-container {
@@ -373,7 +373,7 @@ svg#docker-icon {
 
     .hamb-menu {
         position: absolute;
-        left: 0;
+        right: 0;
     }
 
     .hamb-menu-icon {
@@ -765,8 +765,7 @@ svg#docker-icon {
 @media (min-width: 900px) and (max-width: 1399px) {
 
     .site-description {
-        padding-top:20%;
-        font-size: 0.98rem;
+        display:none;
     }
     .one-line-intro {
         padding-left: 5vw;
@@ -789,6 +788,9 @@ svg#docker-icon {
     }
     .app-category-description {
         font-size: 0.98rem;
+    }
+    .site-description {
+        display: none;
     }
 }
 

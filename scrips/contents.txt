@@ -1,66 +1,53 @@
-
-"c": { body: "<p>This is a messaging application that makes it easier to manage the types of 
-    messages you want to send, from one UI. For instance, if we want to send an email
-    we must open the mail app and for messaging, one of the other available messaging apps on our phone directly.
-    Here the user can provide their message, as well as, the email address or phone number of the receiver and by 
-    the press of a button, the appropriate application opens with its fields already filled in. 
-    This application makes it easier for sending messages from one UI. The application detects the systems language and 
-    the corresponding keyboard layout is presented.</p>
-    <p>As for its structure, the user is provided with a simple UI that probes them for an email address or a phone number. 
-    This field is checked for the validity of its content. For instance, whether the email address conforms with the standard
-    published by the appropriate authorities/organizations. This can prevent simple mistakes like the correct form of the email address 
-    or the number of digits required in a phone number, saving time for the user. A toast message informs the user in case of a mistake.
-    In the case of emails, if an email address is detected, there appears a new field for providing the email subject.
-    A simple text field is there for the body of the message. Finally, at the end of the UI, there are three buttons, 
-    one for opening the user's messaging app, one for the email application and the third and last one, for clearing the text field.</p>
-    <p>The buttons start activities with intents that call the user to open the 
-    appropriate applications for each messaging app. A message's contents are sent to the 
-    appropriate messaging app through the intent.</p>
-},
-"sc": {
-    body: "<p>Application for scientific calculations of the functorial, the Fibonacci sequence up to a number and 
-    the most common divisor of a stream of numbers. The purpose of this application at the educational level was to learn 
-    to work with threads. These calculations are ideal for this purpose since they are computationally expensive for large numbers
-    and can crash or freeze the UI if not handled in the background.</p>
-    <p>The UI includes an EditText view in which the user provides the numbers separated with commas. A check is run for the 
-    proper format of the stream of numbers. If it is not a stream of numbers separated by a comma, a toast message is presented
-    to warn the user. There are three buttons, one for each mathematical operation. The calculation results are 
-    shown as blocks in a text area field. </p>
-    ",
-},
-"ca": {
-    body: "<p>An application that allows the user to create, modify and store calendar events. 
-    The events are displayed on a list based on their due date. 
-    Due to its simplicity, one can organize events more efficiently. </p>
-    <p>Features.The main activity of the application hosts all the calendar events that are not past due, ordered by the date that the event happens,
-    from the closest to the latest one. For each event on the list, its title, the date of creation and the due date will be included as well as 
-    a check box for bulk deleting events. Events that are past due are still stored in the database, however, they are not displayed on the main
-    screen. A button with the '+' sign can be used to add a new event. Once pressed a new activity is started with a new screen that contains 
-    the form with the event's information, which the user needs to fill out. The information includes its title, a description and the date of the event.  
-    On this new screen, there are three buttons available. One to save the event, another to delete it and a final one to cancel the changes, after each
-    operation the user is directed back to the main screen. The event list must be updated after returning from the form screen. The user can also click on
-    an event from the event list and be brought to the activity with the form to modify the event's information. All events will be stored in 
-    a relational database stored locally.</p>
-    <p> The expected learning results are to work with multiple activities and work with databases. No remote connection was required,
-    the database was created locally.</p>
-    ",
-},
-"pg": {
-    body: "<p>An application for taking photos, storing them, adding location information and a description.</p>
-    <p>The user can take photographs or video from both the front and back lenses. After the media is taken they are then stored 
-    locally (using content providers). Additionally, there are stored, the date and time of creation and location information (as retrieved from the GeoCoder).
-    The user can also include a short description (up to 300 characters) of the picture.  The photos will be displayed in a grid-like layout on the main screen,
-     using bitmaps as thumbnails. Once clicking on an image thumbnail the user is guided to a new screen where; the image is displayed at its original size and
-     the image's details follow after. The description can be modified and stored anew. Finally, the user can delete a selected image.</p>
-    ",
-},
-"ma": {
-    body: "<p>An application that shows the location of the user on a map. If the user is moving, there are displayed the velocity with which they are 
-    moving and the direction of movement with respect to the north. The will always be updated to show the user's location (location tracking). Additionally,
-    the user can add places of interest on the map in the form of pins. Each pin is accompanied by an infowindow, which contains information about the location. 
-    The information of each pin where created; is stored locally and displayed on the infowindow of each pin.</p>",
-},
-
-}
+Messaging Application
+ina
+A simple messaging application. Makes it easy to manage messages sent from different applications from one user interface.  When provided with the title, e-mail or phone number, the user can choose to either send an email or a message. The corresponding application opens with the fields of a new e-mail or message filled out, depending on their choice.  
+iwk
+Once the app is opened, the user is presented with a simple UI, that probes them for an email address or a phone number. If an email address is provided, an additional field appears for the email’s subject. Lastly, there is a text field for filling in the email’s or message’s body. 
+This field for the email address and phone number is checked for the validity of its content. For instance, whether the email conforms with the standards published by official authorities/ organizations. This kind of validation can prevent simple mistakes with the correct form of email addresses (i.e., two @) or the number of digits in a phone number. In case of such mistakes, a message appears to inform the user as appropriate.
+After completing all fields, can press one of the available buttons to open the corresponding application. For instance, if the user chooses to send an email, a small menu pops up with all the available applications for sending emails, installed on the user’s phone listed. Then the user can pick which one to choose. 
+tl
+Developing this application had the purpose of getting us accustomed to starting activities using URIs. Those activities help communicate with different applications and not new child activities. Furthermore, coding this app familiarized us with building UI’s with XML coding. 
+Unfortunately, it was not tested for messaging applications besides the one pre-installed. For instance, applications such as Viber, WhatsApp or others. This can be a feature for future development. 
+Scientific Calculator
+ina
+A calculator for computing the factorial, the Fibonacci sequence and the Great Common Divisor of a stream of numbers. The factorial is computed for every number in the sequence. The Fibonacci sequence is generated for each number in the stream and it is up to that number. Lastly, the GCD is computed for the total numbers in the stream. 
+iwk
+Starting, the UI includes an EditText field for providing the stream of numbers. The numbers must be separated by commas. No other separator is allowed. The numbers can include white spaces in between commas. In case of incorrect input, a toast message pops up to inform the user. 
+Next, there are three buttons, one for each mathematical operation. The user can press the buttons at any given time. They can be pressed with the same or different streams, even before the results of previous streams are calculated. 
+Lastly, there is a view for presenting the results. The results are displayed in ascending order of the time needed to calculate them. For example, suppose that the user provides a sequence of large numbers before a stream of smaller numbers. The sequence with smaller ones will be displayed first; since it is a heavier task for the computer to calculate.
+tl
+This application was developed for getting us accustomed to threads. Tasks that take too long to finish need to be completed in a way that does not freeze the UI. As such, threads take the role of doing heavy tasks in the background, while the user can still interact with the application. The UI updates asynchronously. 
+There are limitations when it comes to computational resources. For example, the amount of memory a user has, may not be enough for storing large numbers during the calculation process. Such restrictions can crash the application. I have yet to find a way to detect the memory available and therefore, make customizations or inform the user as appropriate. This could be a task for future reference.
+Calendar Events
+ina
+An application for creating, modifying and storing calendar events. The events are displayed on a list in ascending order of the date they take place. The most recent one is displayed at the top. 
+iwk
+Once opening the application, the user is presented with a list of all the events that haven’t been concluded yet. They are listed from the closest to the furthest one. For each event on the list, the user can see its title, the date of creation and its due date. Along with this information, next to each event, there is a checkbox. The events that are checked can be bulk deleted, by pressing the delete button at the top right side of the screen.
+From the main screen, the user has two choices, apart from mass deleting events. The first one is to press the round orange button. This allows the user to create a new event. The other one is to click on a note from the list to modify its information.
+For the new event, a new screen opens by pressing the ‘+’ button. This screen contains a form for filling in the new event’s information. That information includes; its title, the date it takes place and a description. The description is optional, whereas the due date must be in the format indicated by the placeholder. The same form appears for modifying an already existing event from the list. However, the fields contain the event’s information, as was last stored.
+Once the form is filled out, the event can be saved, in case it already exists deleted or any changes canceled. After any one of the previously mentioned actions, the user is redirected to the main screen.
+tl
+The goal, while developing this application, was to learn how to interact with a database and how to create child activities. The database used; was one created locally. An additional learning result was the serialization of objects of custom classes. 
+As mentioned in the previous section, the due date provided for an event must be in a specific format. This is not user-friendly, neither visually nor functionally. Maybe a calendar widget could be useful for this purpose. Finally, grouping the events weekly or monthly could assist in organizing them more efficiently. 
 
 
+
+
+!! a:
+STYLE_LAYERS = [
+    ('block1_conv1', 0.2),
+    ('block2_conv1', 0.4),
+    ('block3_conv1', 0.4)]   
+content-img: pouri.jpg
+style-img: a_e2.jpg
+
+!! m: 
+STYLE_LAYERS = [
+    ('block1_conv1', 0.4),
+    ('block2_conv1', 0.4),
+    ('block3_conv1', 0.2)
+]
+content-img: dock.jpg
+style-img: square4.jpeg
+gama: 0.08
+Spring's spring -> make it swirly

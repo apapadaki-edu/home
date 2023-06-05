@@ -51,6 +51,7 @@ window.addEventListener("resize", (ev) =>{
     const hambButtons = document.querySelectorAll("[data-dropdown-button]");
     const main = document.getElementsByTagName("MAIN")[0];
     
+
     if (window.matchMedia("(min-width: 901px)").matches || screen.width > 901) {
 
         // if the last dropdown button does not have
@@ -62,14 +63,19 @@ window.addEventListener("resize", (ev) =>{
             if (index !== 0) button.nextElementSibling.remove();     
         });
 
-        
         if (main.querySelector(".page-introduction") === null) return;
-        main.querySelector(".page-introduction").remove();
-        
+        if (main.querySelector(".page-introduction").style.display === "none") return;
+        main.querySelector(".page-introduction").style.display = "none";
+
         return;
     }
     //im case of a mobile screen we need to create the drop-down open button
     addDropdownButtons(hambButtons);  
+
+    // in case of large we do not need an introduction
+    if (main.querySelector(".page-introduction") === null) return;
+    main.querySelector(".page-introduction").style.display = "block";
+
 
 });
 
@@ -257,11 +263,11 @@ function createHomeMain(parent) {
 
     
     Object.keys(URL_PARAMS_PAGES).slice(1).forEach((pr)=>{
-        const categoryContainer = document.createElement("div");
+        let categoryContainer = document.createElement("div");
         categoryContainer.dataset.category = "";
         categoryContainer.classList.add("app-category");
 
-        const categoryLink = document.createElement("a");
+        let categoryLink = document.createElement("a");
         categoryLink.classList.add("to-content");
         categoryLink.setAttribute("href",`pages/template.html?sr=h&d=${pr}&pr=no&darkMode=${document.URL.match(/(?<=Mode=)\w+$/)[0]}`);
         if (pr === "ml") { //remove once projects added
@@ -271,13 +277,13 @@ function createHomeMain(parent) {
         }
         categoryLink.innerHTML = `${prCats[pr].prCatSvg}<h3 class="app-title">${prCats[pr].prCatName}</h3>`;
 
-        const categoryButton = document.createElement("button");
+        let categoryButton = document.createElement("button");
         categoryButton.dataset.categoryDescriptionButton = "";
         categoryButton.classList.add("more-btn");
         categoryButton.innerHTML = '<svg class="more-info" shape-rendering="geometricPrecision"  fill="currentColor" text-rendering="geometricPrecision"  fill="currentColor" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero"  fill="currentColor" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>                    \
             <svg class="less-info" shape-rendering="geometricPrecision" fill="currentColor" text-rendering="geometricPrecision"  fill="currentColor" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 512 266.77"><path fill-rule="nonzero" fill="currentColor" d="M493.12 263.55c4.3 4.28 11.3 4.3 15.62.05 4.33-4.26 4.35-11.19.05-15.47L263.83 3.22c-4.3-4.27-11.3-4.3-15.63-.04L3.21 248.13c-4.3 4.28-4.28 11.21.05 15.47 4.32 4.25 11.32 4.23 15.62-.05L255.99 26.48l237.13 237.07z"/></svg>                ';
 
-        const categoryDescription = document.createElement("p");
+        let categoryDescription = document.createElement("p");
         categoryDescription.classList.add("app-category-description");
         categoryDescription.innerHTML = prCats[pr].prCatDesc;
 
