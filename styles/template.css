@@ -130,7 +130,7 @@ header{
     font-size: 2rem;
     letter-spacing: 5px;
     border: 0px;
-    padding: 8% 0 14% 0;
+    padding: 6% 0 8% 0;
 
 }
 .site-description span {
@@ -379,10 +379,10 @@ svg#docker-icon {
     }
 
     .site-description {
-        height:45vh;
+        height:35vh;
         box-sizing: border-box;
         margin-top: calc(20px + 2rem);
-        padding: 16vh 6vw 6vh 0;
+        padding: 14vh 6vw 10vh 0;
     }
 
     footer {
