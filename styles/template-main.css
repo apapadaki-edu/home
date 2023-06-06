@@ -32,7 +32,7 @@ body {
 
 }
 
-.pr-nav-container .pr-select.selected {
+.pr-select.selected {
     border-bottom: 3px solid #0870d8;
     font-weight: bold;
     font-size: 1.2rem;
@@ -355,4 +355,28 @@ th.cat-heading {
         max-width: 200px;
     } 
 */
+}
+
+@media (max-width: 550px) {
+    .main-projects {
+        background-color: white;
+        color:#333a55;
+    }
+    .pr-nav-container {
+        background-color: #f7f5e6;
+        color: #333a55;
+        border-radius: 0;
+        
+    }
+    div.main-projects {
+        padding: 0;
+    }
+    section.pr-container {
+        padding: 0 6vw 10% 6vw;
+    }
+    .pr-select.selected {
+        background-color: #f7f5e6;
+        color:#333a55;
+        border-bottom:3px solid #52658f;
+    }
 }
