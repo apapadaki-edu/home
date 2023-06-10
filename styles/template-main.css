@@ -107,9 +107,7 @@ body {
     flex-grow: 1;
     pointer-events: none;
 }
-.expand:focus hr {
-    border:  1px solid orange;
-}
+
 
 .section-contents {
     max-height: 0px;
@@ -368,6 +366,11 @@ th.cat-heading {
         border-radius: 0;
         
     }
+    .hamb-menu-icon,
+    .toggle-icon {
+        color: #f7f5e6
+
+    }
     div.main-projects {
         padding: 0;
     }
@@ -379,4 +382,25 @@ th.cat-heading {
         color:#333a55;
         border-bottom:3px solid #52658f;
     }
+    
+    .app-layout-imgs,
+    .circle {
+        background-color: #f7f5e6;
+    }
+    .toggle {
+        border: 1px solid #f7f5e6;
+    }
+    .expand.open,
+    .expand:focus {
+        color: #52658f;
+    }
+    .expand.open .less-info,
+    .expand:focus svg {
+        background-color: white;
+        color: #52658f
+    }
+    .expand:focus hr {
+        border:  1px solid #52658f;
+    }
+    
 }
