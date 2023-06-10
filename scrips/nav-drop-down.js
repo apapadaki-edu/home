@@ -51,7 +51,6 @@ window.addEventListener("resize", (ev) =>{
     const hambButtons = document.querySelectorAll("[data-dropdown-button]");
     const main = document.getElementsByTagName("MAIN")[0];
     
-
     if (window.matchMedia("(min-width: 901px)").matches || screen.width > 901) {
 
         // if the last dropdown button does not have
@@ -84,7 +83,28 @@ window.addEventListener("load", (ev) => {
     if (window.innerWidth < 901) {
         addDropdownButtons(document.querySelectorAll("[data-dropdown-button]"));
     }
-    
+    /*
+    if ((window.innerWidth > 550) && !document.body.classList.contains("dark-mode")) {
+        document.querySelectorAll("footer, .site-description,\
+        #header-container, .hamb-menu-banner, .hamb-menu, .site-description span, \
+        .site-description span:first-child,.site-description span + span,\
+        .main-nav a, .expand-down-arrow, .sub-nav-container:nth-child(2) .sub-nav a, \
+        .main-nav a.link, .main-projects,.pr-nav-container, div.main-projects, section.pr-container,\
+        .pr-select.selected").forEach((el) => {
+            el.classList.toggle("color");
+        })
+    } 
+    if (document.body.classList.contains("dark-mode")) {
+        document.querySelectorAll("footer, .site-description,\
+        #header-container, .hamb-menu-banner, .hamb-menu, .site-description span, \
+        .site-description span:first-child,.site-description span + span,\
+        .main-nav a, .expand-down-arrow, .sub-nav-container:nth-child(2) .sub-nav a, \
+        .main-nav a.link, .main-projects,.pr-nav-container, div.main-projects, section.pr-container,\
+        .pr-select.selected").forEach((el) => {
+            el.classList.remove("color");
+        })
+    }
+    */
     //if no darkMode parameter in the url (user comes from the home page link, add the mode to false, without reloading the page)
     if (!document.URL.includes("darkMode")) window.history.replaceState({noMode: "darkMode='f'"}, "", document.URL + "?darkMode=f");
     

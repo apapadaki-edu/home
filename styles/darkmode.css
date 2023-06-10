@@ -19,8 +19,9 @@ body.dark-mode  {
 }
 
 body.dark-mode .main-container, body.dark-mode main, body.dark-mode footer, 
-body.dark-mode .hamb-menu-banner,
-body.dark-mode .main-nav, body.dark-mode .main-nav.open  {
+body.dark-mode .hamb-menu-banner, body.dark-mode .site-description > span, body.dark-mode .main-projects,
+body.dark-mode .main-nav, body.dark-mode .main-nav.open, 
+body.dark-mode .pr-nav-container  {
     background-color: var(--back-blue);
     color: #e9e9e9;
 }

@@ -379,10 +379,10 @@ svg#docker-icon {
     }
 
     .site-description {
-        height:35vh;
+        height: max-content;
         box-sizing: border-box;
         margin-top: calc(20px + 2rem);
-        padding: 12vh 6vw 10vh 0;
+        padding: 10vh 6vw 10vh 0;
     }
 
     footer {
@@ -514,7 +514,8 @@ svg#docker-icon {
     }
 
     .site-description {
-        max-height:30vh;
+        height: max-content;
+
     }
     
     .site-description span {
@@ -565,17 +566,27 @@ svg#docker-icon {
         background-color: #333A56;
         background-image:none;
         color: #e8e8e8;
+        
     }
     .hamb-menu {
         color: #e8e8e8;
     }
-
+    .site-description {
+        height: max-content;
+    }
+    .site-description span {
+        background-color: #52658fc4;
+        margin-left: 10%;        
+    }
     .site-description span:first-child  {
         font-size: 2rem;
+        padding-top: 2rem;
     }
     .site-description span + span {
         font-size: 1.5rem;
-        margin-top: 0.5rem;  
+        padding-top: 0.5rem; 
+        margin-top: 0;
+        padding-bottom: 1rem; 
     }
 
     .main-nav {
@@ -598,8 +609,6 @@ svg#docker-icon {
         border-bottom: 1px solid transparent;
         border-image: linear-gradient(0.47turn, #e8e8e8, #7a7445);
         border-image-slice: 1;
-    }
-    .main-nav a.link {
         font-weight: 500;
     }
 
