@@ -83,28 +83,7 @@ window.addEventListener("load", (ev) => {
     if (window.innerWidth < 901) {
         addDropdownButtons(document.querySelectorAll("[data-dropdown-button]"));
     }
-    /*
-    if ((window.innerWidth > 550) && !document.body.classList.contains("dark-mode")) {
-        document.querySelectorAll("footer, .site-description,\
-        #header-container, .hamb-menu-banner, .hamb-menu, .site-description span, \
-        .site-description span:first-child,.site-description span + span,\
-        .main-nav a, .expand-down-arrow, .sub-nav-container:nth-child(2) .sub-nav a, \
-        .main-nav a.link, .main-projects,.pr-nav-container, div.main-projects, section.pr-container,\
-        .pr-select.selected").forEach((el) => {
-            el.classList.toggle("color");
-        })
-    } 
-    if (document.body.classList.contains("dark-mode")) {
-        document.querySelectorAll("footer, .site-description,\
-        #header-container, .hamb-menu-banner, .hamb-menu, .site-description span, \
-        .site-description span:first-child,.site-description span + span,\
-        .main-nav a, .expand-down-arrow, .sub-nav-container:nth-child(2) .sub-nav a, \
-        .main-nav a.link, .main-projects,.pr-nav-container, div.main-projects, section.pr-container,\
-        .pr-select.selected").forEach((el) => {
-            el.classList.remove("color");
-        })
-    }
-    */
+
     //if no darkMode parameter in the url (user comes from the home page link, add the mode to false, without reloading the page)
     if (!document.URL.includes("darkMode")) window.history.replaceState({noMode: "darkMode='f'"}, "", document.URL + "?darkMode=f");
     
@@ -215,6 +194,7 @@ function createFontToggleButton(darkMode) {
 
     document.querySelector("#header-container").appendChild(container);
 }
+
 
 function createHomeMain(parent) {
     let prCats = {

@@ -110,7 +110,7 @@ body.dark-mode svg#docker-icon {
 
 body.dark-mode svg#linkedin-round-icon path,
 body.dark-mode svg#github-icon path,
-body.dark-mode svg#black-instagram-icon path {
+body.dark-mode svg#insta-icon path {
     fill: #178582;
 }
 
@@ -355,7 +355,4 @@ body.dark-mode .expand hr {
         column-gap: 3rem;
     }
 
-    body.dark-mode div.main-projects {
-        padding:3%; 
-    }
 }

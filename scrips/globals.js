@@ -16,8 +16,8 @@ const URL_PARAMS_PROJECTS = {
         CONTACT_METHODS: "c",
         SCI_CALCULATOR: "sc",
         CALENDAR: "ca",
-        MAPS_APP: "ma",
-        PHOTO_GALLERY: "pg"
+        PHOTO_GALLERY: "pg",
+        MAPS_APP: "ma"
     },
 
     w: {
@@ -84,7 +84,7 @@ const PROJECT_CONTENTS = {
             Software:[["Android Studio", "Dolphin v2021.3.1"]],
             Languages: [["Java","v8"],[" XML","v1.0"]],
             Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
-            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
+            Dependencies: [["flexbox", "v3.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
     },
@@ -125,7 +125,7 @@ const PROJECT_CONTENTS = {
             Software:[["Android Studio", "Dolphin v2021.3.1"]],
             Languages: [["Java","v8"],[" XML","v1.0"]],
             Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
-            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
+            Dependencies: [["flexbox", "v3.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
         
@@ -172,10 +172,56 @@ const PROJECT_CONTENTS = {
             Software:[["Android Studio", "Dolphin v2021.3.1"]],
             Languages: [["Java","v8"],[" XML","v1.0"]],
             Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
-            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
+            Dependencies: [["flexbox", "v3.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
 
+    },
+    "pg": {
+        title: "Photo Gallery",
+        body: '<p>An application for taking photos, storing them, adding location information and a description.</p> \
+            <button class="expand">\
+            <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
+            <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
+            </span><p>Interworkings</p>\
+            <hr></button> \
+            <p class="section-contents">The user can take photographs or video from both the front and back lenses. After the media is taken they are then stored \
+                locally (using content providers). Additionally, there are stored, the date and time of creation and location information (as retrieved from the GeoCoder). \
+                The user can also include a short description (up to 300 characters) of the picture.  The photos will be displayed in a grid-like layout on the main screen, \
+                using bitmaps as thumbnails. Once clicking on an image thumbnail the user is guided to a new screen where; the image is displayed at its original size and \
+                the image\'s details follow after. The description can be modified and stored anew. Finally, the user can delete a selected image.</p>\
+            <button class="expand">\
+            <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
+            <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
+            </span><p>Technical/Limitations</p>\
+            <hr></button>\
+            <p class="section-contents"> </p>',
+        images: [
+                {
+                    path: "../images/pg_ask_permitions.png",
+                    caption: "Ask Permissions"
+                },
+                {
+                    path: "../images/pg_all_photos.png",
+                    caption: "Gallery"
+                },
+                {
+                    path: "../images/pg_take_photo.png",
+                    caption: "New Photo"
+                },
+                {
+                    path: "../images/pg_modify_photo.png",
+                    caption: "Add Info"
+                }
+            ],
+        github: "https://github.com/apapadaki-edu/android-based/tree/photo-gallery",
+        specs: {
+            Software:[["Android Studio", "Dolphin v2021.3.1"]],
+            Languages: [["Java","v8"],[" XML","v1.0"]],
+            Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
+            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
+            SDK: [["Target", "32"], ["Min", "22"]]
+        },
     },
     "ma": {
         title: "Maps App",
@@ -200,34 +246,6 @@ const PROJECT_CONTENTS = {
             Software:[["Android Studio", "Dolphin 2021.3.1"]],
             Languages: [["Java","v8"],[" XML","v1.0"]],
             Grandle: [["Version", "v7.4"], ["Plugin Version", "v7.3.1"],],
-            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
-            SDK: [["Target", "32"], ["Min", "22"]]
-        },
-    },
-    "pg": {
-        title: "Photo Gallery",
-        body: '<p>An application for taking photos, storing them, adding location information and a description.</p> \
-            <button class="expand">\
-            <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-            <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><p>Interworkings</p>\
-            <hr></button> \
-            <p class="section-contents">The user can take photographs or video from both the front and back lenses. After the media is taken they are then stored \
-                locally (using content providers). Additionally, there are stored, the date and time of creation and location information (as retrieved from the GeoCoder). \
-                The user can also include a short description (up to 300 characters) of the picture.  The photos will be displayed in a grid-like layout on the main screen, \
-                using bitmaps as thumbnails. Once clicking on an image thumbnail the user is guided to a new screen where; the image is displayed at its original size and \
-                the image\'s details follow after. The description can be modified and stored anew. Finally, the user can delete a selected image.</p>\
-            <button class="expand">\
-            <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-            <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><p>Technical/Limitations</p>\
-            <hr></button>\
-            <p class="section-contents"> </p>',
-        github: "https://github.com/apapadaki-edu/android-based/tree/photo-gallery",
-        specs: {
-            Software:[["Android Studio", "Dolphin v2021.3.1"]],
-            Languages: [["Java","v8"],[" XML","v1.0"]],
-            Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
             Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },

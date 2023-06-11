@@ -132,7 +132,7 @@ h4 {
 }
 
 .section-contents.open {
-    max-height:100vh;
+    max-height: 2000px;
     transition: max-height .3s ease-in;
 }
 
