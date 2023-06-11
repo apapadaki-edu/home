@@ -46,37 +46,56 @@ const PROJECT_CONTENTS = {
     },
     "c": {
         title: "Contact Methods",
-        body: '<p>This is a messaging application that makes it easier to manage the types of \
-            messages someone want to send, from one UI. For instance, if we want to send an email\
-            we must open the mail app and for messaging, one of the other available messaging apps on their phone directly\
-            Here the user can provide their message, as well as, the email address or phone number of the receiver and by \
-            the press of a button, the appropriate application opens with its fields already filled out. \
-            This application makes it easier for sending messages from one UI. The application detects the systems language and \
-            the corresponding keyboard layout is presented.</p>\
+        body: '<p>A application that makes it easier for the user to manage the types of\
+            messages they wish to send, all from one UI. Those messages include either emails or phone messages (SMS).\
+            </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Interworkings</p>\
             <hr></button>\
-            <p class="section-contents">As for its structure, the user is presented with a simple UI that probes them for an email address or a phone number. \
-            This field is checked for the validity of its content. For instance, whether the email address conforms with the standard \
-            published by the appropriate authorities/organizations. This can prevent simple mistakes like the correct form of the email address \
-            or the number of digits required in a phone number, saving time for the user. A toast message informs the user in case of a mistake.\
-            In the case of emails, if an email address is detected, there appears a new field for providing the email subject.\
-            A simple text field is there for the body of the message. Finally, at the end of the UI, there are three buttons, \
-            one for opening the user\'s messaging app, one for the email application and the third and last one, for clearing the text field.</p> \
+            <div class="section-contents"><p>The user is presented with a simple UI that probes them for an email address or a phone\
+            number. This field is checked for the validity of its content. This can prevent simple mistakes,\
+            like the correct form of the email address, or the number of digits required in a phone\
+            number, saving time for the user. A pop-up message informs the user in case of a mistake. For\
+            emails, if an email address is detected, there appears a new field for providing\
+            the email\’s subject. Finally, a simple text field is included for the message\’s body.\
+            </p>\
+            <p> There are three buttons at the end of the UI, one for opening the user\'s messaging app,\
+            one for the email application and the third one, for clearing the text field containing the\
+            message\’s body. After the message\’s information are all filled in and depending on the type\
+            of message the user wishes to send, the appropriate application opens with its fields already filled in.</p>\
+            </div>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents">The buttons start activities with intents that call the user to open the \
-            appropriate applications for each messaging app. A message\'s contents are sent to the \
-            appropriate messaging app through the intent.</p>',
+            <p class="section-contents">The buttons start activities with intents that call the user to open the appropriate\
+            applications for each messaging app. A message\'s contents are sent to the messaging app\
+            selected through the intent. For now, messages are only for SMS apps, it would be useful to\
+            include others like for example, messenger. For emails, the validation conforms with OWASP\ Foundation\’s standard. \
+            </p>',
         images: [
                 {
                     path:"../images/c_messaging_app.png",
                     caption: "Main screen"
+                },
+                {
+                    path:"../images/c_fill_message.png",
+                    caption: "Fill SMS"
+                },
+                {
+                    path:"../images/c_open_sms_app.png",
+                    caption: "SMS App"
+                },
+                {
+                    path:"../images/c_fill_mail.png",
+                    caption: "Fill Email"
+                },
+                {
+                    path:"../images/c_select_app.png",
+                    caption: "Select Email App"
                 }
             ],
         github: "https://github.com/apapadaki-edu/android-based/tree/contact-methods",
@@ -90,25 +109,26 @@ const PROJECT_CONTENTS = {
     },
     "sc": {
         title: "Scientific Calculator",
-        body: '<p>Application for scientific calculations of the functorial, the Fibonacci sequence up to a number and \
-            the most common divisor of a stream of numbers. The purpose of this application at the educational level was to learn \
-            to work with threads. These calculations are ideal for this purpose since they are computationally expensive for large numbers \
-            and can crash or freeze the UI if not handled in the background.</p> \
+        body: '<p>Application for scientific calculations of the functorial, the Fibonacci sequence, \
+            up to a number and the most common divisor of a stream of numbers. </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-            </span><p>Interworkings</p>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
+            </span><p>Interworkings</p>\
             <hr></button>\
-            <p class="section-contents">The UI includes an EditText view in which the user provides the numbers separated with commas. A check is run for the \
-            proper format of the stream of numbers. If it is not a stream of numbers separated by a comma, a toast message is presented \
-            to warn the user. There are three buttons, one for each mathematical operation. The calculation results are \
-            shown as blocks in a text area field. </p>\
+            <p class="section-contents">The UI includes an EditText view in which the user provides the numbers separated with commas. \
+            A check is run for the proper format of the stream of numbers. If it is not a stream of numbers separated by a comma, \
+            a toast message is presented to notify the user. There are three buttons, one for each mathematical operation. \
+            The calculation results are shown as blocks in a text area field. </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p  class="section-contents"> </p>',
+            <p class="section-contents"> The purpose of this application at the educational level was to learn to work with threads. \
+            These calculations are ideal for this purpose since they are computationally expensive for large numbers \
+            and can crash or freeze the UI if not handled in the background. Finally, the application detects the system\’s \
+            language and presents the corresponding keyboard layout.</p>',
         images: [ 
                 {
                     path: "../images/sc_calc_main.png",
@@ -132,30 +152,30 @@ const PROJECT_CONTENTS = {
     },
     "ca": {
         title: "Calendar",
-        body: '<p>An application that allows the user to create, modify and store calendar events. \
-            The events are displayed on a list based on their due date. \
-            Due to its simplicity, one can organize events more efficiently. </p> \
+        body: '<p>An application that allows the user to create, modify and store calendar events. The events are displayed on a \
+            list based on their due date; the most resent one appears at the top. Due to its simplicity, one can organize events more efficiently. </p> \
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Interworkings</p>\
             <hr></button>\
-            <p class="section-contents">The main activity of the application hosts all the calendar events that are not past due, ordered by the date that the event happens, \
-            from the closest to the latest one. For each event on the list, its title, the date of creation and the due date will be included as well as \
-            a check box for bulk deleting events. Events that are past due are still stored in the database, however, they are not displayed on the main \
-            screen. A button with the \'+\' sign can be used to add a new event. Once pressed a new activity is started with a new screen that contains \
-            the form with the event\'s information, which the user needs to fill in. The information includes its title, a description and the date of the event.  \
-            On this new screen, there are three buttons available. One to save the event, another to delete it and a final one to cancel the changes, after each \
-            operation the user is directed back to the main screen. The event list must be updated after returning from the form screen. The user can also click on \
-            an event from the event list and be brought to the activity with the form to modify the event\'s information. All events will be stored in \
-            a relational database stored locally.</p> \
+            <div class="section-contents"><p>The start screen displays all calendar events that are not past due; have not yet happened. \
+            The events are ordered by the date the event happens, starting with the most recent one.\
+            For each event on the list, its title, the date of creation and the due date are included. Additionally, \
+            next to each event there is a check box for bulk deleting events. Finally, a button with the \'+\' sign is used to add a new event. </p>\
+            <p>A new form appears to the user, in case they wish to add a new event, by pressing the \‘+\’ sign button or to update an already added event, \
+            by pressing on an event. In the form the user can fill in the event\'s information. These pieces of information include its title, a description and the date of the event.</p>\
+            <p>The form includes three buttons. One button is to save or update an event, one to delete it and finally, one to cancel the changes. \
+            After each operation, the user is directed back to the main screen. Once a new event is added or updated, the event list on the main screen \
+            is also updated to include the newly created event or respectively, to display the altered information of the updated event. </p></div>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents"> The expected learning results are to work with multiple activities and work with databases. No remote connection was required, \
-            the database was created locally.</p>',
+            <p class="section-contents"> Events that are past due are still stored in the database, however, they are not displayed on the main screen. Additionally, \
+            all events are stored in a local relational database, so there is no need for a remote connection. The event list and the \
+            form consist two separate activities with the one first being the applications main activity and the second a child activity of the main.</p>',
         images: [
                 {
                     path: "../images/ca_calendar_ini.png",
@@ -179,23 +199,29 @@ const PROJECT_CONTENTS = {
     },
     "pg": {
         title: "Photo Gallery",
-        body: '<p>An application for taking photos, storing them, adding location information and a description.</p> \
+        body: '<p>An application for taking photos, storing them, adding location information and a description.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Interworkings</p>\
-            <hr></button> \
-            <p class="section-contents">The user can take photographs or video from both the front and back lenses. After the media is taken they are then stored \
-                locally (using content providers). Additionally, there are stored, the date and time of creation and location information (as retrieved from the GeoCoder). \
-                The user can also include a short description (up to 300 characters) of the picture.  The photos will be displayed in a grid-like layout on the main screen, \
-                using bitmaps as thumbnails. Once clicking on an image thumbnail the user is guided to a new screen where; the image is displayed at its original size and \
-                the image\'s details follow after. The description can be modified and stored anew. Finally, the user can delete a selected image.</p>\
+            <hr></button>\
+            <div class="section-contents"><p>The main screen of the application displays the thumbnails of all photos taken, using the application. \
+            A button is included for taking new photos. Once the new button is pressed, the native camera app opens for the user to use.\
+            After a photo is taken the user returns on the main screen with the newly added photo shown in the gallery. Along with the photo, \
+            there are stored the date and time of creation and the location information.</p>\
+            <p>The user can also include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
+            a new screen appears with the photo\’s information. These pieces of information include a larger version of the photograph, the location where it was taken, \
+            the date and time and a field for the description. The description can be modified and stored anew.</p></div>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents"> </p>',
+            <div class="section-contents"><p> Location information is stored as retrieved from the GeoCoder, as latitude and longitude pairs. The date and time \
+            are stored as recorded from the system, without any formatting.</p> <p>After the media is taken, they are stored locally, using a content provider. \
+            The reason for creating a content provider was to use it along the map application developed later. Since through that \
+            application the user can add information along with pins for places of interest, they can also include images for those places.</p>\
+            <p>Some learning objectives were to ask and grand permissions, to use the external storage for an application and lastly, to manipulate media.</p></div>',
         images: [
                 {
                     path: "../images/pg_ask_permitions.png",
