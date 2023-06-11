@@ -59,7 +59,9 @@ body {
     row-gap: 2rem;;
 }
 
-
+.section-contents p {
+    padding-bottom: 0.5rem;
+}
 
 .expand {
     box-sizing: border-box;
@@ -214,6 +216,9 @@ th.cat-heading {
 @media (max-width: 550px) {
     div.main-projects{
         padding: 10% 6vw;
+    }
+    .pr-select {
+        margin: 0 10%;
     }
     table {
         width:100%;

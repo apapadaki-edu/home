@@ -140,7 +140,7 @@ ph = '<p>An application for taking photos, storing them, adding location informa
 A button is included for taking new photos. Once the new button is pressed, the native camera app opens for the user to use.\
 After a photo is taken the user returns on the main screen with the newly added photo shown in the gallery. Along with the photo, \
 there are stored the date and time of creation and the location information.</p>\
-<p>The user can also include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
+<p>The user can include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
 a new screen appears with the photo\’s information. These pieces of information include a larger version of the photograph, the location where it was taken, \
 the date and time and a field for the description. The description can be modified and stored anew.</p></div>\
 <button class="expand">\
@@ -148,8 +148,9 @@ the date and time and a field for the description. The description can be modifi
 <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
 </span><p>Technical/Limitations</p>\
 <hr></button>\
-<p class="section-contents"> Location information is stored as retrieved from the GeoCoder, as latitude and longitude pairs. The date and time \
-are stored as recorded from the system, without any formatting. After the media is taken, they are stored locally, using a content provider. \
-The reason for creating a content provider was to use it along the map application developed later. Since through that \
-application the user can add information along with pins for places of interest, they could also include images for those places.\
-Some learning objectives were to ask and grand permissions, to use the external storage for an application and lastly, to manipulate media.</p>'
+<p class="section-contents"> Location information are stored as retrieved from the GeoCoder, as latitude and longitude pairs. The date and time \
+are stored as recorded from the system, without any formatting.</p> <p>All photographs along with any additional information, is stored locally, using a content provider. \
+The reason for creating a content provider was to use it along the map application developed later. Through that \
+application, the user can add information along with pins for places of interest. As an extra functionality, the user could also include images for those places, \
+by using the content provider. This feature has yet to be added in the Maps Application.</p>\
+<p>Some learning objectives were to ask and grand permissions, to use the external storage for an application and lastly, to manipulate media.</p>'

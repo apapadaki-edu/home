@@ -241,6 +241,9 @@ body.dark-mode .expand hr {
 
 /* up to here will be removed once ml projects are added */
 @media (max-width:550px) {
+    body.dark-mode main.home{
+        padding: 1.5rem;
+    }
     body.dark-mode .app-category {
         max-width: 100%;
     }
@@ -251,11 +254,16 @@ body.dark-mode .expand hr {
     body.dark-mode div.main-projects {
         padding: 4% 0; 
     }
+
+
 }
 
 @media (max-width: 900px) {
     body.dark-mode .app-category {
         max-width: 100%;
+    }
+    body.dark-mode main {
+        padding-top: 0;
     }
 
     body.dark-mode .main-nav {
@@ -285,6 +293,7 @@ body.dark-mode .expand hr {
 
     body.dark-mode main {
         padding: 2rem;
+        padding-top:0;
     }
 
     body.dark-mode div.main-projects {
@@ -293,6 +302,9 @@ body.dark-mode .expand hr {
 }
 
 @media (min-width: 901px) {
+    body.dark-mode main {
+        padding-top: 0;
+    }
     body.dark-mode .sub-nav  {
         background-color: #000318e4;
         color:#ede7e0;
@@ -349,6 +361,7 @@ body.dark-mode .expand hr {
     }
 }
 @media (min-width: 1400px){
+
     body.dark-mode section.categories-container {
         grid-template-areas: "c1 c2" "c3 c4";
         grid-template-columns: 1fr 1fr;

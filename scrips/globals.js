@@ -199,29 +199,31 @@ const PROJECT_CONTENTS = {
     },
     "pg": {
         title: "Photo Gallery",
-        body: '<p>An application for taking photos, storing them, adding location information and a description.</p>\
+        body: '<p>An application for taking photos, storing them, adding location information and a description. It is similar to \
+            the gallery application pre-insalled from the manufacturer.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Interworkings</p>\
             <hr></button>\
-            <div class="section-contents"><p>The main screen of the application displays the thumbnails of all photos taken, using the application. \
-            A button is included for taking new photos. Once the new button is pressed, the native camera app opens for the user to use.\
-            After a photo is taken the user returns on the main screen with the newly added photo shown in the gallery. Along with the photo, \
-            there are stored the date and time of creation and the location information.</p>\
-            <p>The user can also include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
+            <div class="section-contents"><p>Starting the application the user is presented with the thumbnails of all photographs stored. \
+            A button is included for taking new photos. Once the new button is pressed, the camera app opens for the user to use.\
+            After a photo is taken the user returns on the main screen with the newly added photo shown on the gallery. Along with the photo, \
+            are stored the date and time of creation and the location information.</p>\
+            <p>The user can include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
             a new screen appears with the photo\’s information. These pieces of information include a larger version of the photograph, the location where it was taken, \
-            the date and time and a field for the description. The description can be modified and stored anew.</p></div>\
+            the date and time and a field for a description. The description can be modified and stored anew.</p></div>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <div class="section-contents"><p> Location information is stored as retrieved from the GeoCoder, as latitude and longitude pairs. The date and time \
-            are stored as recorded from the system, without any formatting.</p> <p>After the media is taken, they are stored locally, using a content provider. \
-            The reason for creating a content provider was to use it along the map application developed later. Since through that \
-            application the user can add information along with pins for places of interest, they can also include images for those places.</p>\
-            <p>Some learning objectives were to ask and grand permissions, to use the external storage for an application and lastly, to manipulate media.</p></div>',
+            <div class="section-contents"><p> Location information are stored as retrieved from the GeoCoder, as latitude and longitude pairs. The date and time \
+            are stored as recorded from the system, without any formatting.</p> <p>All photographs along with any additional information, is stored locally, using a content provider. \
+            The reason for creating a content provider was to use it along the map application developed later. Through that \
+            application, the user can add information along with pins for places of interest. As an extra functionality, the user could also include images for those places, \
+            by using the content provider. This feature has yet to be added in the Maps Application.</p>\
+            <p>Some learning objectives were to ask and grand permissions, to use the external storage and lastly, to manipulate media.</p></div>',
         images: [
                 {
                     path: "../images/pg_ask_permitions.png",
@@ -245,7 +247,7 @@ const PROJECT_CONTENTS = {
             Software:[["Android Studio", "Dolphin v2021.3.1"]],
             Languages: [["Java","v8"],[" XML","v1.0"]],
             Grandle: [["Version", "7.4"], ["Plugin Version", "7.3.1"],],
-            Dependencies: [["flexbox", "v3.0.0"], ["play-services-location", "v20.0.0"]],
+            Dependencies: [["flexbox", "v3.0.0"]],
             SDK: [["Target", "32"], ["Min", "22"]]
         },
     },
@@ -254,19 +256,7 @@ const PROJECT_CONTENTS = {
         body: '<p>An application that shows the location of the user on a map. If the user is moving, there are displayed the velocity with which they are \
             moving and the direction of movement with respect to the north. The will always be updated to show the user\'s location (location tracking). Additionally, \
             the user can add places of interest on the map in the form of pins. Each pin is accompanied by an infowindow, which contains information about the location. \
-            The information of each pin where created; is stored locally and displayed on the infowindow of each pin.</p>\
-            <button class="expand">\
-            <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-            <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><p>Interworkings</p>\
-            <hr></button>\
-            <p class="section-contents"> </p> \
-            <button class="expand">\
-            <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-            <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><p>Technical/Limitations</p>\
-            <hr></button>\
-            <p class="section-contents"> </p>',
+            The information of each pin where created; is stored locally and displayed on the infowindow of each pin.</p>',
         github: "https://github.com/apapadaki-edu/android-based/tree/maps-app",
         specs: {
             Software:[["Android Studio", "Dolphin 2021.3.1"]],
@@ -369,7 +359,7 @@ const PROJECT_CONTENTS = {
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents">Technical aspects, a server is not needed, apart from hosting the web application, \
+            <p class="section-contents">A server is not needed, apart from hosting the web application, \
             since there was the use of indexedDB for database operations. This is a low-level \
             client storage API available on the browsers. This approach was a personal preference, \
             in order to get accustomed to applications other than server-side storage ones. \
@@ -422,7 +412,7 @@ const PROJECT_CONTENTS = {
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents">Technical aspects, a server is required, apart from hosting the application, since workers were used for controlling \
+            <p class="section-contents">A server is required, apart from hosting the application, since workers were used for controlling \
             the display of sensor results with accordance to the given period and workers are defined in external files. \
             Purposes of this application was to access sensors and work with threads. \
             In the works, is the development of a flask application that connects to a remote \
@@ -470,15 +460,15 @@ const PROJECT_CONTENTS = {
             </span>Technical/Limitations\
             <hr></button>\
             <div class="section-contents">\
-                <p>Technical aspects of this application. The database that supports the application was designed from scratch. \
-                The logic behind the classification was according to (EC) No 1907/2006 (REACH) Regulation, as was until July 2021. \
-                There has not been revised, for the purposes of this project, since then.</p>\
-                <p>New substances cannot be added. \
-                The generated classification is based on  those hazards that are commonly applied for mechanical oils, \
-                since the application  was designed for users that work with datasheets from that industry. \
-                There are also some limited filtering features for products, additives and substances. \
-                Additional capabilities could be functions that generate a resulting product from the provided consecrations \
-                of their components.</p></div>',
+            <p>The database that supports the application was designed from scratch. \
+            The logic behind the classification was according to (EC) No 1907/2006 (REACH) Regulation, as was until July 2021. \
+            There has not been revised, for the purposes of this project, since then.</p>\
+            <p>New substances cannot be added. \
+            The generated classification is based on  those hazards that are commonly applied for mechanical oils, \
+            since the application  was designed for users that work with datasheets from that industry. \
+            There are also some limited filtering features for products, additives and substances. \
+            Additional capabilities could be functions that generate a resulting product from the provided consecrations \
+            of their components.</p></div>',
         images: [
             {
                 path:"../images/sda_start_page.png",
@@ -534,8 +524,7 @@ const PROJECT_CONTENTS = {
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span>Technical / Limitations\
             <hr></button>\
-            <p class="section-contents">Some technical aspects of the system developed. \
-            The device was constructed using a microcontroller and chips so that \
+            <p class="section-contents">The device was constructed using a microcontroller and chips so that \
             the individual parts of the device can operate. The device was \
             installed on the wall next to a light switch. The design of the application \
             controlling the device was provided by the blynk cloud platform. \
