@@ -330,7 +330,7 @@ const PROJECT_CONTENTS = {
             Languages: [["HTML5",""],[" CSS3", ""], ["Javascript", ""], ["PHP", "7.4.3"], ["PL/pgSQL","v12.12"]],
             Databases: [["PostgreSQL", "v12"]], 
             Servers: [["Apache", "v2.4.41"]],
-            'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""], ["Firefox", ""]],
+            'Tested Browsers': [["Chrome", "v114.0.5735.134"], ["Firefox", "v111.0.1"],, ["Min", "v1.27.0"]],
             'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
         },
     },
@@ -384,7 +384,7 @@ const PROJECT_CONTENTS = {
             Languages: [["HTML5",""],[" CSS3",""], ["Javascript", ""]],
             Databases: [["IndexedDB", "v1 (in browser db)"]],
             Servers: [["not needed", ""]],
-            'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""]],
+            'Tested Browsers': [["Chrome", "v114.0.5735.134"], ["Firefox", "v111.0.1"], ["Min", "v1.27.0"]],
             'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
         },
         github: "https://github.com/apapadaki-edu/web_based/tree/note-pad",
@@ -432,8 +432,8 @@ const PROJECT_CONTENTS = {
         github: "https://github.com/apapadaki-edu/web_based/tree/sensors",
         specs: {
             Languages: [["HTML5",""],[" CSS3",""], ["Javascript", ""]],
-            Servers: [["Apache", "2.4.46"]],
-            'Tested Browsers': [["Chrome", ""], ["Avast Secure", ""]],
+            Servers: [["Apache", "v2.4.46"]],
+            'Tested Browsers': [["Chrome", "v114.0.5735.134"], ["Firefox", "v111.0.1"],, ["Min", "v1.27.0"]],
             'Tested Screen Widths': [["all", "best-displayed: > 300px"]]
         },
     },
