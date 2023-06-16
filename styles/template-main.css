@@ -69,16 +69,18 @@ body {
     height: 1.1em;
     position: relative;
     display:flex;
-    justify-content: center;
+    /*justify-content: center;*/
+    align-items: center;
     column-gap: 1rem;
     font-weight: bold;
-    margin-top: 0.5rem;
+
+    padding: 1rem 0;
     -webkit-tap-highlight-color: transparent;
     outline: 0;
 }
 
 .expand:focus {
-    color:orange;
+    color:#0870d8;
 }
 
 .expand span {
@@ -96,10 +98,12 @@ body {
     width: 0.7em;
     height: 0.7em;
     pointer-events: none;
+    margin-top: calc(1rem - 12px);
 }
-.expand:focus svg {
-    background-color: orange;
-    color:white;
+
+.expand:focus svg,
+.expand:focus hr {
+    color:#0870d8;
 }
 .expand hr {
     display: inline-block;
@@ -125,8 +129,9 @@ h4 {
 }
 */
 
-.expand p {
+.expand h3 {
     pointer-events: none;
+    font-size: 1.1rem;
 }
 
 .expand.open hr {
@@ -163,7 +168,11 @@ h4 {
 .pr-desc {
     display: flex;
     flex-direction: column;
-    row-gap: 1.7rem;
+    row-gap: 2rem;
+}
+
+.pr-desc p:first-of-type {
+    margin-bottom: 1rem;
 }
 
 .app-layout-imgs {
@@ -284,23 +293,6 @@ th.cat-heading {
         font-size: 1rem;
     }
 
-    .pr-nav-container {
-        display:flex;
-        flex-direction: row;
-        border-radius:  6px;
-        flex-wrap: wrap;
-        border-bottom: 3px solid var(--off-white);
-    }
-    
-    .pr-nav-container .pr-select{
-        padding: 15px;
-    }
-    
-    .pr-nav-container .pr-select.selected {
-        font-size: 1.1rem;
-        padding: 10px 5px;
-    }
-
     .pr-container  {
         display: grid;
         grid-template-areas: 
@@ -359,6 +351,26 @@ th.cat-heading {
     } 
 */
 }
+@media (min-width: 1090px) {
+    
+    .pr-nav-container {
+        display:flex;
+        flex-direction: row;
+        border-radius:  6px;
+        flex-wrap: wrap;
+        border-bottom: 3px solid var(--off-white);
+    }
+    
+    .pr-nav-container .pr-select{
+        padding: 15px;
+    }
+    
+    .pr-nav-container .pr-select.selected {
+        font-size: 1.1rem;
+        padding: 10px 5px;
+    }
+
+}
 
 @media (max-width: 550px) {
     .main-projects {
@@ -404,8 +416,8 @@ th.cat-heading {
         background-color: white;
         color: #52658f
     }
-    .expand:focus hr {
-        border:  1px solid #52658f;
+    .expand hr {
+        display:none;
     }
     
 }

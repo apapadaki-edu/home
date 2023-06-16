@@ -113,10 +113,9 @@ window.addEventListener("load", (ev) => {
                 url.setAttribute("href", urlDest.replace(/.$/g, "t"));
             });
     }
-
-    //if (document.URL.includes("template")) return;
-
-    //createHomeMain(document.querySelector(".main-container"))
+    /*date the current document has been changed*/
+    let nLastModif = new Date(document.lastModified);
+    document.querySelector(".copyright").innerText = `Last updated ${nLastModif.toLocaleString("default", {month: "short"})} ${nLastModif.getFullYear()}`;
 
 })
 

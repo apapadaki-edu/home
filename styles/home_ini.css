@@ -16,6 +16,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("../fonts/OpenSansReg/OpenSans-Regular.woff"),
+         url("../fonts/OpenSansReg/OpenSans-Regular.woff2");
+    font-weight: 400;
+    font-style: normal;
+}
 * {
     padding:0;
     margin:0;
@@ -23,10 +30,14 @@
 
 /* some general settings */
 html, body {
-    font-size: calc(15px + 0.390625vw);
+    font-size: calc(16px + 0.390625vw); /* normal 15px */
     height:100%;
     background-color: var(--white);
-    font-family: 'Open Sans', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+    font-family: 'Open Sans', 'Open Sans Regular', 'Lato', 'Roboto', 'PT Sans', 'Cambria', 'Sans Serif';
+}
+
+@-moz-document url-prefix() {
+    html, body {font-size: calc(14px + 0.390625vw);}
 }
 
 body {
@@ -38,17 +49,16 @@ body {
     position: relative;
 }
 
-
 main {
-    grid-area:main;
+    grid-area: main;
+}
+.main-container {
+    width:100%;
     margin:0 auto;
     box-sizing:content-box;
     background-color: var(--white);
 }
 
-header, footer {
-    font-family: "Verdana", "Helverica", "Glober", "Cambria";
-}
 
 ul li{
     list-style-type: none;
@@ -86,7 +96,6 @@ header{
 }
 
 
-
 .hamb-menu-banner{
     display:none;
 }
@@ -95,9 +104,12 @@ header{
     display:none;
 }
 
+.main-container {
+    width: 100%;
+}
 .one-line-intro {
     grid-area:heading;
-    padding-left: 10rem;
+    padding-left: 9rem;
     color: #171717;
     font-family: verdana, sans-serif;
     line-height: 1.5;
@@ -133,17 +145,9 @@ header{
     padding: 2rem;
     margin-bottom: 6%;
     border-radius: 6px;
+    border:  2px solid #000000;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.21), 0 2px 8px 0 rgba(0, 0, 0, 0.187); 
     text-align: center;   
-
-    background: linear-gradient(white, white),
-                linear-gradient(to right bottom, #11478c, #0079bd, #00a8b7, #00d07c, #a8eb12);    
-    background-color: black;
-    background-size: 100%;
-    background-clip: padding-box, border-box;
-    -webkit-background-clip: padding-box, border-box;
-    -moz-background-clip: padding-box, border-box;
-    border: 2px solid transparent;
 }
 
 .app-category > a:hover, .app-category > a:focus{
@@ -200,34 +204,23 @@ header{
 
 
 .app-category-description {
-    min-height: 0;
+    max-height: 0;
     overflow-y: hidden;
-    font-size: 1rem;
-    position: relative;
-    line-height: 0;
+    font-size: 1.1rem;
     margin-bottom: 5%;
-}
-
-.note-of-importance {
-    margin-top: 4rem;
-}
-
-strong {
-    background-image: linear-gradient(to right, #11478c, #0079bd, #00a8b7, #00d07c, #a8eb12); 
-    background-color: black;
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text; /* renders background where there is text, (however, gradient layer is hidden underneath)*/
-    -moz-background-clip: text; 
-    -webkit-text-fill-color: transparent; /* removes the fill from text, making the gradient visible*/
-    -moz-text-fill-color: transparent;
+    transition: max-height .5s ease-out;
 }
 
 .app-category-description.open {
-    line-height: 1.1;
-    transition: all .3s ease-in;
+    max-height: 100vh;
+    transition: max-height .5s ease-in;
 }
 
+.note-of-importance {
+    margin-top: 6rem;
+    padding: 2rem 1rem;
+    border-top: 2px solid var(--bg-gray);
+}
 
 .site-description span:first-child {
     font-size: 2.5rem;
@@ -243,7 +236,7 @@ footer {
     padding:2.5em 2em 1em 2em;
     width:auto;
     font-size: 1rem;
-    background-color: #00d07c;
+    background-color: #e5e5e5;
 }
 
 .social {
@@ -260,7 +253,7 @@ footer svg {
     background-color: var(--black);
 }
 svg#docker-icon {
-    background-color: var(--off-white);
+    background-color: #e5e5e5;
 }
 .copyright {
     grid-area: copyright;
@@ -268,6 +261,68 @@ svg#docker-icon {
     text-align:center;
 }
 
+
+.toggle-button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    column-gap: 0.5rem;
+
+}
+
+.toggle {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    border: 2px solid #1f1f1f;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.toggle-icon {
+    color: #1f1f1f;
+
+}
+.circle {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    pointer-events: none;
+    background-color: #1f1f1f;
+    transition: .3s;
+}
+.toggle.active {
+    border-color: #1fc8c3;
+}
+
+.toggle.active + .toggle-icon {
+    color: #1fc8c3;
+}
+
+.toggle.active .circle {
+    left: 100%;
+    transform: translateX(-100%);
+    transition: .3s;
+    background-color: #1fc8c3;
+}
+
+.toggle.active .toggle-icon {
+    color: #1fc8c3;
+}
+
+.toggle-icon svg {
+    width: 25px;
+    height: 35px;
+}
 
 @media (max-width: 900px) {
     body {
@@ -279,6 +334,20 @@ svg#docker-icon {
         position: relative;
     }
     
+    header {
+        background-color: #e5e5e5;
+    }
+
+    main {
+        grid-area: main;
+        padding: 8vh 6vw;
+
+    }
+    .toggle-button-container {
+        padding:0.8rem 1.3rem;
+        left: 0;
+    }
+
     #header-container {
         background-size: cover;
         display: grid;
@@ -288,16 +357,17 @@ svg#docker-icon {
         width: 100%;
         position:fixed;
         z-index: 98;
+        background-color: #e5e5e5;
     }
 
     
     .hamb-menu-banner {
         display:block;
         box-sizing: border-box;
-        height: calc(30px + 1.6rem);
+        height: calc(30px + 2rem);
         background-color: var(--black);
         position: relative;
-        background-color: #11478c;
+        background-color: #e5e5e5;
         z-index: 200; 
     }
 
@@ -308,9 +378,9 @@ svg#docker-icon {
 
     .hamb-menu-icon {
         pointer-events: none;
-        height:25px;
-        width: 25px;
-        margin:0.8rem 1.3rem;
+        height:30px;
+        width: 30px;
+        margin:0.9rem 1.3rem;
         color: #171717;
     }
 
@@ -325,9 +395,8 @@ svg#docker-icon {
         top: -100vh;
         z-index: 100;
         padding: 20px 0px;
-        background-image: linear-gradient(to bottom, #f5f5f5, #f7f7f7, #fafafa, #fcfcfc, #ffffff);    font-family: Quicksand, sans-serif;
-        overflow: hidden;
-        font-weight: bold;
+        background-image: linear-gradient(to bottom, #e5e5e5, #ebebeb, #f2f2f2, #f8f8f8, #ffffff);
+        overflow:hidden;
         transition: top .5s ease-in-out;
     }
     
@@ -345,6 +414,7 @@ svg#docker-icon {
 
     .sub-nav-container {
         position: relative;
+        margin: 0.5rem;
     }
 
     .sub-nav-container:nth-child(2) .sub-nav a {
@@ -360,14 +430,15 @@ svg#docker-icon {
         display: inline-block;
         box-sizing: border-box;
         color: #171717;
-        font-size: 1.2rem;
         text-align: start;
         padding-bottom: 10px;
         margin: 10px 10px 20px 30px;
         width: calc(100% - 3.5rem);
         border-bottom: 1px solid transparent;
-        border-image: linear-gradient(0.47turn, #ffffff, rgb(194, 194, 196));
+        border-image: linear-gradient(0.47turn, #ffffff, #c2c2c4);
         border-image-slice: 1;
+        font-size: 1.17rem;
+        font-weight: bold;
         pointer-events: none;
     }
 
@@ -391,18 +462,20 @@ svg#docker-icon {
 
     .sub-nav {
         overflow: hidden;
-        transition: all .3s ease-in-out;
-        line-height: 0rem;
+        max-height: 0;
+        line-height: 3;
         padding: 0 3em;
+        font-size: 1.1rem;
         color: transparent;
+        transition: max-height .2s ease-in-out;
     }
 
     .sub-nav.open {
-        line-height: 2.5;
+        max-height: 100vh;
         color: black;
+        transition: max-height .3s ease-in-out;
     }
-
-        
+    
     .one-line-intro {
         display:none
     } 
@@ -412,13 +485,14 @@ svg#docker-icon {
         box-sizing: border-box;
         margin-top: calc(20px + 2rem);
         padding: 16vh 6vw 6vh 0;
-        background-image: linear-gradient(to bottom, #11478c, #0079bd, #00a8b7, #00d07c, #a8eb12);
+        background-image: linear-gradient(to bottom, #e5e5e5, #ebebeb, #f2f2f2, #f8f8f8, #ffffff);
         font-family: 'Quicksand', sans-serif;
         color: #171717;
         font-size: 2rem;
         letter-spacing: 5px;
 
     }
+
     .site-description span {
         display: block;
         box-sizing: border-box;
@@ -430,23 +504,22 @@ svg#docker-icon {
         font-size: 2.5rem;
     }
 
-    main {
-        margin: 8vh 10vw;
+    .main-container {
         padding:0;
+        width: 100%;
     }
 
     .page-introduction {
         display:block;
         margin-bottom: 10vh;
         font-size: 1.1rem;
-        text-indent: 5%;
     }
 
     .main-heading  {
         display: none;
     }
 
-    main > section {
+    .main-container > section {
         display: grid;
         grid-template-areas: 
             "c1"
@@ -455,12 +528,9 @@ svg#docker-icon {
             "c4";
         row-gap: 2rem;
         
-        width: calc(100vw - 20vw);
+        width: calc(100vw - 12vw);
     }
 
-    .app-category-description.open {
-        font-size: 1.1rem;
-    }
     footer {
         grid-area: footer;
         display: grid;
@@ -491,7 +561,7 @@ svg#docker-icon {
 }
 
 
-@media (min-width:500px) and (max-width:899px) {
+@media (min-width:700px) and (max-width:899px) {
     .site-description span {
         margin: auto 10vw;
     }
@@ -499,27 +569,31 @@ svg#docker-icon {
         justify-items: center;
     }
     .app-category {
-        max-width: 70%;
+        max-width: 80%;
     }
 }
 
 @media (min-width: 901px) {
     
     body {
-        display: grid;
-        grid-template-areas: 
-            "header header header" 
-            "side-left main side-right"
-            "footer footer footer" ;
-        grid-template-columns: 1fr 8fr 1fr;
         background-color: var(--white);
     }
-    
+
+    body.dark-mode header{
+        background: url("../images/bg_dark.webp");
+        background-size: cover;
+    }
+
     header{
-        grid-area: header;
         background: url("../images/bg.jpg"); /*img source: https://wallpapersafari.com/w/pNHxwB*/
         background-size: cover;
         /*min-height: 100vh; /* full window viewpoint */
+    }
+    
+    .toggle-button-container {
+        top:0;
+        right: 1.3rem;
+        height: 3.5rem;
     }
 
     #header-container {
@@ -534,6 +608,7 @@ svg#docker-icon {
     .main-nav {
         display: flex;
         grid-area: nav;
+        box-sizing: border-box;
         align-items: baseline;
         color: #171717;
         height: 3rem;
@@ -544,7 +619,7 @@ svg#docker-icon {
         display: inline-block;
         box-sizing: border-box;
         position: relative;
-        min-width: 8rem;
+        min-width: 6rem;
     }
 
     .sub-nav-container > a.link {
@@ -554,7 +629,16 @@ svg#docker-icon {
         line-height: 3rem; /* to vertically align text to the middle */
         vertical-align: middle;
         text-align: center;
-        padding: 0em 1rem;
+        background-color: #c0c0c200;
+        font-weight: bold;
+    }
+
+    .sub-nav-container:first-of-type > a.link:hover {
+        border-bottom: 2px solid #171717;
+    }
+
+    .sub-nav-container:nth-child(2) a.link {
+        padding: 0 1em;
     }
 
     .sub-nav-container:nth-child(2) .sub-nav a {
@@ -562,25 +646,24 @@ svg#docker-icon {
         color:#4a4a4a
     }
 
-    .sub-nav-container:first-of-type > .link:hover {
-        border-bottom: 2px solid #000000;
-    }
-
     .sub-nav {
         position:absolute;
-        /*display: none;*/ 
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
         box-sizing: border-box;
-        padding: 1rem 1rem 1rem 1rem;
+        padding: 1rem;                
+        font-size: 0.95rem;        
+        background-color: #e3e2e2f5;
         inline-size: max-content;
         pointer-events: none; /*not be clickable when not visible*/
-        opacity: 0;
-        font-size: 0.9rem;
-        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+        opacity: 0;        
         border-top: 2px solid #000000;
-        background-color: #dbdbdb7e;
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    }
+
+    .sub-nav-container.active > a {
+        background-color: #f6f6f6f5;
     }
     
     .sub-nav-container.active > a.link + .sub-nav {
@@ -589,24 +672,29 @@ svg#docker-icon {
     }
 
     .sub-nav a:hover {
-        border-bottom: 2px solid #000000;
+        border-bottom: 2px solid #171717;
     }
 
-    .site-description {
+    .main-container .site-description {
         display: none;
     }
         
     main {
+        display: grid;
+        grid-template-areas: "side-left main side-right";
+        grid-template-columns: 1fr 8fr 1fr;
+    }
+    .main-container {
         margin-top: 4em;
         grid-area: main;
         width: 100%;
         padding: 6rem 0 3rem 0;
     }
 
-    main::before {
+    .main-container::before {
         grid-area: side-left;
     }
-    main::after {
+    .main-container::after {
         grid-area: side-right;
     }
 
@@ -614,7 +702,7 @@ svg#docker-icon {
         display:none;
     }
 
-    .main-heading {
+    .main-container .main-heading {
         margin: 2vh 0 15vh 0;
         background: linear-gradient(var(--white) 0%, var(--white) 50%, var(--black) 48%, var(--black) 52%, var(--white) 54%, var(--white) 100%);
         font-size: 1.5rem;
@@ -622,14 +710,14 @@ svg#docker-icon {
         text-align: center;
     }
 
-    .main-heading span {
+    .main-container .main-heading span {
         background: var(--white);
         padding: 0 20px;
         position: relative;
         z-index: 5;
     }
 
-    main > section {
+    .main-container > section {
         display: grid;
         grid-template-areas: 
             "c1 c2" 
@@ -647,15 +735,16 @@ svg#docker-icon {
             "copyright copyright" ;
         grid-template-rows: 3fr 1fr;
         grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5rem;
         align-items: end;
-        padding:2.5rem 3rem 1rem 3em;
+        padding:2rem 4rem 1rem 4rem;
         width:auto;
-        font-size: 0.7rem;
-        background-color: var(--off-white);
+        font-size: 0.8rem;
+        background-color: #e5e5e5;
     }
 
     footer h3 {
-        font-size: 1.3rem;
+        font-size: 1.5em;
         font-weight: 200;
         padding-bottom: 0.5em;
     }
@@ -668,12 +757,16 @@ svg#docker-icon {
         text-decoration: underline;
     }
     .about a:visited {
-        color: #0a40bc;
+        color: #0870d8;
     }
 
 }
 
 @media (min-width: 900px) and (max-width: 1399px) {
+
+    .site-description {
+        display:none;
+    }
     .one-line-intro {
         padding-left: 5vw;
         font-size: 1.1rem;
@@ -686,12 +779,18 @@ svg#docker-icon {
 /*remember to remove the ../ from the path of all resorce files*/
 @media (min-width: 1400px) {
 
-    main > section {
+    .main-container > section {
         display: grid;
         grid-template-areas: 
             "c1 c2 c3 c4";
         grid-template-columns: repeat(4, 1fr);
         column-gap: 2rem;
+    }
+    .app-category-description {
+        font-size: 0.98rem;
+    }
+    .site-description {
+        display: none;
     }
 
 }
@@ -724,34 +823,9 @@ svg#docker-icon {
 
 }
 
-
-
 @media (min-width: 3000px) {
-    main > section {
+    .main-container > section {
         column-gap:4vw;
     }
 }
-/*
-palette green
-CSS HEX 
---white: #ffffffff;
---rich-black-fogra-29: #060e19ff;
---middle-blue-green: #84dcc6ff;
 
-CSS HSL 
---white: hsla(0, 0%, 100%, 1);
---rich-black-fogra-29: hsla(215, 61%, 6%, 1);
---middle-blue-green: hsla(165, 56%, 69%, 1);
-*/
-
-/* 
-pallete blue
---steel-blue: #427aa1ff;
---alice-blue: #ebf2faff;
---rich-black-fogra-29: #060e19ff;
-
-
---steel-blue: hsla(205, 42%, 45%, 1);
---alice-blue: hsla(212, 60%, 95%, 1);
---rich-black-fogra-29: hsla(215, 61%, 6%, 1);
-*/
