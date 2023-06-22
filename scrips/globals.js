@@ -196,7 +196,7 @@ const PROJECT_CONTENTS = {
     "pg": {
         title: "Photo Gallery",
         body: '<p>An application for taking photos, storing them, adding location information and a description. It simulates the \
-            image gallery application, already installed on a user\’s phone by the manufacturer,\
+            image gallery application, already installed on the user\’s phone by the manufacturer,\
             but only including its core functionality. </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\

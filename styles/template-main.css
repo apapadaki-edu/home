@@ -171,9 +171,6 @@ h4 {
     row-gap: 2rem;
 }
 
-.pr-desc p:first-of-type {
-    margin-bottom: 1rem;
-}
 
 .app-layout-imgs {
     display: flex;
@@ -289,7 +286,7 @@ th.cat-heading {
         grid-template-areas: 
         "project-nav"
         "projects";
-        padding: 8% 10%;   
+        padding: 4% 10%;   
         font-size: 1rem;
     }
 

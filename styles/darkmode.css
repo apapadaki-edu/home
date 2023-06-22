@@ -253,7 +253,7 @@ body.dark-mode .note-of-importance {
 /* up to here will be removed once ml projects are added */
 @media (max-width:550px) {
     body.dark-mode main.home{
-        padding: 1.5rem;
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
     }
     body.dark-mode .app-category {
         max-width: 100%;
@@ -266,18 +266,13 @@ body.dark-mode .note-of-importance {
         padding: 4% 0; 
     }
 
-
-
 }
 
 @media (max-width: 900px) {
     body.dark-mode .app-category {
         max-width: 100%;
     }
-    body.dark-mode main {
-        padding-top: 0;
-    }
-
+    
     body.dark-mode .main-nav {
         background-image: linear-gradient(to bottom, #020621, #030725, #03082a, #03092e, #030a32);
 

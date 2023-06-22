@@ -265,12 +265,13 @@ section.categories-container {
 }
 
 .site-description span:first-child {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .site-description span + span {
     margin-top: 0.8rem;
-    line-height: 1.1;
+    line-height: 1.3;
+    font-size: 1.6rem;
 }
 
 
@@ -395,7 +396,7 @@ svg#docker-icon {
 
 @media (max-width:550px) {
     main.home{
-        padding: 1.5rem;
+        padding: 1rem 1.5rem 1.5rem 1.5rem;
     }
     .app-category {
         max-width: 100%;
@@ -562,9 +563,9 @@ svg#docker-icon {
     } 
 
     .site-description {
-        height:60vh;
+        min-height:40vh;
         box-sizing: border-box;
-        margin-top: calc(20px + 2rem);
+        margin-top: 2rem;
         padding: 16vh 6vw 6vh 0;
         background-image: linear-gradient(to bottom, #e5e5e5, #ebebeb, #f2f2f2, #f8f8f8, #ffffff);
         font-family: 'Quicksand', sans-serif;
