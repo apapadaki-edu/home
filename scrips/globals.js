@@ -46,35 +46,31 @@ const PROJECT_CONTENTS = {
     },
     "c": {
         title: "Contact Methods",
-        body: '<p>A application that makes it easier for the user to manage the types of\
-            messages they wish to send, all from one UI. Those messages include either emails or phone messages (SMS).\
-            </p>\
+        body: '<p>This is a messaging application that makes it easier for the user to manage\
+            the types of messages they wish to send, all from one UI.\
+            Those messages include either emails or phone messages (SMS).</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Interworkings</h3>\
+            </span><p>Interworkings</p>\
             <hr></button>\
-            <div class="section-contents"><p>The user is presented with a simple UI that probes them for an email address or a phone\
-            number. This field is checked for the validity of its content. This can prevent simple mistakes,\
-            like the correct form of the email address, or the number of digits required in a phone\
-            number, saving time for the user. A pop-up message informs the user in case of a mistake. For\
-            emails, if an email address is detected, there appears a new field for providing\
-            the email\’s subject. Finally, a simple text field is included for the message\’s body.\
-            </p>\
-            <p> There are three buttons at the end of the UI, one for opening the user\'s messaging app,\
-            one for the email application and the third one, for clearing the text field containing the\
-            message\’s body. After the message\’s information are all filled in and depending on the type\
-            of message the user wishes to send, the appropriate application opens with its fields already filled in.</p>\
-            </div>\
+            <div class="section-contents"><p>The user is presented with a simple UI that probes them through an email or a phone number. \
+            This field is checked for the validity of its content. This can prevent simple mistakes, like the correct form of the email address \
+            or the number of digits required in a phone number. A pop-up message informs the user in case of a mistake. \
+            In the case of emails, if an email address is detected, a new field appears for providing the email\’s subject.\
+            Finally, a simple text field is included for the message\’s body. </p>\
+            <p> There are three buttons at the end of the UI, one for opening the user\'s \
+            messaging app, one for the email application and the third one, for clearing the text field containing the message\’s body. \
+            After the message\’s information is all filled in and depending on the type of message the user wishes to send, \
+            the appropriate application opens with its fields already filled in.</p></div>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Technical/Limitations</h3>\
+            </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents">The buttons start activities with intents that call the user to open the appropriate\
-            applications for each messaging app. A message\'s contents are sent to the messaging app\
-            selected through the intent. For now, messages are only for SMS apps, it would be useful to\
-            include others like for example, messenger. For emails, the validation conforms with OWASP\ Foundation\’s standard. \
+            <p class="section-contents">The buttons start activities with intents that call the user to open the appropriate applications for each messaging app. \
+            Message\'s contents are sent to the messaging app selected through the intent. For now, messages are only for SMS apps, \
+            it would be useful to include others like, for example, messenger. For emails, the validation conforms with OWASP Foundation\’s standard.\
             </p>',
         images: [
                 {
@@ -109,26 +105,25 @@ const PROJECT_CONTENTS = {
     },
     "sc": {
         title: "Scientific Calculator",
-        body: '<p>Application for scientific calculations of the functorial, the Fibonacci sequence, \
-            up to a number and the most common divisor of a stream of numbers. </p>\
+        body: '<p>Application for scientific calculations of the functorial,\
+            the Fibonacci sequence, up to a number and the most common divisor of a stream of numbers. </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Interworkings</h3>\
+            </span><p>Interworkings</p>\
             <hr></button>\
             <p class="section-contents">The UI includes an EditText view in which the user provides the numbers separated with commas. \
-            A check is run for the proper format of the stream of numbers. If it is not a stream of numbers separated by a comma, \
-            a toast message is presented to notify the user. There are three buttons, one for each mathematical operation. \
-            The calculation results are shown as blocks in a text area field. </p>\
+            A check runs for the proper format of the stream of numbers. If a stream of numbers is not separated by a comma, a new message is \
+            presented to notify the user. There are three buttons, one for each mathematical operation. The calculation results are shown as blocks in a text area field.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Technical/Limitations</h3>\
+            </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents"> The purpose of this application at the educational level was to learn to work with threads. \
-            These calculations are ideal for this purpose since they are computationally expensive for large numbers \
-            and can crash or freeze the UI if not handled in the background. Finally, the application detects the system\’s \
-            language and presents the corresponding keyboard layout.</p>',
+            <p class="section-contents">The purpose of this application at the educational level was to learn to work with threads. \
+            These calculations are ideal for this purpose since they are expensive for large numbers and can crash or freeze the UI if not \
+            handled in the background. Finally, the application detects the system\’s language and presents the corresponding keyboard layout.\
+            </p>',
         images: [ 
                 {
                     path: "../images/sc_calc_main.png",
@@ -152,30 +147,31 @@ const PROJECT_CONTENTS = {
     },
     "ca": {
         title: "Calendar",
-        body: '<p>An application that allows the user to create, modify and store calendar events. The events are displayed on a \
-            list based on their due date; the most resent one appears at the top. Due to its simplicity, one can organize events more efficiently. </p> \
+        body: '<p>An application that allows the user to create, modify and store calendar events. \
+            The events are displayed on a list based on their due date; the most recent one appears at the top.\
+            Due to its simplicity, one can organize events more efficiently.</p> \
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Interworkings</h3>\
+            </span><p>Interworkings</p>\
             <hr></button>\
-            <div class="section-contents"><p>The start screen displays all calendar events that are not past due; have not yet happened. \
-            The events are ordered by the date the event happens, starting with the most recent one.\
-            For each event on the list, its title, the date of creation and the due date are included. Additionally, \
-            next to each event there is a check box for bulk deleting events. Finally, a button with the \'+\' sign is used to add a new event. </p>\
-            <p>A new form appears to the user, in case they wish to add a new event, by pressing the \‘+\’ sign button or to update an already added event, \
-            by pressing on an event. In the form the user can fill in the event\'s information. These pieces of information include its title, a description and the date of the event.</p>\
-            <p>The form includes three buttons. One button is to save or update an event, one to delete it and finally, one to cancel the changes. \
-            After each operation, the user is directed back to the main screen. Once a new event is added or updated, the event list on the main screen \
-            is also updated to include the newly created event or respectively, to display the altered information of the updated event. </p></div>\
+            <div class="section-contents"><p>The start screen displays all calendar events that are not past due; have not happened yet. The events are ordered by the date the event happens, \
+            starting with the most recent one. For each event on the list, its title, the date of creation and the due date are included. \
+            Additionally, next to each event there is a check box for bulk deleting events. Finally, a button with the "+" sign is used to add a new event. </p>\
+            <p>A new form appears to the user in case they either wish to add a new event, by pressing the "+" sign button or update an already added event, \
+            by clicking on the event. In this form, the user can fill in the event\'s information. This information includes its title, a description and the date of the event. </p>\
+            <p>The form includes three buttons. One button is to save or update an event, one to delete it and finally, one to cancel all the changes. \
+            After each operation, the user is directed back to the main screen. Once a new event is added or updated, the event list on the main screen is \
+            also updated to include the newly created event or respectively, to display the altered information of the updated event. </p></div>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Technical/Limitations</h3>\
+            </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <p class="section-contents"> Events that are past due are still stored in the database, however, they are not displayed on the main screen. Additionally, \
-            all events are stored in a local relational database, so there is no need for a remote connection. The event list and the \
-            form consist two separate activities with the one first being the applications main activity and the second a child activity of the main.</p>',
+            <p class="section-contents">Events that are past due are still stored in the database, however, they are not displayed on the main screen. \
+            Additionally, all events are stored in a local relational database, so there is no need for a remote connection.\
+            The event list and the form consist of two separate activities with the first one being the application\’s main activity and the second \
+            being a child activity of the main.</p>',
         images: [
                 {
                     path: "../images/ca_calendar_ini.png",
@@ -199,31 +195,33 @@ const PROJECT_CONTENTS = {
     },
     "pg": {
         title: "Photo Gallery",
-        body: '<p>An application for taking photos, storing them, adding location information and a description. It is similar to \
-            the gallery application pre-insalled from the manufacturer.</p>\
+        body: '<p>An application for taking photos, storing them, adding location information and a description. It simulates the \
+            image gallery application, already installed on a user\’s phone by the manufacturer,\
+            but only including its core functionality. </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Interworkings</h3>\
+            </span><p>Interworkings</p>\
             <hr></button>\
-            <div class="section-contents"><p>Starting the application the user is presented with the thumbnails of all photographs stored. \
-            A button is included for taking new photos. Once the new button is pressed, the camera app opens for the user to use.\
-            After a photo is taken the user returns on the main screen with the newly added photo shown on the gallery. Along with the photo, \
-            are stored the date and time of creation and the location information.</p>\
-            <p>The user can include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
-            a new screen appears with the photo\’s information. These pieces of information include a larger version of the photograph, the location where it was taken, \
-            the date and time and a field for a description. The description can be modified and stored anew.</p></div>\
+            <div class="section-contents"><p>The main screen of the application displays the thumbnails of all photos taken, \
+            using the application. A button is included for taking new photos. Once the new button is pressed, the native camera app opens \
+            for the user to use. After a photo is taken, the user returns to the main screen with the newly added photo shown in the gallery. Along with the photo, \
+            there are stored the date and time of creation and the location\’s information.</p>\
+            <p>The user can also include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
+            a new screen appears with the photo\’s information. This information includes a larger \
+            version of the photograph, the location where it was taken, the date and time and a field for the description. \
+            The description can be modified and stored anew. </p></div>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-            </span><h3>Technical/Limitations</h3>\
+            </span><p>Technical/Limitations</p>\
             <hr></button>\
-            <div class="section-contents"><p> Location information are stored as retrieved from the GeoCoder, as latitude and longitude pairs. The date and time \
-            are stored as recorded from the system, without any formatting.</p> <p>All photographs along with any additional information, is stored locally, using a content provider. \
-            The reason for creating a content provider was to use it along the map application developed later. Through that \
-            application, the user can add information along with pins for places of interest. As an extra functionality, the user could also include images for those places, \
-            by using the content provider. This feature has yet to be added in the Maps Application.</p>\
-            <p>Some learning objectives were to ask and grand permissions, to use the external storage and lastly, to manipulate media.</p></div>',
+            <p class="section-contents"> Location\’s information is stored as retrieved from the GeoCoder, as latitude and longitude pairs. \
+            The date and time are stored as recorded from the system, without any formatting. After the media is taken, they are stored locally, \
+            using a content provider. A content provider was developed to be used along the map application later. Since the user can add \
+            information along with pins for places of interest through that application, they could also include images for those places. \
+            The learning objectives include permission requests, external storage and lastly, media file manipulation\
+            </p>',
         images: [
                 {
                     path: "../images/pg_ask_permitions.png",
@@ -253,10 +251,12 @@ const PROJECT_CONTENTS = {
     },
     "ma": {
         title: "Maps App",
-        body: '<p>An application that shows the location of the user on a map. If the user is moving, there are displayed the velocity with which they are \
-            moving and the direction of movement with respect to the north. The will always be updated to show the user\'s location (location tracking). Additionally, \
-            the user can add places of interest on the map in the form of pins. Each pin is accompanied by an infowindow, which contains information about the location. \
-            The information of each pin where created; is stored locally and displayed on the infowindow of each pin.</p>',
+        body: '<p>An application that shows the user\’s location on a map. If the user is moving, \
+            the speed and the direction (towards the north) are displayed. \
+            They will always be updated to show the user\'s location (location tracking). Additionally, \
+            the user can add places of interest on the map in the form of pins. Each pin is accompanied by an info-window, \
+            which contains information about the location. The information of each pin is stored locally and displayed on the info-window.\
+            </p>',
         github: "https://github.com/apapadaki-edu/android-based/tree/maps-app",
         specs: {
             Software:[["Android Studio", "Dolphin 2021.3.1"]],
@@ -268,37 +268,34 @@ const PROJECT_CONTENTS = {
     },
     "as": {
         title: "Art Store",
-        body: '<p>Model page of an Art Store for a product and a new customer form. Focusing on mainly on the layout. \
-            The user can create a new customer account from the designed form and manage customers. \
-            They can update, delete and view customer information. </p>\
+        body: '<p>Model page of an Art Store for a product and a new customer form. \
+            Focusing mainly on the layout. The user can create a new customer account from the \
+            designed form and manage customers. They can update, delete, and view customer information.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Interworkings</h3>\
             <hr></button>\
-            <p class="section-contents">Once the user navigates to the model product page, they can be directed to the form page \
-            by clicking on the “Create new account” link at the top left side of the page. \
-            Once there, they can complete the form, check that they agree with the terms of use and press submit. \
-            Before submitting the data, the required fields are checked for having values, \
-            if there are empty such fields an error message is presented to the user \
-            with the option to navigate back to the form to fill in all required fields. \
-            If everything is okay, the information are displayed to the user and they \
-            can navigate to managing customers with the  press of a button. Once on \
-            navigation page all customers with some information are listed, with the options \
-            to delete, update or view each customers information. Once any of the three \
-            previously mentioned operations are complete the user is redirected to the customer management page.</p>\
+            <p class="section-contents">Once the user navigates to the model product page, \
+            they can be directed to the form page by clicking on the “Create new account” link at the top left side of the page. Once there, \
+            they can complete the form, check that they agree with the terms of use and press “submit”. Before submitting the data, \
+            the required fields are checked for having values. If there are empty fields, an error message is presented to the user with the \
+            option to navigate back to the form to fill all required fields. If everything is okay, the information is displayed to the user and \
+            they can navigate to managing customers with the press of a button. Once on the navigation page all customers with some information are listed, \
+            with the options to delete, update or view each customer\’s information. Once any of the three previously mentioned operations are complete, \
+            the user is redirected to the customer management page.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Technical/Limitations</h3>\
             <hr></button>\
-            <p class="section-contents">Apart for the server-side part of handling customer, \
-            the main purpose was to design the front-end of the page. The database \
-            functionality was for learning how to handle form data and interact with databases, \
-            even though it is not relevant so much for the art store but from an administrator\'s perspective. \
-            We were not yet guided on how to use cookies so for navigating from one page to another, \
-            while managing customers no-cookie logic was developed. More about this and a more detailed description \
-            of how this was accomplished can be found on the projects GitHub page, following the link below.</p>',
+            <p class="section-contents">Apart from the server-side part of handling customers, \
+            the main purpose was to design the front-end of the page. The database functionality was \
+            for learning how to handle form data and interact with databases, even though it is not relevant \
+            so much for the art store but from an administrator\’s perspective. We were not yet \
+            guided on how to use cookies so for navigating from one page to another, while managing customers no-cookie \
+            logic was developed. A more detailed description of how this was accomplished can be found \
+            on the projects GitHub page, following the link below.</p>',
         github: "https://github.com/apapadaki-edu/web_based/tree/art-store",
         images: [
             {
@@ -337,33 +334,30 @@ const PROJECT_CONTENTS = {
     "nb": {
         title: "Simple Notebook",
         body: '<p>Application that records notes. The user can see all notes created, \
-            add a new note, update the information of an already existing one and finally, \
-            delete  a note. Additionally, there is the choice of clearing all notes. \
-            Information available  for the user  to include in a note are its title, \
-            the description and a theme. The themes from which they can choose include, \
-            important, reminder, shopping, planning, and lastly, there is the choice of no-theme.</p>\
+            add a new note, update the information of an already existing note or delete it. Additionally, \
+            the user can choose to clear all notes. The available information for the user to include in a note are its title, \
+            the description and a theme. The themes from which they can choose include \
+            “Favorites”, “Reminder”, “Shopping”, “Planning”, and lastly, there is the choice of “No Theme”.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Interworkings</h3>\
             <hr></button>\
-            <p class="section-contents">On launching the application the user is presented with the main screen, \
-            which lists all available notes they have previously been created, their count, \
-            a button to create a new note and one to clear all notes. Note count was included \
-            for anyone that wants to clean unneeded notes they may have forgotten to delete, \
-            after they reach a number they consider appropriate for this task. The user can \
-            click on a note to edit its contents or delete it. If they decide to create a new \
-            note, they are presented with a form to fill in the notes information.</p>\
+            <p class="section-contents">On launching the application, the user is presented with the main screen, which lists all \
+            available notes they have previously been created, their count, a button to create a new note and one to clear all notes. \
+            Note count was included for anyone who wants to clear unnecessary notes they may have forgotten to delete, after they reach a number, \
+            the user considers as appropriate for this task. The user can click on a note to edit its contents or delete it. If they decide to create a new note, \
+            they are presented with a form to fill the note\’s information.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Technical/Limitations</h3>\
             <hr></button>\
             <p class="section-contents">A server is not needed, apart from hosting the web application, \
-            since there was the use of indexedDB for database operations. This is a low-level \
-            client storage API available on the browsers. This approach was a personal preference, \
-            in order to get accustomed to applications other than server-side storage ones. \
-            This application was designed, having in mind, mainly mobile users.</p>',        
+            since there was the use of indexedDB for database operations. This is a low-level client \
+            storage API available on the browsers. This approach was a personal preference, to get \
+            accustomed to applications other than server-side storage ones. This application was designed, \
+            having in mind, mainly for mobile users.</p>',        
         images: [
             {
                 path: "../images/nb_ini.png",
@@ -391,33 +385,32 @@ const PROJECT_CONTENTS = {
     },
     "sp": {
         title: "Sensor Playground",
-        body: '<p>Web application that finds the sensors it can reach from the browser, \
-            activate, or deactivate them and record the results at provided time intervals. \
-            Active buttons of the available sensors can be pressed once to activate them. \
-            Once active the user can provide a period on the field next to each sensor and press enter \
-            for the measurements to be displayed at the given interval. The period can be \
-            changed while the sensor is active, by typing a new one and pressing enter again.</p>\
+        body: '<p>Web application that finds the sensors that it can reach from the browser, \
+            activate or deactivate them and records the results at provided time intervals. Active buttons \
+            of the available sensors can be pressed once to activate them. Once they are active, the user can provide \
+            a period on the field next to each sensor and press “Enter” for the measurements to be displayed \
+            at the given interval. The user can change the period-time while the sensor is active, by typing a \
+            new one and pressing “Enter” again.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Interworkings</h3>\
             <hr></button>\
-            <p class="section-contents">For safety reasons the browser does not allow applications direct access \
-            to core sensors on our devices, so buttons that control the sensors are active \
-            only for those that are allowed access and inactive for all the others. The reason \
-            the button for not available sensors are displayed, are for the user to know the wide range \
-            of sensors that we carry on us, at any given time.</p>\
+            <p class="section-contents">For safety reasons the browser does not allow applications to have direct access to core sensors on our devices, \
+            so buttons that control the sensors are active only for those that their access is allowed and inactive for all the others. \
+            The reason the button for not available sensors is displayed is for the user to know the wide range of sensors that we carry on at any given time.\
+            </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Technical/Limitations</h3>\
             <hr></button>\
-            <p class="section-contents">A server is required, apart from hosting the application, since workers were used for controlling \
-            the display of sensor results with accordance to the given period and workers are defined in external files. \
-            Purposes of this application was to access sensors and work with threads. \
-            In the works, is the development of a flask application that connects to a remote \
-            Redis database for storing sensor date in the form of time series. Once developed \
-            I will post new media files in this section.</p>',
+            <p class="section-contents">A server is required, apart from hosting the application, s\
+            ince workers were used for controlling the display of sensor results in accordance with the \
+            given period and workers are defined in external files. The purpose of this application was to access sensors and work with threads. \
+            The development of a flask application is in the works that connects to a remote Redis database for \
+            storing sensor data in the form of time series. Once developed I will post new media files in this section.\
+            </p>',
         images: [
             {
                 path:"../images/sp_ini.png",
@@ -439,36 +432,37 @@ const PROJECT_CONTENTS = {
     },
     "sda": {
         title: "MSDS Manager",
-        body: '<p>An application with two main features. The first one is the management of products, additives and \
-            material safety datasheets. The second one is the classification of products based on their hazardous properties. \
-            This app could assist those who work for multiple companies with the management of their datasheets. It \
-            can be a cumbersome task, since changes in regulations or a substance\'s hazzardous properties, occur frequently. \
-            Even more essential, since MSDS autors are obliged to review the datasheets every two years maximum. </p> \
+        body: '<p>An application that assists with the management of products, additives, material \
+            safety datasheets and the classification of products based on their hazardous figures. \
+            Important for those who compose msds documents, since they are called to review them every two or so years, \
+            for changes in regulations, responsible for the hazard classification of the substances that comprise them.  \
+            </p> \
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Interworkings</h3>\
             <hr></button>\
-            <p class="section-contents">The users can store new or update already existing products and their datasheets. They can store \
-            and manage all additives of those products. Finally, they can find the classification of products \
-            based on the hazzardous properties of their additives. The classification can be also generated automatically, \
-            with the press of a button. The only thing remaining is to check for any specific conditions \
-            applicable to any products, however not included in the regulation.</p>\
+            <p class="section-contents">From the perspective of someone who works with multiple companies and manages their datasheets, \
+            this application is helpful. The users can store new or update already existing products and their datasheets, store and manage \
+            additives of those products and find the classification of products based on the classification of their additives. \
+            The classification can be also generated automatically with the press of a button, leaving the user to review and check for any specific \
+            conditions applied to some products that are not included in the regulations.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Technical/Limitations</h3>\
             <hr></button>\
             <div class="section-contents">\
+            <p>New substances cannot be added. The generated classification is based on \
+            those hazards that are commonly applied for mechanical oils, since the application\
+            was designed for users that work with datasheets from that industry. \
+            There are also some limited filtering features for products, additives, and substances. \
+            Additional capabilities could be functions that generate a resulting product from the \
+            provided concentrations of their components. </p>\
             <p>The database that supports the application was designed from scratch. \
-            The logic behind the classification was according to (EC) No 1907/2006 (REACH) Regulation, as was until July 2021. \
-            There has not been revised, for the purposes of this project, since then.</p>\
-            <p>New substances cannot be added. \
-            The generated classification is based on  those hazards that are commonly applied for mechanical oils, \
-            since the application  was designed for users that work with datasheets from that industry. \
-            There are also some limited filtering features for products, additives and substances. \
-            Additional capabilities could be functions that generate a resulting product from the provided consecrations \
-            of their components.</p></div>',
+            The logic behind the classification was according to (EC) No 1907/2006 (REACH) Regulation as \
+            was until July 2021 and has not been revised regarding this aspect since then.\
+            </p></div>',
         images: [
             {
                 path:"../images/sda_start_page.png",
@@ -503,36 +497,36 @@ const PROJECT_CONTENTS = {
     },
     "iot": {
         title: "Smart Light Switch",
-        body: '<p>In a nutshell, smart light switch developed from the hardware level to the software level. \
-            A device was developed that can keep track of the time and date \
-            and sense the changes in luminosity of the environment to switch the lights on or off accordingly. \
-            The device operates both automatically and manually.</p>\
+        body: '<p>A smart light switch developed from hardware level to software level. \
+            A device was developed so that not only can it keep track of the time and date, \
+            but also sense the changes of brightness of the environment in order to switch the lights on or off accordingly. \
+            </p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Interworkings</h3>\
             <hr></button>\
-            <p class="section-contents">Depending on whether the user has control of the device from their phone, \
-            they can either turn on the switch from their phones or leave control \
-            to the device itself. For instance, if the user has opened the app \
-            that controls the switch on their phone, the smart device can detect this \
-            and let the user make the decisions (παραχωρήσει). However, if the\
-            the app is closed, the device can switch on or off the lights \
-            depending on the time of day and the levels of luminosity in the room.</p>\
+            <p class="section-contents">The device operates both automatically and manually. Depending on whether \
+            the user has control of the device from they phone, they can either change the switch \
+            from they phones or leave the control to the device itself. \
+            For instance, if the user opens the app that controls the switch of \
+            their phone, the smart device can detect this and let the user \
+            make the decisions. However, if the app is closed, the device can \
+            switch on or off the lights depending on the day-time and the levels\
+            of brightness in the room.</p>\
             <button class="expand">\
             <span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
             <svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
             </span><h3>Technical/Limitations</h3>\
             <hr></button>\
-            <p class="section-contents">The device was constructed using a microcontroller and chips so that \
-            the individual parts of the device can operate. The device was \
-            installed on the wall next to a light switch. The design of the application \
-            controlling the device was provided by the blynk cloud platform. \
-            Node-RED was used for flow control, helping with managing the different \
-            parts of the system and the way they communicate. Also, luminosity measurements \
-            along with the time of measurement were send through HiveMQ broker \
-            to Node-RED and with the help of some nodes they were stored in a Redis database. \
-            Those measurements will be used in a different project later.</p>',
+            <p class="section-contents">The device was constructed using microcontrollers and \
+            chips for the individual parts of the device to operate. The device is installed on the \
+            wall next to the switch. The application that controls the device was designed and \
+            provided by the Blynk cloud platform. Node-RED was used for flow control, helping with \
+            managing the different parts of the system and the way they communicate. \
+            Also, brightness measurements along with the time of measurement were send through \
+            HiveMQ broker to Node-RED and with the help of some nodes they were stored in a Redis \
+            database, in reference to a different project. </p>',
         github: "https://github.com/apapadaki-edu/smart-light-switch",
         specs: {
             Hardware:[["NodeMCU Lua ESP8266", "RISC microcontroller, 4MB flash, integrated Wi-Fi chip"], ["SG90 Micro Servo", "Small servo motor with up to 180 degree rotation."],
