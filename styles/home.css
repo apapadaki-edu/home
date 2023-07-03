@@ -51,7 +51,7 @@ body {
 
 main {
     grid-area: main;
-    padding: 6vw;
+    /*padding: 6vw;*/
 }
 .main-container {
     width:100%;
@@ -396,7 +396,8 @@ svg#docker-icon {
 
 @media (max-width:550px) {
     main.home{
-        padding: 1rem 1.5rem 1.5rem 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1.5rem;
     }
     .app-category {
         max-width: 100%;
