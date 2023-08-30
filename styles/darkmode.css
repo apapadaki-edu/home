@@ -52,7 +52,7 @@ body.dark-mode h4 {
     color: #1fc8c3;
 }
 
-body.dark-mode p.site-description {
+body.dark-mode .site-description {
         background-image: none;
         background-color: var(--back-blue);
         color: #BFA181;
@@ -208,11 +208,12 @@ body.dark-mode .app-category:first-of-type h3 {
 body.dark-mode .pr-nav-container {
     border-bottom: 1px solid #bfa18156;
 }
+/*
 body.dark-mode .expand {
     color: #178582;
     font-weight: bold;
     -webkit-tap-highlight-color: transparent;
-    justify-content: flex-start; /* remove if display hr */
+    justify-content: flex-start; commentStart remove if display hr comentEnd
 }
 
 body.dark-mode .expand:focus {
@@ -237,18 +238,29 @@ body.dark-mode .expand svg {
     top: 0.1em;
 
 }
+*/
+
 body.dark-mode hr {
     border: 1px solid #178582;
     display: none;
 }
 
-body.dark-mode .note-of-importance strong {
+body.dark-mode .note-of-importance strong,
+body.dark-mode .pr-desc h3 {
     color: #BFA181;
 }
 body.dark-mode .note-of-importance {
     border-top: 2px solid #BFA181;
 }
 
+body.dark-mode .site-description .cv-download {
+
+    border: 1px solid #178582;
+    background-color: #178582;
+    box-shadow: 0 4px 8px 0 #02062133, 0 6px 20px 0 #02062130;
+    color: #e9e9e9;
+    
+}
 
 /* up to here will be removed once ml projects are added */
 @media (max-width:550px) {
@@ -291,7 +303,9 @@ body.dark-mode .note-of-importance {
     body.dark-mode, body.dark-mode header, body.dark-mode #header-container {
         background-color: var(--back-blue);
     }
-    
+
+
+    /*
     body.dark-mode .expand {
         color:#BFA181;
     }
@@ -310,6 +324,8 @@ body.dark-mode .note-of-importance {
         background-color: transparent;
         color:#e9e9e9;
     }
+*/
+
 }
 
 @media (min-width:551px) and (max-width: 900px) {
@@ -328,6 +344,9 @@ body.dark-mode .note-of-importance {
 }
 
 @media (min-width: 901px) {
+    body.dark-mode .sub-nav-container > a.link {
+        background-color: var(--back-blue);
+    }
     body.dark-mode main {
         padding-top: 0;
     }
