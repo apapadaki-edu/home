@@ -1,0 +1,94 @@
+body.color-theme-a  #header-container {
+     /*other:#ac0101
+     android:#046c44 */
+    background-color: #046c44;
+}
+body.color-theme-other  #header-container {
+    /*other:#ac0101
+    android:#046c44 */
+   background-color: #ac0101;
+}
+
+body.color-theme-a  .site-description {
+    color:white;
+     /*other:#c13d49
+     android: #c33945*/
+    background: #c33945;
+     /*web: linear-gradient(to right bottom, #ac0101, #b2070c, #b80f16, #be151f, #c41b27, #c6212d, #c82632, #ca2b38, #c8303c, #c63541, #c33945, #c13d49)
+     linear-gradient(to right bottom, #046c44, #027045, #017446, #007846, #007c47, #02854e, #038d55, #05965c, #08a66c, #09b57d, #08c68e, #06d6a0)*/
+    background: linear-gradient(to right bottom, #046c44, #027045, #017446, #007846, #007c47, #02854e, #038d55, #05965c, #08a66c, #09b57d, #08c68e, #06d6a0);
+}
+
+body.color-theme-other  .site-description {
+    color:white;
+     /*other:#c13d49
+     android: #c33945*/
+    background: #c33945;
+     /*ohter: linear-gradient(to right bottom, #ac0101, #b2070c, #b80f16, #be151f, #c41b27, #c6212d, #c82632, #ca2b38, #c8303c, #c63541, #c33945, #c13d49)
+     linear-gradient(to right bottom, #046c44, #027045, #017446, #007846, #007c47, #02854e, #038d55, #05965c, #08a66c, #09b57d, #08c68e, #06d6a0)*/
+    background: linear-gradient(to right bottom, #ac0101, #b2070c, #b80f16, #be151f, #c41b27, #c6212d, #c82632, #ca2b38, #c8303c, #c63541, #c33945, #c13d49);
+}
+
+@media (max-width: 900px) {
+     /*other:#ac0101
+     android:#046c44 */
+     body.color-theme-a  .hamb-menu-banner {
+        background-color: #046c44; 
+    }
+    body.color-theme-other  .hamb-menu-banner {
+        background-color: #ac0101; 
+    }
+
+
+    /*other:#ac0101
+     android:#046c44 */
+     body.color-theme-a .main-nav {
+        background: #046c44;
+    }
+    body.color-theme-other .main-nav {
+        background: #ac0101;
+    }
+
+    /*other: linear-gradient(0.47turn, #d4878e,#ac0101)
+    android: linear-gradient(0.47turn, #64f0cb,#046c44)*/
+    body.color-theme-a .main-nav a.link { 
+        border-image: linear-gradient(0.47turn, #64f0cb,#046c44);
+    }
+    body.color-theme-other .main-nav a.link { 
+        border-image: linear-gradient(0.47turn, #d1a6aa,#560000);
+    }
+
+
+}
+
+@media (min-width: 901px) {
+    
+    /*ohter:#ac0101
+     android: #046c44 */
+    body.color-theme-a .sub-nav-container > a.link {
+        background-color: #046c44;
+    }
+    body.color-theme-other .sub-nav-container > a.link {
+        background-color: #ac0101;
+    }
+
+
+    /*ohter:#ac0101e5
+     android:#046c44e5 */
+    body.color-theme-a .sub-nav {       
+        background-color: #046c44e5;
+    }
+    body.color-theme-other .sub-nav {       
+        background-color: #ac0101e5;
+    }
+
+
+    /*other:#ac0101e5
+     android:#046c44e5 */
+    body.color-theme-a .sub-nav-container.active > a {
+        background-color: #046c44e5;
+    }
+    body.color-theme-other .sub-nav-container.active > a {
+        background-color: #ac0101e5;
+    }
+}

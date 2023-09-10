@@ -53,6 +53,23 @@ gama: 0.08
 Spring's spring -> make it swirly
 */
 
+
+
+// ######### content introduction ########
+l= "<p class=\"page-introduction\"> This is an academic portfolio page in which you can find projects, \
+mainly developed during my studies. I welcome you to navigate through the four main categories \
+offered here. A short description of the concepts covered can be found under each category.\
+I hope something catches your attention.\
+</p>"
+
+// ####### note of importance ##############
+imp = "<p class=\"note-of-importance\"><strong>Note:</strong> Currently, most projects are getting updated, \
+with both impro&shyving code (from the semester initially developed) \
+and adding more featu&shyres. I would be extre&shymely grateful for any feedback\
+or tips on how to improve or change these projects.\
+It would help immen&shysely my develop&shyment as a programmer.</p>"
+
+
 ms = '<p>This is a messaging application that makes it easier for the user to manage\
  the types of messages they wish to send, all from one UI.\
  Those messages include either emails or phone messages (SMS).</p>\

@@ -1,10 +1,57 @@
 const URL_PARAMS_PAGES = {
     h:  "Home", 
-    ml: "Machine Learning Subspace",
+    ml: "AI Subspace",
     a: "Android Subspace",
     w: "Web Subspace",
     otr: "Rest of Space"
 }
+
+
+document.addEventListener("click", (ev)=>{
+    const isProjectCategoryButton = ev.target.classList.contains("pr-select");
+    if (ev.target.closest("[data-category-nav]") == null) return;
+
+    if(!isProjectCategoryButton) return;
+
+    let curProject;
+    if(isProjectCategoryButton) {
+
+        const noCategorySelected = document.querySelector(".select-wrapper");
+        if (noCategorySelected.classList.contains("no-category-selected")) {
+            noCategorySelected.classList.remove("no-category-selected")
+        }
+        
+        ev.target.classList.add("selected")
+        const selectedProject = document.querySelector(".select-btn span");
+        selectedProject.innerHTML = ev.target.innerText;
+        //get the last of the project navigation container and smooth scroll to its top
+
+        const catContainer = document.querySelector(".categories-container")
+        const catContainerCategories = catContainer.children;
+        //52, 4 * (16 + 0.390625 * window.innerWidth);
+        for (var i = 0; i < catContainerCategories.length; i++) {
+            //height of the viewport
+            //const windowHeight = window.innerHeight;
+            const windowHeight = (window.matchMedia("(max-width: 901px)").matches || screen.width < 900)? window.innerHeight: document.querySelector("main.home").offsetTop;
+
+            
+            // different values depending on different screen sizes
+            let subtractHeightScale = (window.innerHeight < 600 && (window.matchMedia("(max-width: 901px)").matches || screen.width < 900))? 9: 4; 
+            let subtractHambMenuHeight = (window.innerHeight < 700 && (window.matchMedia("(max-width: 901px)").matches || screen.width < 900))? 66: 0;
+
+            //distance of the element from the top of the viewport 
+            let catToScrollHeight = (i===0)? windowHeight - subtractHambMenuHeight: catContainerCategories[i].offsetTop - (subtractHeightScale * (16 + 0.00390625 * window.innerWidth)) - subtractHambMenuHeight;
+
+            if(ev.target.classList[1].split("-")[0] != catContainer.children[i].classList[1].split("-")[0]) continue;
+            // 38 is the main padding top
+            window.scroll(0, catToScrollHeight, {behavior:"smooth"});
+            
+        }
+    }
+    // after the project selection close the drop down menu of the select button
+    document.querySelector(".select-wrapper").classList.remove("active");
+});
+
 
 document.addEventListener("mouseover", ev => {
     const isDropdownButton = ev.target.matches("[data-dropdown-button]");
@@ -62,10 +109,6 @@ window.addEventListener("resize", (ev) =>{
             if (index !== 0) button.nextElementSibling.remove();     
         });
 
-        if (main.querySelector(".page-introduction") === null) return;
-        if (main.querySelector(".page-introduction").style.display === "none") return;
-        main.querySelector(".page-introduction").style.display = "none";
-
         return;
     }
     //im case of a mobile screen we need to create the drop-down open button
@@ -113,10 +156,19 @@ window.addEventListener("load", (ev) => {
                 url.setAttribute("href", urlDest.replace(/.$/g, "t"));
             });
     }
+
+    const wrapper = document.querySelector(".select-wrapper");
+    selectBtn = wrapper.querySelector(".select-btn");
+    selectBtn.addEventListener('click', () => {
+        wrapper.classList.toggle("active");
+    })
+    
     /*date the current document has been changed*/
     let nLastModif = new Date(document.lastModified);
     document.querySelector(".copyright").innerText = `Last updated ${nLastModif.toLocaleString("default", {month: "short"})} ${nLastModif.getFullYear()}`;
-
+    
+    // make category titles slide form left-to-right or right-to-left (every second category a different slide direction)
+    window.addEventListener("scroll", revealSlidingCategoryTitle);
 })
 
 
@@ -300,3 +352,30 @@ function createHomeMain(parent) {
     
     parent.append(pageIntro, mainHeading, categoriesSection, note);
 }
+
+var scrollPos = 0;
+
+function revealSlidingCategoryTitle() {
+    var reveals = document.querySelectorAll(".reveal");
+      // detects new state and compares it with the new one
+    let isScrollDirectionUp = (document.body.getBoundingClientRect()).top > scrollPos;
+    // saves the new position for iteration.
+    scrollPos = (document.body.getBoundingClientRect()).top;
+    
+    for (var i = 0; i < reveals.length; i++) {
+        //height of the viewport
+        var windowHeight = window.innerHeight;
+
+        //distance of the element from teh top of the viewport
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        //height with witch the element should be revealed to the user
+        var elementVisible = 50;
+  
+        if ((elementTop < windowHeight - elementVisible) || isScrollDirectionUp) {
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
+    }
+}
+  
