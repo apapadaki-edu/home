@@ -568,10 +568,15 @@ document.addEventListener("click", (ev)=>{
         
         //get the last of the project navigation container and smooth scroll to its top
 
-        const toSmoothScroll = document.getElementsByTagName("main")[0];
-        toSmoothScroll.scrollIntoView({block: "start"});
-        //const prSelect = document.querySelector(".select-btn span");
-        //prSelect.innerText = ev.target.innerText;
+
+        const windowHeight = (window.matchMedia("(max-width: 901px)").matches || screen.width < 900)? window.innerHeight: document.querySelector("main").offsetTop;
+  
+        // different values depending on different screen sizes
+        let subtractHambMenuHeight = (window.innerHeight < 700 && (window.matchMedia("(max-width: 901px)").matches || screen.width < 900))? 66: 0;
+
+        //distance of the element from the top of the viewport 
+        let catToScrollHeight = windowHeight - subtractHambMenuHeight;
+        window.scroll(0, catToScrollHeight, {behavior:"smooth"});
     }
 
     document.querySelectorAll(".pr-article-container").forEach((article) => {

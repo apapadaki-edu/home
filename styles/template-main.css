@@ -146,7 +146,7 @@ th.cat-heading {
 
 @media (max-width: 550px) {
     div.main-projects{
-        padding: 10% 6vw;
+        padding: 5% 6vw 10% 6vw;
     }
 
     table {
@@ -179,7 +179,7 @@ th.cat-heading {
 
 @media (min-width: 551px) and (max-width: 1399px) {
     div.main-projects{
-        padding: 10% 12vw;
+        padding: 5% 12vw 5% 12vw;
     }
 
     .app-layout-imgs {
