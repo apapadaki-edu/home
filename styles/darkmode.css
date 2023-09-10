@@ -101,8 +101,8 @@ body.dark-mode .app-layout-imgs {
     background-color: #ffffff09;
 }
 
-body.dark-mode svg#docker-icon {
-    background-color: #276d6b;
+body.dark-mode svg#email-icon {
+    color: #178582;
 }
 
 body.dark-mode svg#linkedin-round-icon path,

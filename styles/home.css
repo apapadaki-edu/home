@@ -416,8 +416,8 @@ footer svg {
     background-color: var(--black);
 }
 
-svg#docker-icon {
-    background-color: #e5e5e5;
+svg#email-icon {
+    color:white;
 }
 
 .copyright {

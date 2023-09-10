@@ -293,8 +293,8 @@ footer svg {
     border-radius: 50px;
     background-color: var(--black);
 }
-svg#docker-icon {
-    background-color: #e5e5e5;
+svg#email-icon {
+    color: #f5f5f5;
 }
 
 .copyright {
