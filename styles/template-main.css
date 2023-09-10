@@ -12,6 +12,7 @@ Dark classic blue (#0A1828), turquoise (#178582), gold (#BFA181)
     font-weight: 100 900;
     font-display: swap;
     font-style: normal;
+    font-display: fallback;
 }
 
 div.main-projects {
