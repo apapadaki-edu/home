@@ -293,8 +293,9 @@ footer svg {
     border-radius: 50px;
     background-color: var(--black);
 }
+
 svg#email-icon {
-    color: #f5f5f5;
+    color: #1dc571;
 }
 
 .copyright {
