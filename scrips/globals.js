@@ -97,23 +97,23 @@ const PROJECT_CONTENTS = {
             </p>',
         images: [
                 {
-                    path:"../images/c_messaging_app.png",
+                    path:"../images/c_messaging_app.webp",
                     caption: "Main screen"
                 },
                 {
-                    path:"../images/c_fill_message.png",
+                    path:"../images/c_fill_message.webp",
                     caption: "Fill SMS"
                 },
                 {
-                    path:"../images/c_open_sms_app.png",
+                    path:"../images/c_open_sms_app.webp",
                     caption: "SMS App"
                 },
                 {
-                    path:"../images/c_fill_mail.png",
+                    path:"../images/c_fill_mail.webp",
                     caption: "Fill Email"
                 },
                 {
-                    path:"../images/c_select_app.png",
+                    path:"../images/c_select_app.webp",
                     caption: "Select Email App"
                 }
             ],
@@ -141,11 +141,11 @@ const PROJECT_CONTENTS = {
             </p>',
         images: [ 
                 {
-                    path: "../images/sc_calc_main.png",
+                    path: "../images/sc_calc_main.webp",
                     caption:"Main Screen"
                 },
                 { 
-                    path: "../images/sc_calc_result.png",
+                    path: "../images/sc_calc_result.webp",
                     caption: "With results"
                 }
             ],
@@ -181,11 +181,11 @@ const PROJECT_CONTENTS = {
             being a child activity of the main.</p>',
         images: [
                 {
-                    path: "../images/ca_calendar_ini.png",
+                    path: "../images/ca_calendar_ini.webp",
                     caption: "Start screen"
                 },
                 {
-                    path: "../images/ca_calendar_add_event.png",
+                    path: "../images/ca_calendar_add_event.webp",
                     caption: "Add Event"
                 }
             ],
@@ -223,19 +223,19 @@ const PROJECT_CONTENTS = {
             </p>',
         images: [
                 {
-                    path: "../images/pg_ask_permitions.png",
+                    path: "../images/pg_ask_permitions.webp",
                     caption: "Ask Permissions"
                 },
                 {
-                    path: "../images/pg_all_photos.png",
+                    path: "../images/pg_all_photos.webp",
                     caption: "Gallery"
                 },
                 {
-                    path: "../images/pg_take_photo.png",
+                    path: "../images/pg_take_photo.webp",
                     caption: "New Photo"
                 },
                 {
-                    path: "../images/pg_modify_photo.png",
+                    path: "../images/pg_modify_photo.webp",
                     caption: "Add Info"
                 }
             ],
@@ -290,27 +290,27 @@ const PROJECT_CONTENTS = {
         github: "https://github.com/apapadaki-edu/web_based/tree/art-store",
         images: [
             {
-                path:"../images/sda_form_ini.png",
+                path:"../images/sda_form_ini.webp",
                 caption: "Form main"
             },
             {
-                path:"../images/sda_empty_field.png",
+                path:"../images/sda_empty_field.webp",
                 caption: "Verification error"
             },
             {
-                path:"../images/sda_verification_ok.png",
+                path:"../images/sda_verification_ok.webp",
                 caption: "Verification ok"
             },
             {
-                path:"../images/sda_list_customers.png",
+                path:"../images/sda_list_customers.webp",
                 caption: "List customers"
             },
             {
-                path:"../images/sda_view_customer.png",
+                path:"../images/sda_view_customer.webp",
                 caption: "View customer"
             },
             {
-                path:"../images/sda_update_successful.png",
+                path:"../images/sda_update_successful.webp",
                 caption: "Update customer"
             }
         ],
@@ -343,15 +343,15 @@ const PROJECT_CONTENTS = {
             having in mind, mainly for mobile users.</p>',        
         images: [
             {
-                path: "../images/nb_ini.png",
+                path: "../images/nb_ini.webp",
                 caption: "Start screen"
             },
             {
-                path: "../images/nb_new_note.png",
+                path: "../images/nb_new_note.webp",
                 caption: "Add Note"
             },
             {
-                path: "../images/nb_update_note.png",
+                path: "../images/nb_update_note.webp",
                 caption: "Update Note"
             }
         ],
@@ -388,11 +388,11 @@ const PROJECT_CONTENTS = {
             </p>',
         images: [
             {
-                path:"../images/sp_ini.png",
+                path:"../images/sp_ini.webp",
                 caption: "Main screen"
             },            
             {
-                path:"../images/sp_with_results.png",
+                path:"../images/sp_with_results.webp",
                 caption: "With results"
             },
         ],
@@ -432,23 +432,23 @@ const PROJECT_CONTENTS = {
             </p></div>',
         images: [
             {
-                path:"../images/sda_start_page.png",
+                path:"../images/sda_start_page.webp",
                 caption: "Main screen"
             },            
             {
-                path:"../images/sda_products.png",
+                path:"../images/sda_products.webp",
                 caption: "Product Management"
             },            
             {
-                path:"../images/sda_additives.png",
+                path:"../images/sda_additives.webp",
                 caption: "Additive Management"
             },
             {
-                path:"../images/sda_classification.png",
+                path:"../images/sda_classification.webp",
                 caption: "Classification"
             },
             {
-                path:"../images/sda_result_classification.png",
+                path:"../images/sda_result_classification.webp",
                 caption: "Result Classification"
             },
         ],
