@@ -6,7 +6,7 @@ const URL_PARAMS_PAGES = {
     otr: "Rest of Space"
 }
 
-
+// listener to select field's li elelments, for project selection
 document.addEventListener("click", (ev)=>{
     const isProjectCategoryButton = ev.target.classList.contains("pr-select");
     if (ev.target.closest("[data-category-nav]") == null) return;
@@ -52,7 +52,7 @@ document.addEventListener("click", (ev)=>{
     document.querySelector(".select-wrapper").classList.remove("active");
 });
 
-
+// mouse over sub nav appearing effect for desktop screens 
 document.addEventListener("mouseover", ev => {
     const isDropdownButton = ev.target.matches("[data-dropdown-button]");
     // if this is not a dropdown or if it is in the dropdown then do nothing
@@ -73,19 +73,7 @@ document.addEventListener("mouseover", ev => {
 
 });
 
-document.addEventListener("click", ev => {
-
-    const isMoreInfoButton = ev.target.matches("[data-category-description-button]");
-    if (!isMoreInfoButton) return;
-
-    let currentCategoryDescription;
-    currentCategoryDescription = ev.target.closest("[data-category]").querySelector(".app-category-description");
-    currentCategoryDescription.classList.toggle('open');
-    ev.target.classList.toggle('open');
-    
-});
-
-
+// humbmenu display coordinator
 document.addEventListener("click", (ev) => {
     const isHambMenuButton = ev.target.classList.contains("hamb-menu");
     
@@ -157,6 +145,7 @@ window.addEventListener("load", (ev) => {
             });
     }
 
+    // showing and hidding the select field's options
     const wrapper = document.querySelector(".select-wrapper");
     selectBtn = wrapper.querySelector(".select-btn");
     selectBtn.addEventListener('click', () => {
@@ -353,10 +342,11 @@ function createHomeMain(parent) {
     parent.append(pageIntro, mainHeading, categoriesSection, note);
 }
 
-var scrollPos = 0;
+
 
 function revealSlidingCategoryTitle() {
-    var reveals = document.querySelectorAll(".reveal");
+    let scrollPos = 0;
+    const reveals = document.querySelectorAll(".reveal");
       // detects new state and compares it with the new one
     let isScrollDirectionUp = (document.body.getBoundingClientRect()).top > scrollPos;
     // saves the new position for iteration.
@@ -366,7 +356,7 @@ function revealSlidingCategoryTitle() {
         //height of the viewport
         var windowHeight = window.innerHeight;
 
-        //distance of the element from teh top of the viewport
+        //distance of the element from the top of the viewport
         var elementTop = reveals[i].getBoundingClientRect().top;
         //height with witch the element should be revealed to the user
         var elementVisible = 50;

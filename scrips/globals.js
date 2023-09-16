@@ -290,27 +290,27 @@ const PROJECT_CONTENTS = {
         github: "https://github.com/apapadaki-edu/web_based/tree/art-store",
         images: [
             {
-                path:"../images/sda_form_ini.webp",
+                path:"../images/as_form_ini.webp",
                 caption: "Form main"
             },
             {
-                path:"../images/sda_empty_field.webp",
+                path:"../images/as_empty_field.webp",
                 caption: "Verification error"
             },
             {
-                path:"../images/sda_verification_ok.webp",
+                path:"../images/as_verification_ok.webp",
                 caption: "Verification ok"
             },
             {
-                path:"../images/sda_list_customers.webp",
+                path:"../images/as_list_customers.webp",
                 caption: "List customers"
             },
             {
-                path:"../images/sda_view_customer.webp",
+                path:"../images/as_view_customer.webp",
                 caption: "View customer"
             },
             {
-                path:"../images/sda_update_successful.webp",
+                path:"../images/as_update_successful.webp",
                 caption: "Update customer"
             }
         ],
@@ -792,5 +792,129 @@ function createTable(prId){
     return tableContents;
 }
 
+function createImagesSection(prId){
+    if(PROJECT_CONTENTS[prId].images){
+
+        // for displaying images fullscreen when clicked;
+        const fullPage = document.createElement("div");
+        fullPage.classList.add("fullpage");
+        fullPage.addEventListener('click', (ev)=>{
+            ev.target.style.display='none';
+        });
+        document.querySelector('.pr-container').appendChild(fullPage);
+
+        // populate with images
+        PROJECT_CONTENTS[prId].images.forEach((img)=>{
+            const figureNode = document.createElement("figure");
+            const imgNode = document.createElement("img");
+            imgNode.src = img.path;
+            imgNode.style.width = "100%"
+            imgNode.addEventListener('click', function() {
+                fullPage.style.backgroundImage = 'url(' + img.path + ')';
+                fullPage.style.display = 'block';
+              });
+            figureNode.appendChild(imgNode);
+            const figCap = document.createElement("figcaption");
+            figCap.classList.add("caption");
+            figCap.innerText = img.caption;
+            figureNode.appendChild(figCap)
+
+            articlePics.appendChild(figureNode);
+        });
+    }
+}
+
+const GITHUB_USER = "apapadaki-edu";
+const GITHUB_REPO = "home";
+const GITHUB_BRANCH = "new";
+const GITHUB_FOLDER = "images";
+
+//######## FUNCTIONS FOR FETCHING IMAGES ASYNCHRONOUSLY ###########
+function getImageUrls(currPr="") {
+    // fetches an array with objects containing the image URLs, and their names 
+    // names, of all images matching a string in the images folder 
+    // of the specified branch in the specified repo(using github's Content API)
+    const githubContentsAPICall = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${GITHUB_FOLDER}?ref=${GITHUB_BRANCH}`
+    return new Promise((resolve)=>{
+        fetch(githubContentsAPICall)
+        .then(res => res.json())
+        .then((json) => {
+          const imgLinks = []
+          json.forEach((img)=>{
+            //this can be done with the start of a string ex. /^fs/
+            const regex = new RegExp(`^${currPr}.*[.]webp$`);
+            if(!regex.test(img.name)) return; 
+            imgLinks.push({"name": img.name,
+                        "git_url": img.git_url});
+          });
+  
+          resolve(imgLinks);
+        });
+      });
+  }
+  
+  function getImageInBase64(imgUrl) {
+    // fetches an image in its base64 encoding from the specified git url
+    // the url can be found from github's content API
+    return new Promise((resolve) =>{fetch(imgUrl)
+        .then(res=>res.json())
+        .then((json)=>resolve(json.content));
+      });
+  }
+  
+  function loadImageFromBase64(base64img){
+    // loads an image with the specified data url as source
+    // the data url is of the form "prefix,image_base64_str"
+    // where prefix specifies the type of data and format
+    return new Promise((resolve, reject) => {
+        var base64imgDataUrl = `data:image/webp;base64,${base64img}`;
+        var img = new Image();
+        img.onload = function() {
+            resolve(img);
+        };
+        img.onerror = reject;
+        img.src = base64imgDataUrl;      
+      });
+  }
+  
+  
+  async function getAllImages(currPr="", imgsContainer=null){
+    // the getImageUrls takes the following argument
+    // currPr "c", "ca", "pg" etc (used in the includes function or test function
+    // in line 229) to check the images to download based on the project.
+    
+    //fetching images urls
+    const imgUrls = await getImageUrls(currPr);
+  
+    
+    // mapping each image url from the array above with 
+    // a promise that retrieves the image in base64,
+    // the result is an array of promises that can be executed in 
+    // parallel with the Promise.all method
+    const promises = imgUrls.map((imgUrl)=>{
+        return getImageInBase64(imgUrl.git_url).then((img)=>{
+          return { "name": imgUrl.name, "imgBase64": img };
+        })
+    });
+  
+    // fetching images in base64 encoding from remote host  
+    // img is of the form {"name":str, "imgBase64":str}
+    const results = await Promise.all(promises);
+  
+    // mapping each image in base64 to a promise that returns
+    // an image node with the loaded image and appends it 
+    // to the the specified DOM element
+    const promisesNodes = results.map((img)=>{
+      return loadImageFromBase64(img.imgBase64).then((imgNode)=>{
+        const parentNode = (imgsContainer)? imgsContainer: document.body;
+        parentNode.appendChild(imgNode);
+      })
+    })
+  
+    // loads all images in parallel
+    await Promise.all(promisesNodes);
+  }
+
 }
 c();
+

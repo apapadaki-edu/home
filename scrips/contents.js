@@ -32,137 +32,289 @@ As mentioned in the previous section, the due date provided for an event must be
 
 
 
+//a custom listener for class change of an element
+function callback(mutationsList, observer) {
+    mutationsList.forEach((mutation)=>{
+        if(mutation.type !== "attributes" || mutation.attributeName !== "class") return;
+        if(!mutation.target.classList.contains("open")) {
+            document.querySelector("."+mutation.target.id).style.borderBottom = "1px solid gray";
+            return;
+        }
+        console.log(document.querySelector("."+mutation.target.id))
+        document.querySelector("."+mutation.target.id).style.borderBottom = "1px solid blue";
+    })
+}
 
-!! a:
-STYLE_LAYERS = [
-    ('block1_conv1', 0.2),
-    ('block2_conv1', 0.4),
-    ('block3_conv1', 0.4)]   
-content-img: pouri.jpg
-style-img: a_e2.jpg
+const mutationObserver = new MutationObserver(callback);
+mutationObserver.observe(
+    document.getElementById("sda"),
+    {attributes: true}
+)
 
-!! m: 
-STYLE_LAYERS = [
-    ('block1_conv1', 0.4),
-    ('block2_conv1', 0.4),
-    ('block3_conv1', 0.2)
-]
-content-img: dock.jpg
-style-img: square4.jpeg
-gama: 0.08
-Spring's spring -> make it swirly
+//##############################################################################
+
+
+/*
+fileSHA stores the SHA of the file we want to fetch.
+
+fileBlob stores the blob fetched from the API.
+
+fileContent is used to store the decoded string.
+
+file has the data that we actually need.
+
+You can find the reference code in the next section, 
+just change the folder path with the actual file path 
+(with file extension) and you're good to go!
+*/
+
+let fileSHA, fileBlob, fileContent, file
+
+const getFileSHA = async () => {
+  try {
+    const response = await fetch(
+        "https://api.github.com/repos/apapadaki-edu/home/contents/images?ref=new"
+    );
+    const data = await response.json();
+    // console.log(data);
+    
+    fileSHA = data[1].sha
+    //console.log(fileSHA);
+
+  } catch (error) {
+    console.log(error);
+  }
+  
+  getFileBlob()
+}
+
+const getFileBlob = async (fileSHA)=> {
+  try {
+  const response = await fetch(
+    `https://api.github.com/repos/apapadaki-edu/home/git/blobs/d8e4b0c68d1d399be4123d595dfae32843427975`
+    );
+  const data = await response.json();
+    
+  fileBlob = data.content
+  convertBlob(fileBlob)
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+const convertBlob = async blob => {
+  //console.log(blob)
+  try {
+    // const fileContents = Buffer.from(blob, "base64").toString()
+    // file = JSON.parse(fileContents)
+
+    
+    // ..... UNCOMMENT FOR FILES ..........
+    //fileContents = base64EncodeUnicode(blob)
+    //file = JSON.parse(fileContents)
+    //console.log(file)
+
+    //...... FOR IMAGES ....
+    var base64img = `data:image/webp;base64,${blob}`;
+    await Base64ToImage(base64img).then((img) => {
+        //document.body.appendChild(img);
+    });
+
+  } catch(error) {
+    console.log(error)
+  }
+}
+
+function Base64ToImage(base64img) {
+    return new Promise((resolve, reject) => {
+        var img = new Image();
+        img.onload = function() {
+            resolve(img);
+        };
+        img.onerror = reject;
+        img.src = base64img; 
+        
+    });
+}
+
+//.....FOR FILES.....
+function base64EncodeUnicode(str) {
+  utf8Bytes = decodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function (match, p1) {
+    return String.fromCharCode('0x' + p1);
+  });
+
+  return atob(utf8Bytes);
+}
+
+
+getFileSHA()
+
+/* the api call url includes
+    user: aspapadaki-edu/
+    repo: home/
+    new: branch (in ref= '' parameter) 
+*/
+document.body.style.forntSize = "3rem";
+fetch('https://api.github.com/repos/apapadaki-edu/home/contents/images?ref=new')
+  .then(res => res.json())
+  .then((json) => {
+    document.body.innerHTML = `<pre>${JSON.stringify(json, undefined, 2)}</pre>`});
+
+/*
+fetch(`https://api.github.com/repos/apapadaki-edu/home/git/blobs/d8e4b0c68d1d399be4123d595dfae32843427975`)
+.then(res=>res.json())
+.then((json)=>{
+    let data = json.content;
+    var base64img = `data:image/webp;base64,${data}`;
+    return new Promise((resolve, reject) => {
+      var img = new Image();
+      img.onload = function() {
+          resolve(img);
+      };
+      img.onerror = reject;
+      img.src = base64img;
+      console.log("outimage")  
+      
+  });
+})
+.then((img)=>{
+  document.body.appendChild(img);
+})
 */
 
 
+function getImageUrls(currPr="") {
+  // fetches an array with objects containing the image URLs, and their names 
+  // names, of all images matching a string in the images folder 
+  // of the specified branch in the specified repo(using github's Content API)
+  return new Promise((resolve)=>{
+      fetch('https://api.github.com/repos/apapadaki-edu/home/contents/images?ref=new')
+      .then(res => res.json())
+      .then((json) => {
+        const imgLinks = []
+        json.forEach((img)=>{
+          //this can be done with the start of a string ex. /^fs/
+          const regex = new RegExp(`^${currPr}.*[.]webp$`);
+          if(!regex.test(img.name)) return; 
+          imgLinks.push({"name": img.name,
+                      "git_url": img.git_url});
+        });
 
-// ######### content introduction ########
-l= "<p class=\"page-introduction\"> This is an academic portfolio page in which you can find projects, \
-mainly developed during my studies. I welcome you to navigate through the four main categories \
-offered here. A short description of the concepts covered can be found under each category.\
-I hope something catches your attention.\
-</p>"
+        resolve(imgLinks);
+      });
+    });
+}
 
-// ####### note of importance ##############
-imp = "<p class=\"note-of-importance\"><strong>Note:</strong> Currently, most projects are getting updated, \
-with both impro&shyving code (from the semester initially developed) \
-and adding more featu&shyres. I would be extre&shymely grateful for any feedback\
-or tips on how to improve or change these projects.\
-It would help immen&shysely my develop&shyment as a programmer.</p>"
+function getImageInBase64(imgUrl) {
+  // fetches an image in its base64 encoding from the specified git url
+  // the url can be found from github's content API
+  return new Promise((resolve) =>{fetch(imgUrl)
+      .then(res=>res.json())
+      .then((json)=>resolve(json.content));
+    });
+}
+
+function loadImageFromBase64(base64img){
+  // loads an image with the specified data url as source
+  // the data url is of the form "prefix,image_base64_str"
+  // where prefix specifies the type of data and format
+  return new Promise((resolve, reject) => {
+      var base64imgDataUrl = `data:image/webp;base64,${base64img}`;
+      var img = new Image();
+      img.onload = function() {
+          resolve(img);
+      };
+      img.onerror = reject;
+      img.src = base64imgDataUrl; 
+      img.style.width = "100%";
+      img.classList.add()
+    
+    });
+}
 
 
-ms = '<p>This is a messaging application that makes it easier for the user to manage\
- the types of messages they wish to send, all from one UI.\
- Those messages include either emails or phone messages (SMS).</p>\
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Interworkings</p>\
-<hr></button>\
-<div class="section-contents"><p>The user is presented with a simple UI that probes them through an email or a phone number. \
-This field is checked for the validity of its content. This can prevent simple mistakes, like the correct form of the email address \
-or the number of digits required in a phone number. A pop-up message informs the user in case of a mistake. \
-In the case of emails, if an email address is detected, a new field appears for providing the email\’s subject.\
- Finally, a simple text field is included for the message\’s body. </p>\
-<p> There are three buttons at the end of the UI, one for opening the user\'s \
-messaging app, one for the email application and the third one, for clearing the text field containing the message\’s body. \
-After the message\’s information is all filled in and depending on the type of message the user wishes to send, \
-the appropriate application opens with its fields already filled in.</p></div>\
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Technical/Limitations</p>\
-<hr></button>\
-<p class="section-contents">The buttons start activities with intents that call the user to open the appropriate applications for each messaging app. \
-Message\'s contents are sent to the messaging app selected through the intent. For now, messages are only for SMS apps, \
-it would be useful to include others like, for example, messenger. For emails, the validation conforms with OWASP Foundation\’s standard.</p>'
+async function getAllImages(currPr="", imgsContainer=null){
+  // the getImageUrls takes the following argument
+  // currPr "c", "ca", "pg" etc (used in the includes function or test function
+  // in line 229) to check the images to download based on the project.
+  
+  //fetching images urls
+  const imgUrls = await getImageUrls(currPr);
 
-calc = '<p>Application for scientific calculations of the functorial,\
- the Fibonacci sequence, up to a number and the most common divisor of a stream of numbers. </p>\
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Interworkings</p>\
-<hr></button>\
-<p class="section-contents">The UI includes an EditText view in which the user provides the numbers separated with commas. \
-A check runs for the proper format of the stream of numbers. If a stream of numbers is not separated by a comma, a new message is \
-presented to notify the user. There are three buttons, one for each mathematical operation. The calculation results are shown as blocks in a text area field.</p>\
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Technical/Limitations</p>\
-<hr></button>\
-<p class="section-contents">The purpose of this application at the educational level was to learn to work with threads. \
-These calculations are ideal for this purpose since they are expensive for large numbers and can crash or freeze the UI if not \
-handled in the background. Finally, the application detects the system\’s language and presents the corresponding keyboard layout.</p>'
+  
+  // mapping each image url from the array above with 
+  // a promise that retrieves the image in base64,
+  // the result is an array of promises that can be executed in 
+  // parallel with the Promise.all method
+  const promises = imgUrls.map((imgUrl)=>{
+      return getImageInBase64(imgUrl.git_url).then((img)=>{
+        return { "name": imgUrl.name, "imgBase64": img };
+      })
+  });
 
-ca  = '<p>An application that allows the user to create, modify and store calendar events. \
-The events are displayed on a list based on their due date; the most recent one appears at the top.\
- Due to its simplicity, one can organize events more efficiently.</p> \
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Interworkings</p>\
-<hr></button>\
-<div class="section-contents"><p>The start screen displays all calendar events that are not past due; have not happened yet. The events are ordered by the date the event happens, \
-starting with the most recent one. For each event on the list, its title, the date of creation and the due date are included. \
-Additionally, next to each event there is a check box for bulk deleting events. Finally, a button with the \'+\' sign is used to add a new event. </p>\
-<p>A new form appears to the user in case they either wish to add a new event, by pressing the \'+\' sign button or update an already added event, \
-by clicking on the event. In this form, the user can fill in the event\'s information. This information includes its title, a description and the date of the event. </p>\
-<p>The form includes three buttons. One button is to save or update an event, one to delete it and finally, one to cancel all the changes. \
-After each operation, the user is directed back to the main screen. Once a new event is added or updated, the event list on the main screen is \
-also updated to include the newly created event or respectively, to display the altered information of the updated event. </p></div>\
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Technical/Limitations</p>\
-<hr></button>\
-<p class="section-contents">Events that are past due are still stored in the database, however, they are not displayed on the main screen. \
-Additionally, all events are stored in a local relational database, so there is no need for a remote connection.\
- The event list and the form consist of two separate activities with the first one being the application\’s main activity and the second being a child activity of the main.</p>'
+  // fetching images in base64 encoding from remote host  
+  // img is of the form {"name":str, "imgBase64":str}
+  const results = await Promise.all(promises);
 
-ph = '<p>An application for taking photos, storing them, adding location information and a description. It simulates the \
-image gallery application, already installed on a user\’s phone by the manufacturer,\
- but only including its core functionality. </p>\
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Interworkings</p>\
-<hr></button>\
-<div class="section-contents"><p>The main screen of the application displays the thumbnails of all photos taken, \
-using the application. A button is included for taking new photos. Once the new button is pressed, the native camera app opens \
-for the user to use. After a photo is taken, the user returns to the main screen with the newly added photo shown in the gallery. Along with the photo, \
-there are stored the date and time of creation and the location\’s information.</p>\
-<p>The user can also include a description for a photograph. Once clicking on a photo thumbnail on the main screen, \
-a new screen appears with the photo\’s information. This information includes a larger \
-version of the photograph, the location where it was taken, the date and time and a field for the description. \
-The description can be modified and stored anew. </p></div>\
-<button class="expand">\
-<span><svg class="more-info" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="-40 -40 592 346.77"><path stroke="currentColor" stroke-width="30" fill-rule="nonzero" d="M493.12 3.22c4.3-4.27 11.3-4.3 15.62-.04a10.85 10.85 0 0 1 .05 15.46L263.83 263.55c-4.3 4.28-11.3 4.3-15.63.05L3.21 18.64a10.85 10.85 0 0 1 .05-15.46c4.32-4.26 11.32-4.23 15.62.04L255.99 240.3 493.12 3.22z"/></svg>\
-<svg class="less-info" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" fill="currentColor" clip-rule="evenodd" viewBox="0 0 512 312.36"><path fill-rule="nonzero" d="M0 276.77 253.12 0 512 282.48l-32.65 29.88-226.2-246.83L32.66 306.64z"/></svg>\
-</span><p>Technical/Limitations</p>\
-<hr></button>\
-<p class="section-contents"> Location\’s information is stored as retrieved from the GeoCoder, as latitude and longitude pairs. \
-The date and time are stored as recorded from the system, without any formatting. After the media is taken, they are stored locally, \
-using a content provider. A content provider was developed to be used along the map application later. Since the user can add \
-information along with pins for places of interest through that application, they could also include images for those places. \
-The learning objectives include permission requests, external storage and lastly, media file manipulation</p>'
+  // mapping each image in base64 to a promise that returns
+  // an image node with the loaded image and appends it 
+  // to the the specified DOM element
+  const promisesNodes = results.map((img)=>{
+    return loadImageFromBase64(img.imgBase64).then((imgNode)=>{
+      const parentNode = (imgsContainer)? imgsContainer: document.body;
+      parentNode.appendChild(imgNode);
+    })
+  })
+
+  // loads all images in parallel
+  await Promise.all(promisesNodes);
+}
+
+getAllImages()
+/*
+async function loadImages(){
+  const promisesImgs = await getAllImages();
+
+  const fetchedImgs = await Promise.all(promisesImgs);
+  // img is of the form {"name":str, "imgBase64":str}
+  const promises = fetchedImgs.map((img)=>{
+    return getImage(img.imgBase64).then((imgNode) => {
+      document.body.appendNode(imgNode);
+      //return json.parse({"name": img.name, "imgNode": imgNode});
+    });
+  })
+
+  await Promise.all(promises);
+  console.log("COMPLETE");
+
+}
+*/
+
+/*
+WORKS
+async function getAllImages(){
+  const imgUrls = await getImageUrls();
+  const promises = imgUrls.map((imgUrl)=>{
+    return getImage(imgUrl.git_url).then((img)=>{
+      return { "name": imgUrl.name, "imgBase64": img };
+    })
+    
+  });
+
+  const results = await Promise.all(promises);
+  console.log(results)
+  return results
+}
+*/
+  /*
+    const response = await fetch(imgUrl);
+    const data = await response.json();
+  return new Promise((resolve)=>{
+    resolve(data.content);
+  })
+  fileBlob = data.content
+  convertBlob(fileBlob)
+  */
+
+
+
