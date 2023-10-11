@@ -404,6 +404,11 @@ svg#email-icon {
         background-color: #1f36e6;
         z-index: 200; 
     }
+    
+    .hamb-menu-banner.open {
+        background-color: var(--black);
+        background-color: white; 
+    }
 
     .hamb-menu {
         position: absolute;
@@ -418,6 +423,11 @@ svg#email-icon {
         color: #ffffffe7 /*#1f1f1f*/;
     }
 
+    .hamb-menu-banner.open .hamb-menu-icon {
+        margin:0.9rem 1.3rem;
+        color: #001686;
+    }
+
     .main-nav-container {
         position:relative;
     }
@@ -430,7 +440,6 @@ svg#email-icon {
         z-index: 100;
         padding: 20px 0px;
         background: #1f36e6;
-
         /*background-image: linear-gradient(to bottom, #e5e5e5, #ebebeb, #f2f2f2, #f8f8f8, #ffffff);*/
         overflow:hidden;
         transition: top .5s ease-in-out;
@@ -441,26 +450,41 @@ svg#email-icon {
         top:0; 
         overflow-y: auto;
         transition: top .5s ease-in-out;
+        padding-top:0;
+        background: #ffffff;
+    }
+
+    .main-nav.open a {
+        color:black;
+        font-family: 'Quicksand', sans-serif;
     }
 
     .main-nav a {
-        /*color: #171717;*/
-        color:#ffffffd7;
+        color: #1f36e6;
     }
-
 
     .sub-nav-container {
         position: relative;
-        margin: 0.5rem;
+        margin: 0;
+        padding: 0.7rem 0 0 0;
+        border-bottom: 1px solid #0000002a;
+    }
+
+    .sub-nav-container:first-child {
+        box-sizing: border-box;
+        margin-top: 1rem;
+        border-top: 1px solid #0000002a;
+        padding-bottom: 0.7rem;
     }
 
     .sub-nav-container:nth-child(2) .sub-nav a {
         /*color: #17171777;*/
-        color: #ffffff77;
+        color: #000000;
     }
 
     .sub-nav-container:last-child {
-        padding-bottom: 2rem;
+        box-sizing: border-box;
+        padding-bottom:0px;
     } 
     
 
@@ -468,20 +492,23 @@ svg#email-icon {
         display: inline-block;
         box-sizing: border-box;
         /*color: #171717;*/
-        color:#ffffffd7;
+        color: #1f36e6;
+
         text-align: start;
-        padding-bottom: 10px;
-        margin: 10px 10px 20px 30px;
+        padding-bottom: 0;
+        margin: 1rem;
         width: calc(100% - 3.5rem);
         border-bottom: 1px solid transparent;
-        
-        border-image: linear-gradient(0.47turn, #44d5d8 , #2635ab);
-        /*border-image: linear-gradient(0.47turn, #ffffff, #c2c2c4);
-        font-weight: bold;*/
-        border-image-slice: 1;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+        padding-left: 0.7rem;
         font-size: 1.17rem;
 
         pointer-events: none;
+    }
+    
+    .main-nav.open a.link {
+        color:#000000; 
     }
 
     .main-nav li:first-child a  {
@@ -494,42 +521,55 @@ svg#email-icon {
         position: absolute;
         right: 0;
         z-index:101;
-        margin: 0.5rem 2.5rem 2.5em 2.5rem;
+        margin: 1.3rem 2.5rem 2.5em 2.5rem;
         padding: 4px;
         border: solid #ffffffd7;
         /*border: solid #171717;*/
-        border-width: 0 3px 3px 0;
+        border-width: 0 2px 2px 0;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
+        border-color: #000000;
     }
 
-    .sub-nav {
+    .main-nav.open .sub-nav {
         overflow: hidden;
         max-height: 0;
         line-height: 3;
-        padding: 0 3em;
+        margin-top: 0.7rem;
+        padding: 0 2rem 0 2.5rem;
         font-size: 1.1rem;
         color: transparent;
         transition: max-height .2s ease-in-out;
     }
 
-    .sub-nav.open {
+    .main-nav.open .sub-nav.open {
         max-height: 100vh;
         color: black;
+        background-color:#ffffff0e;
         transition: max-height .3s ease-in-out;
     }
     
     .toggle {
         border: 2px solid #ffffffe7;
     }
-    
+    .toggle-button-container.open .toggle {
+        border-color:#000000;
+    }
+
     .toggle-icon {
         color: #ffffffe7;
-    
     }
+    .toggle-button-container.open .toggle-icon svg {
+        color:#000000;
+    }
+
     .circle {
         background-color: #ffffffe7;
     }
+    .toggle-button-container.open .circle {
+        background-color: #000000;
+    }
+
 
     .site-description {
         padding-top: 31vh;

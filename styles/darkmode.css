@@ -174,14 +174,30 @@ body.dark-mode .site-description .cv-download {
 
     body.dark-mode .main-nav {
         background-image: linear-gradient(to bottom, #020621, #030725, #03082a, #03092e, #030a32);
-
     }
+
     body.dark-mode .main-nav a.link {
-        border-bottom: 1px solid transparent;
-        border-image: linear-gradient(0.47turn, #BFA181, #423528);
-        border-image-slice: 1;
-
+        border:0px;
+        color:#ede7e0;
     }
+
+    body.dark-mode .sub-nav-container {
+        border-bottom: 1px solid #423528;
+    }
+
+    body.dark-mode .toggle-button-container.open .toggle-icon svg,
+    body.dark-mode .hamb-menu-banner.open .hamb-menu-icon {
+        background-color: #000318e4;
+        color:#ede7e0;
+    }
+
+    body.dark-mode .toggle-button-container.open .circle {
+        background-color: #ede7e0;
+    }
+    body.dark-mode .toggle-button-container.open .toggle.active {
+        border-color: #ede7e0;
+    }
+
 
     body.dark-mode, body.dark-mode header,
     body.dark-mode #header-container {
@@ -197,7 +213,7 @@ body.dark-mode .site-description .cv-download {
     body.dark-mode .category-title span{
         color: #e9e9e9;
     }
-    body.dark-mode .sub-nav  {
+    body.dark-mode .sub-nav {
         background-color: #000318e4;
         color:#ede7e0;
     }

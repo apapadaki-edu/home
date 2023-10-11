@@ -36,11 +36,11 @@ document.addEventListener("click", (ev)=>{
 
             
             // different values depending on different screen sizes
-            let subtractHeightScale = (window.innerHeight < 600 && (window.matchMedia("(max-width: 901px)").matches || screen.width < 900))? 9: 4; 
+            let subtractHeightScale = (window.innerHeight < 600 && (window.matchMedia("(max-width: 901px)").matches || screen.width < 900))? 12: 10; 
             let subtractHambMenuHeight = (window.innerHeight < 700 && (window.matchMedia("(max-width: 901px)").matches || screen.width < 900))? 66: 0;
 
             //distance of the element from the top of the viewport 
-            let catToScrollHeight = (i===0)? windowHeight - subtractHambMenuHeight: catContainerCategories[i].offsetTop - (subtractHeightScale * (16 + 0.00390625 * window.innerWidth)) - subtractHambMenuHeight;
+            let catToScrollHeight = (i===0)? windowHeight - subtractHambMenuHeight: catContainerCategories[i].offsetTop - (subtractHeightScale * (8 + 0.00390625 * window.innerWidth)) - subtractHambMenuHeight;
 
             if(ev.target.classList[1].split("-")[0] != catContainer.children[i].classList[1].split("-")[0]) continue;
             // 38 is the main padding top
@@ -78,7 +78,17 @@ document.addEventListener("click", (ev) => {
     const isHambMenuButton = ev.target.classList.contains("hamb-menu");
     
     if (!isHambMenuButton) return;
-    document.querySelector(".main-nav").classList.toggle("open");
+    let navContainer = document.querySelector(".main-nav");
+    navContainer.classList.toggle("open");
+    document.querySelector(".hamb-menu-banner").classList.toggle("open");
+    document.querySelector(".toggle-button-container").classList.toggle("open");
+
+    //close sub navigation menus when the whole hamberger menu is closed
+    if (!navContainer.classList.contains("open")){
+        document.querySelectorAll(".sub-nav").forEach((nav)=>{
+            nav.classList.remove("open");
+        })
+    }
 });
 
 //styling the main menu with drop-down buttons in case of mobile screens
