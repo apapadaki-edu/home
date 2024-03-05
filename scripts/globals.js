@@ -823,7 +823,7 @@ function createImagesSection(prId){
         });
     }
 }
-
+/*
 const GITHUB_USER = "apapadaki-edu";
 const GITHUB_REPO = "home";
 const GITHUB_BRANCH = "new";
@@ -914,7 +914,7 @@ function getImageUrls(currPr="") {
     // loads all images in parallel
     await Promise.all(promisesNodes);
   }
-
+*/
 }
 c();
 
