@@ -219,7 +219,7 @@ const PROJECT_CONTENTS = {
             The date and time are stored as recorded from the system, without any formatting. After the media is taken, they are stored locally, \
             using a content provider. A content provider was developed to be used along the map application later. Since the user can add \
             information along with pins for places of interest through that application, they could also include images for those places. \
-            The learning objectives include permission requests, external storage and lastly, media file manipulation\
+            The learning objectives include permission requests, external storage and lastly, media file manipulation.\
             </p>',
         images: [
                 {
@@ -380,8 +380,8 @@ const PROJECT_CONTENTS = {
             The reason the button for not available sensors is displayed is for the user to know the wide range of sensors that we carry on at any given time.\
             </p>\
             <h3>Technical/Limitations</h3>\
-            <p class="section-contents">A server is required, apart from hosting the application, s\
-            ince workers were used for controlling the display of sensor results in accordance with the \
+            <p class="section-contents">A server is required, apart from hosting the application, since \
+            workers were used for controlling the display of sensor results in accordance with the \
             given period and workers are defined in external files. The purpose of this application was to access sensors and work with threads. \
             The development of a flask application is in the works that connects to a remote Redis database for \
             storing sensor data in the form of time series. Once developed I will post new media files in this section.\
@@ -470,8 +470,8 @@ const PROJECT_CONTENTS = {
             </p>\
             <h3>Interworkings</h3>\
             <p class="section-contents">The device operates both automatically and manually. Depending on whether \
-            the user has control of the device from they phone, they can either change the switch \
-            from they phones or leave the control to the device itself. \
+            the user has control of the device from their phone, they can either change the switch \
+            from their phones or leave the control to the device itself. \
             For instance, if the user opens the app that controls the switch of \
             their phone, the smart device can detect this and let the user \
             make the decisions. However, if the app is closed, the device can \
@@ -483,7 +483,7 @@ const PROJECT_CONTENTS = {
             wall next to the switch. The application that controls the device was designed and \
             provided by the Blynk cloud platform. Node-RED was used for flow control, helping with \
             managing the different parts of the system and the way they communicate. \
-            Also, brightness measurements along with the time of measurement were send through \
+            Also, brightness measurements along with the time of measurement were sent through \
             HiveMQ broker to Node-RED and with the help of some nodes they were stored in a Redis \
             database, in reference to a different project. </p>',
         github: "https://github.com/apapadaki-edu/smart-light-switch",
