@@ -334,7 +334,7 @@ const PROJECT_CONTENTS = {
             available notes they have previously been created, their count, a button to create a new note and one to clear all notes. \
             Note count was included for anyone who wants to clear unnecessary notes they may have forgotten to delete, after they reach a number, \
             the user considers as appropriate for this task. The user can click on a note to edit its contents or delete it. If they decide to create a new note, \
-            they are presented with a form to fill the note\’s information.</p>\
+            they are presented with a form to fill in the note\’s information.</p>\
             <h3>Technical/Limitations</h3>\
             <p class="section-contents">A server is not needed, apart from hosting the web application, \
             since there was the use of indexedDB for database operations. This is a low-level client \
